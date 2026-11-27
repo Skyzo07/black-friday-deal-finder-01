@@ -90,7 +90,7 @@ function render() {
   if (match) {
     const found = deals.find((d) => d.id === decodeURIComponent(match[1]));
     document.title = `${found ? found.title : "Not found"} | The Deal Desk`;
-    app.innerHTML = found ? dealPage(found, deals) : missingPage();
+    app.innerHTML = found ? dealPage(found, deals) : missingPage(deals.length);
   } else {
     renderList();
   }

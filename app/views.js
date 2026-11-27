@@ -23,6 +23,7 @@ export function card(d) {
   <h2><a href="#/deal/${encodeURIComponent(d.id)}">${escape(d.title)}</a></h2>
   <div class="meta">${escape(d.store)} · ${escape(d.category)}</div>
   <div class="prices"><span class="price">${usd(d.price)}</span><span class="was">${usd(d.was)}</span><span class="off">${percentOff(d)}% off</span></div>
+  ${d.drop ? `<div class="drop">↓ dropped today — was ${usd(d.drop)} this morning</div>` : ""}
   <div>${verdictBadge(d)} <span class="meta">save ${usd(saved(d))}</span></div>
   <p class="evidence">${escape(d.evidence)}</p>
   <div class="spacer"></div>
@@ -108,6 +109,7 @@ export function dealPage(d, all) {
     <dt>Category</dt><dd>${escape(d.category)}</dd>
     <dt>You save</dt><dd>${usd(saved(d))} (${percentOff(d)}% off the usual ${usd(d.was)})</dd>
     <dt>Verdict</dt><dd><strong>${escape(VERDICT_LABEL[d.verdict] || d.verdict)}</strong> — ${escape(d.evidence)}</dd>
+    ${d.drop ? `<dt>Price move</dt><dd>Dropped again today — ${usd(d.drop)} in this morning's check, ${usd(d.price)} now.</dd>` : ""}
     <dt>Checked</dt><dd>${day(d.checked)}</dd>
     <dt>Read in</dt><dd>${escape(d.source)}</dd>
   </dl>
@@ -118,6 +120,6 @@ export function dealPage(d, all) {
 ${more}`;
 }
 
-export function missingPage() {
-  return `<h1>Not found</h1><p>There is no deal at this address. <a href="#/">See all 38 deals</a>.</p>`;
+export function missingPage(count) {
+  return `<h1>Not found</h1><p>There is no deal at this address. <a href="#/">See all ${count} deals</a>.</p>`;
 }

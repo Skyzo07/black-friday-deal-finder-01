@@ -4,7 +4,7 @@
 
 # The Deal Desk — Black Friday 2026 deal finder
 
-A static deal-finder site for Black Friday / Cyber Monday 2026: **38 real deals**, each found and checked by the agent on **27 Nov 2026** at its store (Amazon, Best Buy, Walmart, Target), with the product, store, store link, sale price, usual price, discount, check time, source, and an honest verdict — **new low**, **strong deal**, or **routine** — with the evidence behind it.
+A static deal-finder site for Black Friday / Cyber Monday 2026: **67 real deals**, each found and checked by the agent on **27 Nov 2026** at its store (Amazon, Best Buy, Walmart, Target) and re-checked the same day at 16:00 UTC, with the product, store, store link, sale price, usual price, discount, check time, source, and an honest verdict — **new low**, **strong deal**, or **routine** — with the evidence behind it. Four deals dropped further in the re-check and are flagged on their cards; one rose and says so.
 
 ## What it does
 
@@ -37,6 +37,6 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 - `app/style.css` — the whole look (warm paper, ink, one red accent)
 - `app/main.js` — search, filters, sorting, hash routing
 - `app/views.js` — card, board, and deal-page HTML
-- `app/data.js` — all 38 checked deals, with store, prices, check time, source and verdict
+- `app/data.js` — all 67 checked deals, with store, prices, check time, source and verdict
 - `main.ts` — the hand-in program
 - `screenshots/` — renders of the site's own code
