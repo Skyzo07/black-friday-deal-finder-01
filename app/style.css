@@ -1,0 +1,220 @@
+/* The Deal Desk — Black Friday 2026. Warm paper, ink text, one red accent.
+   System font stack only, no webfonts, so the first load stays tiny. */
+
+* { box-sizing: border-box; }
+:root {
+  --paper: #fdf8ef;
+  --card: #fffdf8;
+  --ink: #221a12;
+  --muted: #6f6252;
+  --red: #b3261e;
+  --red-dark: #8f1d17;
+  --green: #1d6b34;
+  --green-bg: #e2f2e6;
+  --amber: #7a5200;
+  --amber-bg: #fbeecd;
+  --grey-bg: #ece7db;
+  --line: #e3d9c6;
+  --shadow: 0 1px 3px rgba(34, 26, 18, 0.12);
+}
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--red); }
+a:hover { color: var(--red-dark); }
+
+.masthead {
+  background: var(--ink);
+  color: #f7ead2;
+  padding: 18px 16px 14px;
+  border-bottom: 4px solid var(--red);
+}
+.masthead-inner { max-width: 1080px; margin: 0 auto; }
+.brand {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fff;
+  text-decoration: none;
+}
+.brand::before { content: "◆ "; color: var(--red); }
+.tagline { margin: 2px 0 0; color: #d8c9ae; font-size: 14px; }
+
+main { max-width: 1080px; margin: 0 auto; padding: 16px; }
+.foot {
+  max-width: 1080px;
+  margin: 8px auto 32px;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 13.5px;
+  border-top: 1px solid var(--line);
+}
+.foot p { margin: 6px 0; }
+
+/* ---- stats strip ---- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 4px 0 16px;
+}
+.stat {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: var(--shadow);
+}
+.stat b { display: block; font-size: 26px; line-height: 1.1; }
+.stat span { font-size: 12.5px; color: var(--muted); }
+
+/* ---- toolbar ---- */
+.toolbar {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 14px;
+}
+.toolbar-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.search {
+  flex: 1 1 220px;
+  min-width: 180px;
+  font: inherit;
+  padding: 10px 12px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+.search:focus { outline: none; border-color: var(--red); }
+.toolbar select {
+  font: inherit;
+  padding: 10px 8px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  max-width: 100%;
+}
+.verdict-toggles { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.toggle {
+  font: inherit;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  color: var(--ink);
+}
+.toggle[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.result-line { margin: 10px 2px 0; font-size: 13.5px; color: var(--muted); }
+
+/* ---- deal grid ---- */
+.deals {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card h2 { font-size: 17px; line-height: 1.3; margin: 0; }
+.card h2 a { color: var(--ink); text-decoration: none; }
+.card h2 a:hover { color: var(--red); text-decoration: underline; }
+.meta { font-size: 13px; color: var(--muted); }
+.prices { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.price { font-size: 26px; font-weight: 800; color: var(--red); }
+.was { font-size: 15px; color: var(--muted); text-decoration: line-through; }
+.off {
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--red);
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 7px;
+}
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+.badge.new-low { background: var(--green-bg); color: var(--green); }
+.badge.strong { background: #e3ecfd; color: #1d4fa1; }
+.badge.routine { background: var(--amber-bg); color: var(--amber); }
+.evidence { font-size: 13.5px; color: var(--muted); margin: 0; }
+.checked { font-size: 12.5px; color: var(--muted); }
+.card .spacer { flex: 1; }
+.store-link {
+  display: block;
+  text-align: center;
+  background: var(--red);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+.store-link:hover { background: var(--red-dark); color: #fff; }
+.detail-link { font-size: 13.5px; text-align: center; }
+.empty {
+  background: var(--card);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---- detail page ---- */
+.back { display: inline-block; margin-bottom: 10px; }
+.detail {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.detail h1 { font-size: 24px; margin: 4px 0 8px; line-height: 1.25; }
+.detail dl {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 6px 14px;
+  margin: 16px 0;
+  font-size: 15px;
+}
+.detail dt { color: var(--muted); }
+.detail dd { margin: 0; }
+.compare { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+.compare th, .compare td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); }
+.compare tr.best td { font-weight: 700; }
+.detail .store-link { max-width: 320px; margin-top: 12px; }
+.source-note { font-size: 13px; color: var(--muted); }
+
+/* ---- phone ---- */
+@media (max-width: 560px) {
+  .brand { font-size: 25px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat b { font-size: 22px; }
+  .deals { grid-template-columns: 1fr; }
+  .detail dl { grid-template-columns: 96px 1fr; }
+  main { padding: 12px; }
+}
