@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v20; v20 checked 28 Nov 2026 ~19:31 UTC).
+// The rest of the deals (v6–v21; v21 checked 28 Nov 2026 ~19:39 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -29,6 +29,11 @@ const K0=DT+"18:58:00Z";
 const L0=DT+"19:09:00Z";
 const M0=DT+"19:20:00Z";
 const N0=DT+"19:31:00Z";
+const O0=DT+"19:39:00Z";
+const PG = "PC Guide Cyber Monday deals, 28 Nov 2026";
+const T0 = "9to5Toys top 10 still live, 28 Nov 2026";
+const G9 = "9to5Google Black Friday deals, 26 Nov 2026";
+const L8 = "9to5Toys LEGO Black Friday deals, 27 Nov 2026";
 const DL = "Droid-Life Galaxy Z Fold 8 deals, 27 Nov 2026";
 const CM = "Cult of Mac best Apple Black Friday deals, 28 Nov 2026";
 const BP = "Best Buy product page, 28 Nov 2026";
@@ -343,7 +348,7 @@ export const deals2 = [
   ["iphone-air-1tb-amazon","Apple iPhone Air smartphone (1TB)",AM,CT,1400,1699,"d3",H1,AP,VS,"$299 off the 1TB iPhone Air"],
   ["airpods-4-walmart","Apple AirPods 4",WM,CA,89,129.99,0,H1,"CNN Underscored AirPods deals, 28 Nov 2026",VS,"$41 off the open-fit AirPods"],
   ["wow-celebration-pass-battlenet","World of Warcraft Celebration Pass, 12 months","Battle.net",CG,120,155.88,"https://us.shop.battle.net/",H1,"Wowhead Celebration Pass, 28 Nov 2026",VS,"A year of WoW for $10 a month"],
-  ["samsung-990-pro-2tb-amazon","Samsung 990 PRO Gen4 SSD, 2TB",AM,CT,389.99,639.99,AMZ+"Samsung+990+PRO+2TB+SSD",H1,MS,VS,"$250 off the 2TB flagship SSD",[[BB,409.99,"d3,4",H7,BP]]],
+  ["samsung-990-pro-2tb-amazon","Samsung 990 PRO Gen4 SSD, 2TB",AM,CT,384.99,639.99,AMZ+"Samsung+990+PRO+2TB+SSD",O0,PG,VS,"$255 off the 2TB flagship SSD",[[BB,409.99,"d3,4",H7,BP]]],
   ["sandisk-extreme-pro-4tb-amazon","SanDisk Extreme PRO Portable SSD, 4TB",AM,CT,979.99,1099.99,0,H1,MS,VS,"$120 off the 4TB portable SSD"],
   ["hyperx-omen-15-walmart","HyperX Omen 15 gaming laptop (RTX 5060)",WM,CL,1199,1899,WMT+"OMEN+15+gaming+laptop+RTX+5060",H1,TL,VS,"$700 off the RTX 5060 laptop"],
   ["lenovo-legion-5a-bh","Lenovo Legion 5a gaming laptop (RTX 5060)","B&H",CL,1249,1799,"https://www.bhphotovideo.com/c/search?Ntt=Lenovo+Legion+5a",H1,TL,VS,"$550 off the OLED Legion 5a"],
@@ -504,4 +509,41 @@ export const deals2 = [
   ["metroid-prime-4-switch-amazon","Metroid Prime 4: Beyond (Nintendo Switch)",AM,CG,40,60,0,N0,AP,VS,"$20 off the base Switch game"],
   ["belkin-25w-2in1-magnetic-amazon","Belkin 25W 2-in-1 Magnetic Charging Station",AM,CT,70,100,0,N0,AP,VS,"$30 off the Belkin 2-in-1"],
   ["pixel-watch-5-lte-curry-amazon","Google Pixel Watch 5 LTE Steph Curry Edition, 45mm",AM,CT,480,580,0,N0,AP,VS,"$100 off the Curry Edition watch"],
+  ["sony-bravia-6-77-amazon","Sony BRAVIA 6 OLED 4K TV, 77-inch",AM,CV,1798,2999.99,0,O0,PG,VS,"$1,202 off the 77-inch BRAVIA"],
+  ["lg-c6-77-amazon","LG C6 OLED 4K TV, 77-inch",AM,CV,1849.97,2499.99,0,O0,PG,VS,"$650 off the 77-inch C6 OLED"],
+  ["sony-bravia-xr8b-65-amazon","Sony BRAVIA XR8B OLED 4K TV, 65-inch",AM,CV,1498,1999.99,0,O0,PG,VS,"$502 off the 65-inch XR8B"],
+  ["roomba-plus-415x-amazon","iRobot Roomba Plus 415X Combo robot vacuum and mop",AM,CH,379.99,799.99,0,O0,PG,VS,"$420 off the Roomba 415X"],
+  ["acer-predator-x32x-amazon","Acer Predator X32 X 32-inch 4K QD-OLED 240Hz gaming monitor",AM,CT,649.99,999.99,0,O0,PG,VS,"$350 off the Predator X32"],
+  ["samsung-odyssey-g9-g91f-amazon","Samsung 49-inch Odyssey G9 (G91F) gaming monitor",AM,CT,649.99,999.99,0,O0,PG,VS,"$350 off the Odyssey G9"],
+  ["aoc-agon-pro-27-amazon","AOC AGON Pro 27-inch QD-OLED 240Hz gaming monitor",AM,CT,297.49,499.99,0,O0,PG,VS,"$202.50 off the AGON Pro"],
+  ["logitech-g502-x-amazon","Logitech G502 X gaming mouse",AM,CG,39.99,99.99,0,O0,PG,VS,"$60 off the G502 X mouse"],
+  ["ultrahuman-ring-pro-amazon","Ultrahuman Ring PRO smart ring, Space Silver",AM,CF,299,479,0,O0,ST,VS,"$180 off the titanium ring"],
+  ["keychron-b2-pro-amazon","Keychron B2 Pro Ultra-Slim wireless keyboard",AM,CT,32,40,0,O0,ST,VS,"$8 off the ultra-slim B2 Pro"],
+  ["baseus-70w-travel-adapter-amazon","Baseus 6-in-1 70W Retractable USB-C Travel Adapter",AM,CT,36,50,0,O0,ST,VS,"$14 off the 70W travel adapter"],
+  ["govee-humidifier-max-7l-amazon","GoveeLife 7L Smart Humidifier Max",AM,CS,66,90,0,O0,ST,VN,"$24 off the 7L humidifier"],
+  ["solo-stove-surround-42-amazon","Solo Stove Surround 42-inch Fire Pit",AM,CH,296.99,349.99,0,O0,ST,VS,"$53 off the fire pit surround"],
+  ["huanuo-71-executive-desk-amazon","HUANUO 71- by 30-inch Executive Standing Desk",AM,CH,209,320,0,O0,ST,VS,"$111 off the 71-inch desk"],
+  ["belkin-switch2-charging-case-amazon","Belkin Nintendo Switch 2 10,000mAh Charging Case",AM,CG,85,100,0,O0,ST,VS,"$15 off the Switch 2 case"],
+  ["spigen-mac-mini-case-amazon","Spigen Mac mini M4/M5/M6 Transparent Case",AM,CT,21,26,0,O0,ST,VR,"$5 off the transparent case"],
+  ["statik-smartcharge-amazon","Statik SmartCharge Wall Adapter + 10K Power Bank",AM,CT,47,55,0,O0,ST,VR,"$8 off the 5-in-1 charger"],
+  ["aqara-g410-doorbell-amazon","Aqara Apple Home Doorbell Camera with Chime",AM,CS,100,145,0,O0,ST,VS,"$45 off the G410 doorbell"],
+  ["logitech-g325-amazon","Logitech G325 LIGHTSPEED Wireless Gaming Headset",AM,CG,64,80,0,O0,ST,VS,"$16 off the G325 headset"],
+  ["amazon-kids-tablet-8-amazon","Amazon Kids Tablet 8, Aquatic Case",AM,CT,130,230,0,O0,ST,VN,"$100 off the Kids Tablet 8"],
+  ["gamesir-pocket-taco-amazon","GameSir Pocket Taco mobile Bluetooth controller",AM,CG,25.99,34.99,0,O0,T0,VN,"$9 off the Pocket Taco",[[BB,27.99,0,O0,BP]]],
+  ["airfly-drive-amazon","Twelve South AirFly Drive Wireless CarPlay & Android Auto Adapter",AM,CT,32,40,0,O0,T0,VN,"$8 off the AirFly Drive"],
+  ["techpod-repod-c1-amazon","TechPod RePod C1 Aluminum Case for Apple Watch",AM,CT,47,60,0,O0,T0,VN,"$13 off the RePod case"],
+  ["sandisk-microsd-express-256gb-amazon","SanDisk microSD Express card, 256GB",AM,CG,49.99,75,0,O0,T0,VN,"$25 off the 256GB card"],
+  ["echo-time-kids-amazon","Amazon Echo Time Kids smart clock",AM,CT,100,210,0,O0,G9,VN,"$110 off the Echo Time Kids"],
+  ["lego-mario-standard-kart-amazon","LEGO Mario Kart - Mario & Standard Kart",AM,CY,135.99,169.99,0,O0,L8,VN,"$34 off the Mario Kart set"],
+  ["lego-drum-castle-amazon","LEGO One Piece Battle at Drum Castle",AM,CY,88,110,0,O0,L8,VN,"$22 off the Drum Castle set"],
+  ["lego-pokemon-poke-ball-amazon","LEGO Pokémon Iconic Trainer Moments Poké Ball",AM,CY,224.99,299.99,0,O0,L8,VN,"$75 off the Poké Ball set"],
+  ["lego-chopper-amazon","LEGO One Piece Tony Tony Chopper",AM,CY,39.97,69.99,0,O0,L8,VS,"$30 off the Chopper set"],
+  ["lego-dorry-brogy-amazon","LEGO One Piece Dorry vs. Brogy Giants",AM,CY,68,80,0,O0,L8,VS,"$12 off the Dorry vs. Brogy"],
+  ["lego-going-merry-amazon","LEGO One Piece The Going Merry Pirate Ship",AM,CY,112,130,0,O0,L8,VS,"$18 off the Going Merry"],
+  ["lego-garp-battleship-amazon","LEGO One Piece Garp's Marine Battleship",AM,CY,143.99,180,0,O0,L8,VS,"$36 off the Garp battleship"],
+  ["lego-drone-mew-amazon","LEGO Pokémon Drone Search for Mythical Mew",AM,CY,40,50,0,O0,L8,VS,"$10 off the Drone Search set"],
+  ["lego-mewtwo-lab-amazon","LEGO Pokémon Mewtwo's Lab Break",AM,CY,56,70,0,O0,L8,VS,"$14 off the Mewtwo set"],
+  ["lego-arcanine-amazon","LEGO Pokémon Arcanine",AM,CY,87.99,109.99,0,O0,L8,VS,"$22 off the Arcanine set"],
+  ["lego-pikachu-poke-ball-amazon","LEGO Pokémon Pikachu and Poké Ball",AM,CY,159.95,199.99,0,O0,L8,VN,"$40 off the Pikachu set"],
+  ["lego-hogwarts-castle-amazon","LEGO Harry Potter Hogwarts Castle and Grounds",AM,CY,136.99,169.99,0,O0,L8,VS,"$33 off the Hogwarts Castle",[[TA,136.99,0,O0,T9]]],
 ].map(X);
