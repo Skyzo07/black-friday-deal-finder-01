@@ -1,8 +1,8 @@
-// Deals checked 27–28 Nov 2026 (v14: 10 second-store prices ~18:25 UTC
-// 28 Nov). Each deal: product, store, link, sale/usual price, check time,
-// source, verdict ("new-low"/"strong"/"routine"); `also` = same product at
+// Deals checked 27–28 Nov 2026 (v15: 21 new deals, 3 also, 1 fix 18:45
+// 28 Nov). Each deal: product, store, link, prices, check time,
+// source, verdict; `also` = same product at
 // another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
-// the first paint; the rest live in data2.js, loaded by import() after.
+// the first paint; the rest live in data2.js (import() after).
 
 export const CHECKED = "2026-11-27T16:00:00Z";
 // A8–B2: deals added 28 Nov 2026, ~17:00–18:00 UTC.
@@ -37,7 +37,7 @@ const AM = "Amazon";
 const BB = "Best Buy";
 const WM = "Walmart";
 const TA = "Target";
-// Store search links: AMZ/BBY/TGT/WMT + query.
+// Search links: AMZ/BBY/TGT/WMT + query.
 const AMZ = "https://www.amazon.com/s?k=";
 const BBY = "https://www.bestbuy.com/site/searchpage.jsp?st=";
 const TGT = "https://www.target.com/s?searchTerm=";
