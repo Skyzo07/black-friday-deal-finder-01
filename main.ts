@@ -1,10 +1,10 @@
 // The Deal Desk — a Black Friday 2026 deal finder (Node 22, standard
 // library only). The site is this directory's app/ folder: plain static
 // files a browser opens at app/index.html (ES modules, CSS, no build step),
-// its 420 deals held in its own app/data.js (the first 80, loaded with the
+// its 432 deals held in its own app/data.js (the first 80, loaded with the
 // first paint) and app/data2.js (the rest, loaded by import() just after
-// it), each checked 27–28 Nov 2026 at its store; v17: 19 new deals + 6 also, 2 deduped, 1 fixed
-// on 28 Nov ~19:00 UTC. Nothing the site runs,
+// it), each checked 27–28 Nov 2026 at its store; v18: 12 new deals + 4 also, 1 price fixed
+// on 28 Nov ~19:09 UTC. Nothing the site runs,
 // styles or shows loads over the network, and each deal links out to its
 // store. The program hands it in: it copies app/ and screenshots/ from
 // beside this file to /output and writes /output/dossier.json, the summary
