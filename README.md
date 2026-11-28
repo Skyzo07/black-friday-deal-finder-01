@@ -4,7 +4,7 @@
 
 # The Deal Desk — Black Friday 2026 deal finder
 
-A static deal-finder site for Black Friday / Cyber Monday 2026: **115 real deals**, each found and checked by the agent on **27–28 Nov 2026** at its store (Amazon, Best Buy, Walmart, Target, Sam's Club) and re-checked 28 Nov at 17:00 UTC, with the product, store, store link, sale price, usual price, discount, check time, source, and an honest verdict — **new low**, **strong deal**, or **routine** — with the evidence behind it. Six prices moved in the 28 Nov re-check and are corrected on their cards (AirPods Pro 3 $149.99 at Best Buy, MacBook Air M5 $999 at Best Buy, Fire TV Stick 4K Plus $30, Sony WH-1000XM6 $348 at Best Buy, Keurig K-Express $35 at Walmart, Apple Watch SE 3 $179.99 at Target).
+A static deal-finder site for Black Friday / Cyber Monday 2026: **227 real deals**, each found and checked by the agent on **27–28 Nov 2026** at its store (Amazon, Best Buy, Walmart, Target, Sam's Club, Dell, Costco) and re-checked 28 Nov in the evening, with the product, store, store link, sale price, usual price, discount, check time, source, and an honest verdict — **new low**, **strong deal**, or **routine** — with the evidence behind it. The evening pass added 68 deals and corrected two prices (M6 MacBook Pro 14-inch $1,749 at Amazon, Watch SE 3 Target row's Amazon link $179).
 
 ## What it does
 
@@ -37,6 +37,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 - `app/style.css` — the whole look (warm paper, ink, one red accent)
 - `app/main.js` — search, filters, sorting, hash routing
 - `app/views.js` — card, board, and deal-page HTML
-- `app/data.js` — all 115 checked deals, with store, prices, check time, source and verdict
+- `app/data.js` — the first 80 checked deals, loaded with the first paint, with store, prices, check time, source and verdict
+- `app/data2.js` — the remaining 147 checked deals, loaded by `import()` just after the first paint, so the first load stays small while the board shows all 227 deals
 - `main.ts` — the hand-in program
 - `screenshots/` — renders of the site's own code
