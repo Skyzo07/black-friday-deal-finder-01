@@ -1,4 +1,4 @@
-// Deals checked 27-28 Nov 2026 (v25: 31 deals, 2 also, 0 fix 20:30
+// Deals checked 27-28 Nov 2026 (v26: 49 deals, 1 also, 4 fix 20:42
 // 28 Nov) Each deal: product, store, link, prices, check time,
 // source, verdict; `also` = same product at
 //another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
@@ -9,6 +9,7 @@ export const A8 = "2026-11-28T17:00:00Z";
 export const B2 = "2026-11-28T18:00:00Z";
 // v10 second-store prices, checked 28 Nov 2026 ~19:00 UTC.
 export const B3 = "2026-11-28T19:00:00Z";
+export const B4 = "2026-11-28T20:00:00Z";
 const B = "Best Buy product page, 28 Nov 2026";
 const TG = "Target Black Friday page, 28 Nov 2026";
 const QB = "9to5Toys Best Buy Black Friday, 28 Nov 2026";
@@ -36,7 +37,6 @@ const AM = "Amazon";
 const BB = "Best Buy";
 const WM = "Walmart";
 const TA = "Target";
-// Search links: AMZ/BBY/TGT/WMT + query.
 const AMZ = "https://www.amazon.com/s?k=";
 const BBY = "https://www.bestbuy.com/site/searchpage.jsp?st=";
 const TGT = "https://www.target.com/s?searchTerm=";
@@ -115,8 +115,8 @@ const deals1 = [
     was: 459.99,
     url: 2,
     source: MA,
-    verdict: VS,
-    evidence: "$112 off Sony's flagship",
+    verdict: VN,
+    evidence: "Lowest price ever, $112 off",
     also: [{ store: BB, price: 348, url: BBY+"Sony+WH-1000XM6" }],
   },
   {
@@ -304,12 +304,13 @@ const deals1 = [
     title: "Apple MacBook Air 13-inch (M5, 16GB/512GB)",
     store: AM,
     category: CL,
-    price: 989,
+    price: 999,
     was: 1299,
     url: "1-2",
-    source: "BeeBulletin Black Friday deals 2026, 27 Nov 2026",
-    verdict: VN,
-    evidence: "$310 off the new M5 Air",
+    checked: B4,
+    source: "9to5Toys + Cult of Mac, 28 Nov 2026",
+    verdict: VS,
+    evidence: "$300 off the new M5 Air",
     drop: 1049,
     also: [{ store: BB, price: 999, url: BBY+"MacBook+Air+M5+13-inch" }],
   },
@@ -956,8 +957,8 @@ const deals1 = [
     url: "d0,5",
     checked: A8,
     source: LC,
-    verdict: VS,
-    evidence: "$400 off, the biggest Air cut",
+    verdict: VN,
+    evidence: "All-time low, $400 off Air",
       also: [{ store: BB, price: 1199, url: BBY+"MacBook+Air+M5+13-inch+1TB", checked: B2, source: QB }],
   },
   {

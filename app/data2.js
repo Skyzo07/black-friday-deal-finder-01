@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v25; v25 checked 28 Nov 2026 ~20:30 UTC).
+// The rest of the deals (v6–v26; v26 checked 28 Nov 2026 ~20:42 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -35,6 +35,11 @@ const Q0=DT+"19:59:00Z";
 const R0=DT+"20:12:00Z";
 const S0=DT+"20:19:00Z";
 const U0=DT+"20:30:00Z";
+const U1=DT+"20:42:00Z";
+const MB = "MacObserver Belkin UltraCharge deal, 28 Nov 2026";
+const DC = "Digital Citizen Dell Black Friday deals, 28 Nov 2026";
+const BF = "BuzzFeed best Amazon Black Friday deals, 28 Nov 2026";
+const HW = "Tom's Hardware Black Friday gaming laptop deals, 24 Nov 2026";
 const BZ = "BuzzFeed Black Friday beauty deals, 28 Nov 2026";
 const WR = "WIRED best Black Friday deals, 28 Nov 2026";
 const DS = "DealSeek best early Black Friday tech deals, 28 Nov 2026";
@@ -165,7 +170,7 @@ export const deals2 = [
   ["marshall-emberton-3-amazon","Marshall Emberton III portable speaker",AM,CA,89.99,179.99,"d3",H8,BL,VN,HP+", the best deal seen",[[BB,89.99,2,H2,BP]]],
   ["garmin-instinct-3-amazon","Garmin Instinct 3 AMOLED (45mm) GPS watch",AM,CF,249.99,449.99,2,H8,BL,VS,"$200 off Garmin's rugged watch",[[BB,249.99,2,H5,BP]]],
   ["anker-power-bank-25k-amazon","Anker laptop power bank, 25,000mAh",AM,CT,91.19,119.99,AMZ+"Anker+laptop+power+bank+25000mAh",H8,BL,VS,R2,[[BB,91,0,R0,VG]]],
-  ["sony-wh1000xm6-bestbuy","Sony WH-1000XM6 noise-canceling headphones",BB,CA,348,458,2,H8,S7,VS,"Read live off Best Buy's page",[[AM,348,AMZ+"Sony+WH-1000XM6"]]],
+  ["sony-wh1000xm6-bestbuy","Sony WH-1000XM6 noise-canceling headphones",BB,CA,348,458,2,H8,S7,VN,"Lowest price ever, $110 off",[[AM,348,AMZ+"Sony+WH-1000XM6"]]],
   ["hp-omnibook-3-bestbuy","HP OmniBook 3 14-inch OLED laptop",BB,CL,599.99,799.99,1,H8,S7,VS,"$200 off a 14-inch OLED laptop"],
   ["insignia-fridge-bestbuy","Insignia 18 cu ft top-freezer refrigerator",BB,CH,299.99,749.99,"d4",H8,S7,VS,"60% off a full-size fridge"],
   ["shark-powerdetect-speed-bestbuy","Shark PowerDetect Speed upright vacuum",BB,CH,199.99,499.99,"d3",H8,S7,VN,"60% off Shark's newest upright"],
@@ -218,7 +223,7 @@ export const deals2 = [
   ["ember-mug-3-amazon","Ember Mug 3, 14-ounce",AM,CK,95,149.95,1,J5,Q9,VS,"A third off the Ember Mug",[[BB,99.99,BBY+"Ember+Mug+3"]]],
   ["govee-lamp-2-pro-amazon","Govee Table Lamp 2 Pro X Sound by JBL",AM,CS,119.99,179.99,4,H8,VG,VS,"A third off the smart lamp",[[BB,119.99,BBY+"Govee+Table+Lamp+2+Pro"]]],
   ["pixel-buds-2a-amazon","Google Pixel Buds 2a",AM,CA,99,129,0,H8,VG,VS,"23% off Google's newest buds",[[BB,99]]],
-  ["glocusent-light-amazon","Glocusent bookmark reading light",AM,CT,10.49,33.89,0,H8,VG,VS,"69% off the pocket light"],
+  ["glocusent-light-amazon","Glocusent bookmark reading light",AM,CT,10.49,33.89,0,H8,VG,VS,"69% off the pocket light",[[WM,10,0,U1,VG]]],
   ["echo-dot-max-amazon","Amazon Echo Dot Max smart speaker",AM,CT,50,120,"1-2",H8,ST,VN,"58% off the big Echo speaker",[[TA,49.99,2,H2,T9],[BB,50,0,R0,VG]]],
   ["echo-time-amazon","Amazon Echo Time smart clock",AM,CT,99.99,199.99,"1-0",H8,ST,VN,HP+" on a new smart",[[TA,99.99,2,H2,T9],[BB,100,0,R0,VG]]],
   ["aqara-u400-amazon","Aqara U400 smart lock",AM,CS,200,270,0,H8,ST,VS,"Hands-free UWB + Home Key"],
@@ -734,4 +739,53 @@ export const deals2 = [
   ["jbl-go-5-amazon","JBL Go 5 portable Bluetooth speaker",AM,CA,39.95,54.95,0,U0,TU,VS,"$15 off the pocket JBL Go 5"],
   ["netgear-orbi-770-3pack-amazon","Netgear Orbi 770 Wi-Fi 7 mesh system, 3-pack",AM,CT,569,700,0,U0,D2,VS,"19% off the Orbi 770 3-pack"],
   ["theragun-prime-g6-target","Theragun Prime (6th Gen) massage gun",TA,CF,189.99,329.99,0,U0,MG,VS,"$140 off the Theragun Prime"],
+  ["thinkpad-p16s-lenovo","Lenovo ThinkPad P16s Gen 5 laptop (16-inch 3K OLED)","Lenovo",CL,3293.22,7549,"https://www.lenovo.com/us/en/search?query=ThinkPad+P16s",U1,SD,VS,"$4,256 off the ThinkPad"],
+  ["rog-strix-g16-5060-amazon","Asus ROG Strix G16 gaming laptop (RTX 5060)",AM,CL,1179,1586,0,U1,TL,VS,"$407 off the Strix G16"],
+  ["predator-helios-18-ai-newegg","Acer Predator Helios 18 AI gaming laptop (RTX 5070 Ti)","Newegg",CL,1999,2299,"https://www.newegg.com/p/pl?d=Acer+Predator+Helios+18+AI",U1,TL,VS,"$300 off the Helios 18 AI"],
+  ["msi-crosshair-max-16-walmart","MSI Crosshair Max 16 gaming laptop (RTX 5060)",WM,CL,1399,2099,0,U1,TL,VS,"$700 off the Crosshair Max"],
+  ["rog-strix-scar-16-newegg","Asus ROG Strix Scar 16 gaming laptop (RTX 5090)","Newegg",CL,4149.99,4499.99,"https://www.newegg.com/p/pl?d=Asus+ROG+Strix+Scar+16",U1,TL,VS,"$350 off the Scar 16 RTX 5090"],
+  ["alienware-16x-aurora-5060-dell","Dell Alienware 16X Aurora gaming laptop (RTX 5060)","Dell",CL,2849.99,3149.99,"https://www.dell.com/en-us/search/Alienware%2016X%20Aurora",U1,HW,VS,"$300 off the 16X Aurora"],
+  ["alienware-16x-aurora-5070-dell","Dell Alienware 16X Aurora gaming laptop (RTX 5070)","Dell",CL,2899.99,3299.99,"https://www.dell.com/en-us/search/Alienware%2016X%20Aurora",U1,DC,VS,"$400 off the 16X Aurora"],
+  ["alienware-16x-aurora-5070ti-dell","Dell Alienware 16X Aurora gaming laptop (RTX 5070 Ti)","Dell",CL,3349.99,3549.99,"https://www.dell.com/en-us/search/Alienware%2016X%20Aurora",U1,DC,VS,"$200 off the 16X Aurora"],
+  ["tuf-gaming-a16-walmart","Asus TUF Gaming A16 gaming laptop",WM,CL,1361,1799,0,U1,TL,VS,"$438 off the TUF A16"],
+  ["legion-5i-walmart","Lenovo Legion 5i gaming laptop",WM,CL,1499,2299,0,U1,TL,VS,"$800 off the Legion 5i"],
+  ["dell-16-plus-32gb-dell","Dell 16 Plus laptop (Core Ultra 7, 32GB/1TB)","Dell",CL,1199.99,1679.99,"https://www.dell.com/en-us/search/Dell%2016%20Plus",U1,DC,VS,"$480 off the Dell 16 Plus"],
+  ["dell-16-plus-16gb-dell","Dell 16 Plus laptop (Core Ultra 7, 16GB/1TB)","Dell",CL,999.99,1399.99,"https://www.dell.com/en-us/search/Dell%2016%20Plus",U1,DC,VS,"$400 off the Dell 16 Plus"],
+  ["dell-14-plus-u5-dell","Dell 14 Plus laptop (Core Ultra 5, 16GB/512GB)","Dell",CL,1139.99,1379.99,"https://www.dell.com/en-us/search/Dell%2014%20Plus",U1,DC,VS,"$240 off the Dell 14 Plus"],
+  ["dell-14-plus-u7-dell","Dell 14 Plus laptop (Core Ultra 7, 16GB/1TB)","Dell",CL,1199.99,1399.99,"https://www.dell.com/en-us/search/Dell%2014%20Plus",U1,DC,VS,"$200 off the Dell 14 Plus"],
+  ["msi-prestige-16-flip-amazon","MSI Prestige 16 Flip laptop",AM,CL,1789,2149,0,U1,PG,VS,"$360 off the Prestige Flip"],
+  ["surface-laptop-15-amazon","Microsoft Surface Laptop 15-inch (Snapdragon X2 Elite, 16GB/1TB)",AM,CL,1549.99,2199.99,0,U1,PG,VS,"$650 off the Surface Laptop"],
+  ["hp-hyperx-omen-16-oled-amazon","HP HyperX OMEN 16 OLED gaming laptop",AM,CL,2399,3199,0,U1,PG,VS,"$800 off the OMEN 16 OLED"],
+  ["legion-tab-gen5-lenovo","Lenovo Legion Tab Gen 5 tablet (8.8-inch, 3K 165Hz)","Lenovo",CT,582,900,"https://www.lenovo.com/us/en/search?query=Legion+Tab+Gen+5",U1,SD,VS,"$318 off the Legion Tab"],
+  ["cvlife-pocket-knife-amazon","CVLIFE compact pocket folding knife (2.12-inch)",AM,CT,18,30,0,U1,SD,VS,"40% off the pocket knife"],
+  ["craftsman-organizer-amazon","CRAFTSMAN 10-compartment small storage organizer",AM,CT,8,11,0,U1,SD,VS,"27% off the organizer"],
+  ["iphone-16e-walmart","Straight Talk Apple iPhone 16e smartphone (128GB, locked)",WM,CT,199,349,0,U1,SD,VS,"Locked Straight Talk, $150 off"],
+  ["viture-luma-pro-amazon","Viture Luma Pro XR glasses",AM,CT,339,499,0,U1,WR,VS,"$160 off the Luma Pro XR"],
+  ["archer-be230-amazon","TP-Link Archer BE230 Wi-Fi 7 router",AM,CT,75,120,0,U1,PG,VS,"38% off the BE230 router"],
+  ["anker-140w-2in1-cable-amazon","Anker 140W 2-in-1 USB-C to USB-C cable",AM,CT,14,18,0,U1,VG,VS,"$4 off the 2-in-1 cable"],
+  ["belkin-ultracharge-3in1-amazon","Belkin UltraCharge 3-in-1 foldable magnetic charger (Qi2 25W)",AM,CT,76.99,99.99,0,U1,MB,VS,"$23 off the UltraCharge 3-in-1"],
+  ["alienware-aw3225qf-dell","Alienware AW3225QF 32-inch 4K QD-OLED gaming monitor","Dell",CT,699.99,999.99,"https://www.dell.com/en-us/search/Alienware%20AW3225QF",U1,DC,VS,"$300 off the 4K QD-OLED"],
+  ["iniu-45w-charger-amazon","INIU 45W fast charging portable charger",AM,CT,31,40,0,U1,DS,VS,"$9 off the 45W charger"],
+  ["anycubic-kobra-x-amazon","AnyCubic Kobra X 4-color 3D printer",AM,CT,285,355,0,U1,DS,VS,"$70 off the Kobra X printer"],
+  ["lexar-nm1090-pro-4tb-amazon","Lexar NM1090 PRO 4TB PCIe 5.0 NVMe SSD",AM,CT,719.99,999.99,0,U1,PG,VS,"$280 off the 4TB Gen5 SSD"],
+  ["msi-pro-a1000pl-amazon","MSI PRO A1000PL 1000W Platinum ATX power supply",AM,CT,119.99,179.99,0,U1,PG,VS,"$60 off the 1000W PSU"],
+  ["thermaltake-view-600-amazon","Thermaltake View 600 TG Snow full tower PC case",AM,CT,89.99,169.99,0,U1,PG,VS,"$80 off the View 600 case"],
+  ["corsair-k65-plus-amazon","CORSAIR K65 PLUS WIRELESS 75% mechanical keyboard",AM,CT,99.99,159.99,0,U1,PG,VS,"$60 off the K65 keyboard"],
+  ["gerber-eab-lite-amazon","Gerber EAB Lite folding utility knife and money clip",AM,CT,13,14,0,U1,ST,VR,"7% off the EAB Lite knife"],
+  ["samsung-frame-2025-55-bestbuy","Samsung The Frame 2025 55-inch 4K TV",BB,CV,700,900,0,U1,VG,VS,"$200 off the 55-inch Frame"],
+  ["lg-c6-oled-77-amazon","LG C6 OLED evo 4K TV, 77-inch",AM,CV,1899.99,2499.99,0,U1,PG,VS,"$600 off the 77-inch C6"],
+  ["chi-infra-silk-amazon","CHI Infra Silk Infusion leave-in hair treatment",AM,CB,14.19,34.14,0,U1,BZ,VN,"Lowest price of the year"],
+  ["sol-de-janeiro-bum-bum-amazon","Sol de Janeiro Brazilian Bum Bum Cream",AM,CB,27,36,0,U1,BZ,VS,"Best deal of the year, 25% off"],
+  ["color-wow-raise-root-amazon","Color Wow Raise the Root volumizing spray",AM,CB,18.2,26,0,U1,BZ,VS,"30% off the root spray"],
+  ["anastasia-brow-definer-amazon","Anastasia Beverly Hills Brow Definer Pencil",AM,CB,18.9,27,0,U1,BZ,VS,"30% off the brow definer"],
+  ["elemis-cleansing-balm-amazon","Elemis Pro-Collagen Cleansing Balm",AM,CB,45,75,0,U1,BZ,VS,"40% off the cleansing balm"],
+  ["lancome-lash-idole-amazon","Lancôme Lash Idôle mascara",AM,CB,14,30,0,U1,BZ,VN,"Lowest price it goes for"],
+  ["truskin-vitamin-c-amazon","TruSkin vitamin C serum",AM,CB,19.31,38.99,0,U1,BZ,VN,"Prime-exclusive best-ever"],
+  ["shark-flexfusion-dryer-amazon","Shark FlexFusion hair straightener and dryer",AM,CB,249.99,399.99,0,U1,BZ,VN,"Best-ever deal, 38% off"],
+  ["eight-saints-neck-cream-amazon","Eight Saints Firming Neck Cream",AM,CB,27.2,44,0,U1,BZ,VS,"38% off the neck cream"],
+  ["medicube-pdrn-balm-amazon","Medicube PDRN Collagen Volume Multi Balm Stick",AM,CB,11.94,20,0,U1,BZ,VS,"40% off the multi balm"],
+  ["olaplex-no7-oil-amazon","Olaplex No. 7 hair-bonding oil",AM,CB,21,30,0,U1,BZ,VS,"30% off the No. 7 oil"],
+  ["shark-speedstyle-amazon","Shark SpeedStyle Pro Flex hair dryer and styler",AM,CB,149,249,0,U1,BZ,VS,"40% off the SpeedStyle"],
+  ["bissell-little-green-amazon","Bissell Little Green carpet and upholstery cleaner",AM,CH,84.99,129.99,0,U1,BF,VN,"New best price of 2026"],
+  ["vitamix-propel-750-amazon","Vitamix Propel 750 blender",AM,CK,359.95,629.95,0,U1,BF,VS,"43% off the Propel 750"],
 ].map(X);
