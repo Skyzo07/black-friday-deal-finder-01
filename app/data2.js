@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v27; v27 checked 28 Nov 2026 ~20:50 UTC).
+// The rest of the deals (v6–v28; v28 checked 28 Nov 2026 ~20:56 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -37,6 +37,7 @@ const S0=DT+"20:19:00Z";
 const U0=DT+"20:30:00Z";
 const U1=DT+"20:42:00Z";
 const U2=DT+"20:50:00Z";
+const U3=DT+"20:56:00Z";
 const MB = "MacObserver Belkin UltraCharge deal, 28 Nov 2026";
 const DC = "Digital Citizen Dell Black Friday deals, 28 Nov 2026";
 const BF = "BuzzFeed best Amazon Black Friday deals, 28 Nov 2026";
@@ -850,4 +851,48 @@ export const deals2 = [
   ["anua-niacinamide-serum-amazon","Anua 10% niacinamide serum",AM,CB,11.49,22,0,U2,BZ,VS,"48% off the Anua serum"],
   ["anua-azelaic-serum-amazon","Anua azelaic acid serum",AM,CB,15.4,24,0,U2,BZ,VS,"36% off the Anua serum"],
   ["tirtir-cushion-foundation-amazon","TirTir cushion foundation",AM,CB,7.5,25,0,U2,BZ,VS,"70% off the TirTir cushion"],
+  ["samsung-q900h-soundbar-amazon","Samsung Q-Series Soundbar HW-Q900H",AM,CV,897.99,1497.99,0,U3,PG,VS,"$600 off the Q900H soundbar"],
+  ["samsung-s90h-65-amazon","Samsung 65-inch S90H Series TV",AM,CV,1397.99,1947.98,0,U3,PG,VS,"$550 off the 65-inch S90H"],
+  ["samsung-galaxy-z-fold8-ultra-amazon","Samsung Galaxy Z Fold8 Ultra unlocked 512GB smartphone",AM,CT,1849.99,2299.99,0,U3,PG,VS,"$450 off the Z Fold8 Ultra"],
+  ["asus-vivobook-s16-amazon","ASUS Vivobook S16 laptop (2026, Ryzen AI 7 445)",AM,CL,1169.99,1599.99,0,U3,PG,VS,"$430 off the Vivobook S16"],
+  ["ecoflow-portable-amazon","EF EcoFlow portable power station",AM,CT,977,1399,0,U3,PG,VS,"$422 off the EcoFlow station"],
+  ["samsung-s90h-55-amazon","Samsung 55-inch S90H OLED 4K TV",AM,CV,1240.99,1647.98,0,U3,PG,VS,"$407 off the 55-inch S90H"],
+  ["amazon-ember-artline-65-amazon","Amazon Ember Artline 65-inch with Fire TV",AM,CV,615,1015,0,U3,PG,VS,"$400 off the Ember Artline"],
+  ["samsung-frame-ls03he-65-amazon","Samsung 65-inch Frame LS03HE QLED 4K TV",AM,CV,997.99,1397.99,0,U3,PG,VS,"$400 off the Frame LS03HE"],
+  ["samsung-s85h-48-amazon","Samsung 48-inch S85H OLED 4K TV (2026)",AM,CV,697.99,1097.99,0,U3,PG,VS,"$400 off the 48-inch S85H"],
+  ["rog-nuc-16-amazon","Asus ROG NUC 16 mini PC",AM,CT,2099,2399,0,U3,PG,VS,"$300 off the ROG NUC 16"],
+  ["garmin-fenix-8-43mm-amazon","Garmin fēnix 8 smartwatch (43mm)",AM,CF,749.99,999.99,0,U3,PG,VS,"$250 off the fēnix 8 43mm"],
+  ["innocn-49-curved-amazon","INNOCN 49-inch curved DQHD ultrawide gaming monitor",AM,CT,599.99,844.99,0,U3,PG,VS,"$245 off the INNOCN 49-inch"],
+  ["samsung-odyssey-oled-g6-amazon","Samsung 27-inch Odyssey OLED G6 (G61SH) QD-OLED gaming monitor",AM,CT,375.23,599.99,0,U3,PG,VS,"$225 off the OLED G6"],
+  ["msi-venture-a16-ai-amazon","MSI Venture A16 AI laptop",AM,CL,977.5,1199,0,U3,PG,VS,"$222 off the Venture A16"],
+  ["sony-bravia-3-ii-75-amazon","Sony 75-inch BRAVIA 3 II LED 4K HDR TV",AM,CV,998,1199.99,0,U3,PG,VS,"$202 off the BRAVIA 3 II"],
+  ["sony-inzone-m10s-amazon","Sony INZONE M10S 27-inch OLED gaming monitor",AM,CT,698,899.99,0,U3,PG,VS,"$202 off the INZONE M10S"],
+  ["asus-rog-pg27ucdm-amazon","ASUS ROG PG27UCDM 27-inch 4K 240Hz OLED gaming monitor",AM,CT,898.99,1099,0,U3,PG,VS,"$200 off the PG27UCDM"],
+  ["samsung-viewfinity-s8-27-amazon","Samsung 27-inch ViewFinity S8 (S80HF) monitor",AM,CT,499.99,699.99,0,U3,PG,VS,"$200 off the ViewFinity S8"],
+  ["lenovo-ideapad-slim-3i-amazon","Lenovo IdeaPad Slim 3i 15.6-inch laptop (16GB/1TB)",AM,CL,999.99,1196.05,0,U3,PG,VS,"$196 off the IdeaPad Slim 3i"],
+  ["alienware-15-4050-amazon","Alienware 15 gaming laptop (RTX 4050, Core 7 240H)",AM,CL,1099.99,1279,0,U3,PG,VS,"$179 off the Alienware 15"],
+  ["garmin-instinct-3-solar-amazon","Garmin Instinct 3 Solar smartwatch",AM,CF,289.99,449.99,0,U3,PG,VS,"$160 off the Instinct 3 Solar"],
+  ["sonos-five-amazon","Sonos Five wireless smart speaker",AM,CA,439,599,0,U3,PG,VS,"$160 off the Sonos Five"],
+  ["logitech-g-rs50-amazon","Logitech G RS50 Direct Drive racing wheel (PS5/PC)",AM,CT,539.99,699.99,0,U3,PG,VS,"$160 off the G RS50 wheel"],
+  ["garmin-forerunner-265-amazon","Garmin Forerunner 265 smartwatch (46mm)",AM,CF,299.99,449.99,0,U3,PG,VS,"$150 off the Forerunner 265"],
+  ["acer-nitro-27-4k-amazon","Acer Nitro 27-inch 4K gaming IPS monitor",AM,CT,208.99,349.99,0,U3,PG,VS,"40% off the Nitro 27 4K"],
+  ["lg-27g440a-amazon","LG 27G440A-B 27-inch Ultragear gaming monitor",AM,CT,159.99,299.99,0,U3,PG,VS,"47% off the 27G440A monitor"],
+  ["garmin-vivoactive-5-amazon","Garmin vivoactive 5 smartwatch",AM,CF,169,299.99,0,U3,PG,VS,"44% off the vivoactive 5"],
+  ["skullcandy-crusher-anc-2-amazon","Skullcandy Crusher ANC 2 noise cancelling headphones",AM,CA,129.99,259.99,0,U3,PG,VS,"50% off the Crusher ANC 2"],
+  ["dell-15-6-laptop-amazon","Dell 15.6-inch laptop (Core 3 100U, 8GB/256GB)",AM,CL,399.99,515,0,U3,PG,VS,"$115 off the Dell 15.6"],
+  ["wd-elements-8tb-amazon","WD 8TB Elements desktop external hard drive",AM,CT,299.99,414.99,0,U3,PG,VS,"$115 off the 8TB Elements"],
+  ["logitech-g29-amazon","Logitech G29 Driving Force racing wheel and pedals",AM,CT,189.89,299.99,0,U3,PG,VS,"$110 off the G29 wheel"],
+  ["hyperx-omen-27-g3-amazon","HyperX OMEN 27 G3 27-inch FHD 240Hz gaming monitor",AM,CT,139.99,249.99,0,U3,PG,VS,"44% off the OMEN 27 G3"],
+  ["acer-nitro-27-wqhd-amazon","Acer Nitro 27-inch WQHD IPS gaming monitor",AM,CT,189.99,299.99,0,U3,PG,VS,"37% off the Nitro 27 WQHD"],
+  ["sandisk-extreme-1tb-amazon","SanDisk 1TB Extreme portable SSD",AM,CT,198.55,299.99,0,U3,PG,VS,"$101 off the Extreme 1TB"],
+  ["nothing-phone-4a-pro-amazon","Nothing Phone (4a) Pro smartphone",AM,CT,397.99,499,0,U3,PG,VS,"$101 off the Phone (4a) Pro"],
+  ["samsung-galaxy-tab-a11-plus-amazon","Samsung Galaxy Tab A11+ tablet",AM,CT,279,379.99,0,U3,PG,VS,"$101 off the Tab A11+"],
+  ["amazon-ember-55-amazon","Amazon Ember 55-inch QLED with Fire TV",AM,CV,489.99,589.99,0,U3,PG,VS,"$100 off the Ember 55 QLED"],
+  ["lg-34u60zb-amazon","LG 34U60ZB-B 34-inch UltraWide monitor",AM,CT,199.99,299.99,0,U3,PG,VS,"$100 off the 34U60ZB"],
+  ["sandisk-optimus-gx-2tb-amazon","SanDisk Optimus GX PRO 8100 2TB SSD",AM,CT,349.99,444.43,0,U3,PG,VS,"$94 off the Optimus GX 2TB"],
+  ["acer-aspire-go-15-amazon","Acer Aspire Go 15 AI Ready laptop",AM,CL,299.99,390.7,0,U3,PG,VS,"$91 off the Aspire Go 15"],
+  ["lg-27g610a-amazon","LG 27G610A-B 27-inch Ultragear gaming monitor",AM,CT,159.99,249.99,0,U3,PG,VS,"36% off the 27G610A monitor"],
+  ["sansui-32-curved-amazon","SANSUI 32-inch curved 240Hz gaming monitor",AM,CT,169.99,259.99,0,U3,PG,VS,"35% off the SANSUI 32 curved"],
+  ["msi-mag-272urdfa-amazon","MSI MAG 272URDFA E16 gaming monitor",AM,CT,199.99,286.95,0,U3,PG,VS,"$87 off the MAG 272URDFA"],
+  ["hp-omen-27qs-g2-amazon","HP OMEN 27qs G2 gaming monitor (2026)",AM,CT,169.99,254.69,0,U3,PG,VS,"$85 off the OMEN 27qs G2"],
 ].map(X);
