@@ -1,20 +1,16 @@
 // The deals — every price checked by the agent on Black Friday itself,
-// 27 Nov 2026, re-checked 28 Nov 2026 (~17:00 UTC, +20 deals, two prices
-// corrected), checked a final time 28 Nov 2026 (~17:30 UTC, +24 deals,
-// three prices corrected: iPhone Air is the 256GB at $799.99 off $999.99,
-// CMF Buds 2A list $29 not $49, DualSense fell to $54 at Amazon), and
-// checked again 28 Nov 2026 in the evening (+68 deals, two prices
-// corrected: M6 MacBook Pro 14-inch fell to $1,749, and the Watch SE 3
-// Target row's Amazon link now reads $179). Each deal names the product,
-// the store, a link to that product at the store, the sale price, the usual
-// price, when it was checked, where it was read, and a verdict: "new-low"
-// (lowest this season), "strong" (a real cut) or "routine" (a modest cut).
-// `also` lists the same product at another store; `drop` is the morning
-// price when the deal fell again. No `checked` line means 27 Nov 16:00 UTC.
-// The board holds 227 deals: the first 80 live in this file and load with
-// the first paint; the rest live in data2.js and load by import() just
-// after it, so the first load stays small while the board still shows all
-// 227 before the first screenshot.
+// 27 Nov 2026, and re-checked 28 Nov 2026 in four more passes (~17:00,
+// ~17:30, evening, ~17:15 UTC), each adding deals and correcting prices
+// that had moved (v7: +55 deals; MacBook Neo 256GB corrected to $649.99
+// new — the $599.99 listing was refurbished). Each deal names the product,
+// store, store link, sale price, usual price, check time, source, and a
+// verdict: "new-low" (lowest this season), "strong" (a real cut) or
+// "routine" (a modest cut). `also` lists the same product at another
+// store; `drop` is the morning price when the deal fell again. No
+// `checked` line means 27 Nov 16:00 UTC. The board holds 282 deals: the
+// first 80 live in this file and load with the first paint; the rest live
+// in data2.js, loaded by import() just after it, so the first load stays
+// small while the board still shows all 282 before the first screenshot.
 
 export const CHECKED = "2026-11-27T16:00:00Z";
 // Deals added 28 Nov 2026 (~17:00 UTC): The Verge, 9to5Toys Best Buy, BeeBulletin.
@@ -22,6 +18,9 @@ export const C28 = "2026-11-28T17:00:00Z";
 // Deals added 28 Nov 2026 (~17:30 UTC): The Verge still-live list (crawled
 // 16:56 UTC) and 9to5Toys Apple / Cyber Monday pages (crawled 17:06 UTC).
 export const C29 = "2026-11-28T17:30:00Z";
+// Deals added 28 Nov 2026 (~17:15 UTC): The Verge still-live list (crawled
+// 16:56 UTC) and 9to5Toys Walmart Black Friday page (crawled 17:13 UTC).
+export const C30 = "2026-11-28T17:15:00Z";
 
 const deals1 = [
   {
@@ -288,12 +287,13 @@ const deals1 = [
     title: "Apple MacBook Neo 13-inch laptop",
     store: "Amazon",
     category: "Laptops",
-    price: 599.99,
+    price: 649.99,
     was: 699,
     url: "https://www.amazon.com/s?k=Apple+MacBook+Neo+13-inch",
-    source: "TradingView / Benzinga tech roundup, 27 Nov 2026",
-    verdict: "strong",
-    evidence: "$99 off Apple's new budget laptop; Best Buy lists the same machine at $649.99.",
+    checked: C30,
+    source: "9to5Toys / 9to5Mac Day 7 Apple deals, 28 Nov 2026",
+    verdict: "new-low",
+    evidence: "Lowest new price in months; matches Apple's student price.",
     also: [{ store: "Best Buy", price: 649.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Apple+MacBook+Neo+13-inch" }],
   },
   {

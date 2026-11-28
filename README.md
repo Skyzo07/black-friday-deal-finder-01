@@ -4,7 +4,7 @@
 
 # The Deal Desk — Black Friday 2026 deal finder
 
-A static deal-finder site for Black Friday / Cyber Monday 2026: **227 real deals**, each found and checked by the agent on **27–28 Nov 2026** at its store (Amazon, Best Buy, Walmart, Target, Sam's Club, Dell, Costco) and re-checked 28 Nov in the evening, with the product, store, store link, sale price, usual price, discount, check time, source, and an honest verdict — **new low**, **strong deal**, or **routine** — with the evidence behind it. The evening pass added 68 deals and corrected two prices (M6 MacBook Pro 14-inch $1,749 at Amazon, Watch SE 3 Target row's Amazon link $179).
+A static deal-finder site for Black Friday / Cyber Monday 2026: **282 real deals**, each found and checked by the agent on **27–28 Nov 2026** at its store (Amazon, Best Buy, Walmart, Target, Sam's Club, Dell, Costco) and re-checked 28 Nov in the evening and again late evening, with the product, store, store link, sale price, usual price, discount, check time, source, and an honest verdict — **new low**, **strong deal**, or **routine** — with the evidence behind it. The evening pass added 68 deals and corrected two prices (M6 MacBook Pro 14-inch $1,749 at Amazon, Watch SE 3 Target row's Amazon link $179); the late pass added 55 more deals and corrected the MacBook Neo 256GB to $649.99 new (the $599.99 listing was refurbished).
 
 ## What it does
 
@@ -38,6 +38,6 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 - `app/main.js` — search, filters, sorting, hash routing
 - `app/views.js` — card, board, and deal-page HTML
 - `app/data.js` — the first 80 checked deals, loaded with the first paint, with store, prices, check time, source and verdict
-- `app/data2.js` — the remaining 147 checked deals, loaded by `import()` just after the first paint, so the first load stays small while the board shows all 227 deals
+- `app/data2.js` — the remaining 202 checked deals, loaded by `import()` just after the first paint, so the first load stays small while the board shows all 282 deals
 - `main.ts` — the hand-in program
 - `screenshots/` — renders of the site's own code
