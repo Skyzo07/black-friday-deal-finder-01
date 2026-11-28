@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v23; v23 checked 28 Nov 2026 ~19:59 UTC).
+// The rest of the deals (v6–v24; v24 checked 28 Nov 2026 ~20:19 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -32,6 +32,16 @@ const N0=DT+"19:31:00Z";
 const O0=DT+"19:39:00Z";
 const P0=DT+"19:50:00Z";
 const Q0=DT+"19:59:00Z";
+const R0=DT+"20:12:00Z";
+const S0=DT+"20:19:00Z";
+const BV = "Bob Vila Black Friday kitchen deals, 28 Nov 2026";
+const PS = "PopSci Amazon Black Friday deals, 28 Nov 2026";
+const D2 = "DealNews Black Friday deals, 28 Nov 2026";
+const T1 = "Tom's Guide Black Friday deals under $30, 28 Nov 2026";
+const OT = "Overtime Gamer Nintendo eShop Black Friday sale, 28 Nov 2026";
+const PW = "Pogwire Switch 2 Black Friday 2026, 28 Nov 2026";
+const GZ = "Gizmodo Dyson Supersonic Nural Black Friday, 28 Nov 2026";
+const PD = "PriceDrop Shark FlexFusion Black Friday, 28 Nov 2026";
 const SD = "Slickdeals Black Friday frontpage, 28 Nov 2026";
 const NW = "NintendoWire Switch 2 Black Friday deals, 28 Nov 2026";
 const NL = "Nintendo Life Switch 2 Black Friday deals, 28 Nov 2026";
@@ -145,10 +155,10 @@ export const deals2 = [
   ["macbook-neo-512gb-amazon","Apple MacBook Neo 13-inch laptop (512GB)",AM,CL,699,799,"d4",H8,LC,VS,"$100 off the 512GB Neo"],
   ["mario-party-jamboree-s2-amazon","Super Mario Party Jamboree — Nintendo Switch 2 Edition",AM,CG,59,80,"d4",H8,LC,VS,"$21 off Switch 2 party game",[[BB,59,"d0,4,7",H6,Q9]]],
   ["galaxy-z-fold-8-amazon","Samsung Galaxy Z Fold 8 256GB foldable phone",AM,CT,1499.99,1900,2,H4,VG,VN,"$400 off, all-time low",[[BB,1499.99,2,H4,BP]]],
-  ["oura-ring-5-amazon","Oura Ring 5 smart ring",AM,CF,299,399,2,H8,BL,VS,R1],
+  ["oura-ring-5-amazon","Oura Ring 5 smart ring",AM,CF,299,399,2,H8,BL,VS,R1,[[BB,299,0,R0,VG]]],
   ["marshall-emberton-3-amazon","Marshall Emberton III portable speaker",AM,CA,89.99,179.99,"d3",H8,BL,VN,HP+", the best deal seen",[[BB,89.99,2,H2,BP]]],
   ["garmin-instinct-3-amazon","Garmin Instinct 3 AMOLED (45mm) GPS watch",AM,CF,249.99,449.99,2,H8,BL,VS,"$200 off Garmin's rugged watch",[[BB,249.99,2,H5,BP]]],
-  ["anker-power-bank-25k-amazon","Anker laptop power bank, 25,000mAh",AM,CT,91.19,119.99,AMZ+"Anker+laptop+power+bank+25000mAh",H8,BL,VS,R2],
+  ["anker-power-bank-25k-amazon","Anker laptop power bank, 25,000mAh",AM,CT,91.19,119.99,AMZ+"Anker+laptop+power+bank+25000mAh",H8,BL,VS,R2,[[BB,91,0,R0,VG]]],
   ["sony-wh1000xm6-bestbuy","Sony WH-1000XM6 noise-canceling headphones",BB,CA,348,458,2,H8,S7,VS,"Read live off Best Buy's page",[[AM,348,AMZ+"Sony+WH-1000XM6"]]],
   ["hp-omnibook-3-bestbuy","HP OmniBook 3 14-inch OLED laptop",BB,CL,599.99,799.99,1,H8,S7,VS,"$200 off a 14-inch OLED laptop"],
   ["insignia-fridge-bestbuy","Insignia 18 cu ft top-freezer refrigerator",BB,CH,299.99,749.99,"d4",H8,S7,VS,"60% off a full-size fridge"],
@@ -171,7 +181,7 @@ export const deals2 = [
   ["hp-essential-14-target","HP Essential 14-inch laptop","Target",CL,299.99,999.97,TGT+"HP+Essential+14+laptop",H8,S8,VN,"70% off, $700 under list"],
   ["titan-massage-chair-sams","Titan Pro 3D massage chair","Sam's Club",CH,1499,2999,"https://www.samsclub.com/s/titan%20massage%20chair",H8,S8,VN,HP+", full massage chair"],
   ["jbl-tour-one-m3-amazon","JBL Tour One M3",AM,CA,149.95,449.95,0,H8,VG,VN,R4],
-  ["nex-playground-amazon","Nex Playground",AM,CY,209,299,0,H8,VG,VN,R5],
+  ["nex-playground-amazon","Nex Playground",AM,CY,209,299,0,H8,VG,VN,R5,[[WM,209,0,R0,VG]]],
   ["alienware-aw2726dm-bestbuy","Alienware AW2726DM QD-OLED monitor",BB,CT,279.99,349.99,2,H8,VG,VN,"Lowest price yet, 27-inch",[["Dell",279.99,"https://www.dell.com/en-us/search/Alienware%20AW2726DM"]]],
   ["cmf-buds-2a-amazon","CMF Buds 2A",AM,CA,17.89,29,0,H8,VG,VN,"38% off buds with ANC",[[WM,18,0,Q0,SD]]],
   ["tapo-smart-plug-amazon","TP-Link Tapo Matter smart plug mini",AM,CS,7.99,19.99,"d2,5",H8,VG,VN,"60% off the Matter smart plug"],
@@ -203,8 +213,8 @@ export const deals2 = [
   ["govee-lamp-2-pro-amazon","Govee Table Lamp 2 Pro X Sound by JBL",AM,CS,119.99,179.99,4,H8,VG,VS,"A third off the smart lamp",[[BB,119.99,BBY+"Govee+Table+Lamp+2+Pro"]]],
   ["pixel-buds-2a-amazon","Google Pixel Buds 2a",AM,CA,99,129,0,H8,VG,VS,"23% off Google's newest buds",[[BB,99]]],
   ["glocusent-light-amazon","Glocusent bookmark reading light",AM,CT,10.49,33.89,0,H8,VG,VS,"69% off the pocket light"],
-  ["echo-dot-max-amazon","Amazon Echo Dot Max smart speaker",AM,CT,50,120,"1-2",H8,ST,VN,"58% off the big Echo speaker",[[TA,49.99,2,H2,T9]]],
-  ["echo-time-amazon","Amazon Echo Time smart clock",AM,CT,99.99,199.99,"1-0",H8,ST,VN,HP+" on a new smart",[[TA,99.99,2,H2,T9]]],
+  ["echo-dot-max-amazon","Amazon Echo Dot Max smart speaker",AM,CT,50,120,"1-2",H8,ST,VN,"58% off the big Echo speaker",[[TA,49.99,2,H2,T9],[BB,50,0,R0,VG]]],
+  ["echo-time-amazon","Amazon Echo Time smart clock",AM,CT,99.99,199.99,"1-0",H8,ST,VN,HP+" on a new smart",[[TA,99.99,2,H2,T9],[BB,100,0,R0,VG]]],
   ["aqara-u400-amazon","Aqara U400 smart lock",AM,CS,200,270,0,H8,ST,VS,"Hands-free UWB + Home Key"],
   ["assassins-creed-black-flag-amazon","Assassin's Creed Black Flag (PS5)",AM,CG,30,60,AMZ+"Assassins+Creed+Black+Flag+PS5",H8,ST,VN,HP+" on the remake"],
   ["funko-astro-bot-amazon","Funko POP! Jumbo Astro Bot",AM,CY,20,40,0,H8,ST,VN,HP+" on jumbo Astro Bot"],
@@ -307,7 +317,7 @@ export const deals2 = [
   ["alexa-tablet-11-128gb-amazon","Amazon Alexa Tablet 11, 128GB",AM,CT,220,380,0,H0,WQ,VN,"New all-time low, $160 off"],
   ["alexa-tablet-12-pro-amazon","Amazon Alexa Tablet 12 Pro, 128GB",AM,CT,349.99,500,1,P0,Q9,VN,"All-time low, $150 off, 128GB"],
   ["alexa-tablet-12-pro-nanomatte-amazon","Amazon Alexa Tablet 12 Pro Nanomatte, 128GB",AM,CT,400,550,1,P0,Q9,VN,"All-time low, $150 off Nano"],
-  ["alexa-photo-frame-amazon","Amazon Alexa Photo Frame",AM,CT,115,200,0,H0,WQ,VN,"New low, $85 off Alexa"],
+  ["alexa-photo-frame-amazon","Amazon Alexa Photo Frame",AM,CT,115,200,0,H0,WQ,VN,"New low, $85 off Alexa",[[BB,115,0,R0,VG]]],
   ["fire-tv-stick-4k-select-amazon","Amazon Fire TV Stick 4K Select",AM,CT,18,50,0,H0,WQ,VN,"64% off the Select 4K stick",[[BB,17.99,"d0,4",H6,"ClarkDeals Best Buy, 28 Nov 2026"]]],
   ["fire-tv-stick-hd-amazon","Amazon Fire TV Stick HD",AM,CT,16,40,0,H0,WQ,VN,"60% off the HD stick, $16 now",[[BB,15.99,"1-0",H6,BP]]],
   ["watch-series-12-cell-46mm-amazon","Apple Watch Series 12 Cellular 46mm",AM,CT,449,549,0,H0,WQ,VN,AL+" on the 46mm"],
@@ -326,11 +336,11 @@ export const deals2 = [
   ["belkin-qi2-2in1-amazon","Belkin 2-in-1 Qi2 25W magnetic charging station",AM,CT,43,60,AMZ+"Belkin+2-in-1+Qi2+25W+magnetic+charger",H0,WQ,VS,"$17 off Belkin's Qi2 station"],
   ["belkin-qi2-3in1-foldable-amazon","Belkin 25W 3-in-1 foldable charging station",AM,CT,77,100,0,H0,WQ,VS,"$23 off Belkin's foldable"],
   ["ugreen-magflow-pro-10k-amazon","UGREEN 25W Qi2 MagFlow Pro 10K power bank",AM,CT,90,150,"d1,2",H0,WQ,VS,"$60 off the liquid-cooled Qi2"],
-  ["pixel-watch-5-45mm-amazon","Google Pixel Watch 5, 45mm",AM,CT,330,430,0,H0,WQ,VS,"$100 off larger Pixel Watch"],
+  ["pixel-watch-5-45mm-amazon","Google Pixel Watch 5, 45mm",AM,CT,330,430,0,H0,WQ,VS,"$100 off larger Pixel Watch",[[BB,329.99,0,R0,BP]]],
   ["pixel-watch-5-lte-41mm-amazon","Google Pixel Watch 5 LTE, 41mm",AM,CT,400,500,0,H0,WQ,VS,R8],
   ["pixel-watch-5-lte-45mm-amazon","Google Pixel Watch 5 LTE, 45mm",AM,CT,430,530,0,H0,WQ,VS,R8],
   ["ps-access-controller-amazon","PlayStation Access Controller",AM,CG,60,90,0,H0,WQ,VS,"$30 off Sony's PS5 controller"],
-  ["control-resonant-amazon","CONTROL Resonant (PlayStation 5)",AM,CG,50,60,"dp",H0,WQ,VS,"$10 off Remedy's new PS5 game",[[BB,50,2,H6,Q9]]],
+  ["control-resonant-amazon","CONTROL Resonant (PlayStation 5)",AM,CG,50,60,"dp",H0,WQ,VS,"$10 off Remedy's new PS5 game",[[BB,50,2,H6,Q9],["PlayStation Store",48,"https://store.playstation.com/en-us/search/CONTROL%20Resonant",R0,VG]]],
   ["cyberpunk-2077-ultimate-amazon","Cyberpunk 2077: Ultimate Edition (PlayStation 5)",AM,CG,40,50,"dp",H0,WQ,VS,"$10 off the Ultimate Edition",[[BB,40,"d2,3p",H6,Q9]]],
   ["switch-sports-resort-amazon","Nintendo Switch Sports Resort",AM,CG,45,50,0,H0,WQ,VR,"$5 off the Switch sports set"],
   ["xenoblade-upgrade-pack-amazon","Xenoblade Chronicles Switch 2 Edition Upgrade Pack",AM,CG,7,10,"d4",H0,WQ,VS,TH+"Switch 2 upgrade"],
@@ -650,4 +660,41 @@ export const deals2 = [
   ["all-clad-fry-pan-set-costco","All-Clad Ceramic Nonstick fry pan set, 3-piece","Costco",CK,109.99,140,"https://www.costco.com/CatalogSearch?dept=All&keyword=All-Clad+Ceramic+Nonstick+Fry+Pan+Set",Q0,SD,VS,"$30 off the All-Clad fry pans"],
   ["tile-lock-scrabble-amazon","Winning Moves Tile Lock Scrabble board game",AM,CY,16,30,0,Q0,SD,VS,"46% off Tile Lock Scrabble"],
   ["echo-studio-home-camera-amazon","Amazon Echo Studio with Home Camera",AM,CT,180,250,0,Q0,CM2,VS,"$70 off the Studio + camera"],
+  ["kingdom-hearts-collection-amazon","KINGDOM HEARTS Collection [I–III] Amazon Exclusive Edition (Nintendo Switch 2, Game-Key Card)",AM,CG,59.99,74.99,0,R0,NL,VS,"$15 off the KH collection"],
+  ["dragon-quest-1-2-amazon","DRAGON QUEST I & II HD-2D Remake (Nintendo Switch 2, Game-Key Card)",AM,CG,33.24,59.99,0,R0,NL,VS,"44% off Dragon Quest I & II"],
+  ["trails-in-the-sky-amazon","Trails in the Sky 1st Chapter (Nintendo Switch)",AM,CG,29.99,59.99,0,R0,NL,VS,"Half price on Trails in Sky"],
+  ["metal-gear-solid-vol2-amazon","METAL GEAR SOLID MASTER COLLECTION Vol. 2 (Nintendo Switch 2, Game-Key Card)",AM,CG,29.99,49.99,0,R0,NL,VS,"$20 off Metal Gear Vol. 2"],
+  ["ea-sports-fc-27-digital-amazon","EA SPORTS FC 27 (Nintendo Switch 2, digital)",AM,CG,34.99,69.99,0,R0,OT,VS,"Half price on FC 27 digital"],
+  ["persona-3-reload-digital-amazon","Persona 3 Reload Digital Premium Edition (Nintendo Switch 2, digital)",AM,CG,44.99,89.99,0,R0,OT,VS,"Half price Persona 3 Reload"],
+  ["hogwarts-quidditch-bundle-digital-amazon","Hogwarts Legacy + Quidditch Champions Deluxe Editions bundle (Nintendo Switch 2, digital)",AM,CG,9.99,99.99,0,R0,PW,VS,"90% off the Hogwarts bundle"],
+  ["oblivion-remastered-digital-amazon","The Elder Scrolls IV: Oblivion Remastered Deluxe Edition (Nintendo Switch 2, digital)",AM,CG,41.99,59.99,0,R0,OT,VS,"$18 off Oblivion Remastered"],
+  ["skyrim-fallout-bundle-digital-amazon","The Elder Scrolls V: Skyrim Anniversary Edition + Fallout 4 Anniversary Edition bundle (Nintendo Switch 2, digital)",AM,CG,53.99,89.99,0,R0,OT,VS,"$36 off Skyrim + Fallout 4"],
+  ["last-of-us-part-1-amazon","The Last of Us Part I (PlayStation 5)",AM,CG,28,70,0,R0,Q9,VS,"60% off The Last of Us I"],
+  ["breville-barista-express-amazon","Breville Barista Express espresso machine",AM,CK,494.95,699.95,0,R0,D2,VN,"All-time low, $205 off"],
+  ["breville-barista-pro-amazon","Breville Barista Pro espresso machine",AM,CK,629.95,849.95,0,R0,BV,VS,"$220 off the Barista Pro"],
+  ["breville-smart-oven-pro-amazon","Breville Smart Oven Air Fryer Pro",AM,CK,299.95,399.95,0,R0,BV,VS,"$100 off Breville's oven"],
+  ["delonghi-dedica-maestro-plus-amazon","De'Longhi Dedica Maestro Plus espresso machine",AM,CK,237.45,499.95,0,R0,BV,VS,"52% off the Dedica Maestro"],
+  ["delonghi-magnifica-duo-amazon","De'Longhi Magnifica Duo automatic espresso machine",AM,CK,699.95,999.95,0,R0,BV,VS,"$300 off the Magnifica Duo"],
+  ["delonghi-eletta-explore-amazon","De'Longhi Eletta Explore espresso machine",AM,CK,1499.95,1999.95,0,R0,PS,VS,"$500 off the Eletta Explore"],
+  ["breville-pizzaiolo-amazon","Breville Smart Oven Pizzaiolo",AM,CK,699.95,999.95,0,R0,PS,VS,"$300 off the Pizzaiolo oven"],
+  ["fellow-espresso-series-1-amazon","Fellow Espresso Series 1 espresso machine",AM,CK,1279.95,1599.95,0,R0,PS,VS,"$320 off Fellow's espresso"],
+  ["kitchenaid-kf6-amazon","KitchenAid KF6 fully automatic espresso machine",AM,CK,997,1200,0,R0,D2,VS,"$203 off the KitchenAid KF6"],
+  ["ninja-luxe-cafe-premier-amazon","Ninja Luxe Café Premier 3-in-1 espresso machine",AM,CK,499.99,599.99,0,R0,BV,VS,"$100 off the Luxe Café"],
+  ["instant-pot-vortex-mini-amazon","Instant Pot Vortex Plus Mini 4-Quart air fryer",AM,CK,59.99,129.99,0,R0,BV,VS,"53% off the Vortex Mini"],
+  ["blink-outdoor4-doorbell-bundle-amazon","Blink Outdoor 4 camera + Battery Doorbell 2K+ bundle",AM,CS,27.99,149.98,0,R0,PG,VS,"81% off the Blink bundle"],
+  ["blink-mini-2k-amazon","Blink Mini 2K+ smart security camera",AM,CS,15,39,0,R0,T1,VS,"61% off the Blink Mini"],
+  ["amazon-smart-plug-amazon","Amazon Smart Plug",AM,CS,14,24,0,R0,T1,VS,"$10 off Amazon's plug"],
+  ["dyson-supersonic-nural-amazon","Dyson Supersonic Nural hair dryer",AM,CB,349.99,449.99,0,R0,GZ,VN,"All-time low, $100 off"],
+  ["shark-flexfusion-amazon","Shark FlexFusion Ceramic Air Styler & Straightener",AM,CB,284.05,429.99,0,R0,PD,VS,"$146 off the FlexFusion"],
+  ["dyson-airstrait-amazon","Dyson Airstrait straightener",AM,CB,399.99,499.99,0,R0,PS,VS,"$100 off the Airstrait"],
+  ["asics-gel-kayano-30-womens-amazon","Asics Gel-Kayano 30 running shoes (Women's)",AM,CF,69,160,0,R0,T1,VS,"57% off Gel-Kayano 30"],
+  ["asics-sonicblast-amazon","Asics Sonicblast running shoes",AM,CF,85,180,0,R0,T1,VS,"53% off the Sonicblast"],
+  ["compustar-csx5305s-bestbuy","Compustar CSX5305S-KIT 2-way remote starter with DroneMobile, installation included",BB,CT,399.99,650,0,R0,SD,VS,"38% off remote start + install"],
+  ["stanley-quencher-14oz-rose-amazon","Stanley Quencher H2.0 FlowState Tumbler, 14 oz (Rose Quartz)",AM,CK,12.5,25,0,R0,SD,VN,"50% off, matches all-time low"],
+  ["kasa-kl110-amazon","Kasa KL110 LED Wi-Fi smart bulb",AM,CS,7,16,0,S0,T1,VS,"Smart bulb down to $7"],
+  ["lego-roses-amazon","LEGO Roses Building Set",AM,CY,11,14,0,S0,T1,VS,"Roses set down to $11"],
+  ["anker-soundcore-p20i-amazon","Anker Soundcore P20i wireless earbuds",AM,CA,19,39,0,S0,T1,VS,"P20i earbuds down to $19"],
+  ["yeti-yonder-20oz-amazon","YETI Yonder Water Bottle, 20 oz",AM,CK,21,30,0,S0,T1,VS,"Yonder bottle down to $21"],
+  ["instant-pot-duo-6qt-amazon","Instant Pot Duo 7-in-1 pressure cooker, 6-Qt",AM,CK,60,109.99,0,S0,D2,VS,"Duo 6-Qt down to $60"],
+  ["it-takes-two-switch2-digital-amazon","It Takes Two (Nintendo Switch 2, digital)",AM,CG,29.99,39.99,0,S0,OT,VS,"It Takes Two down to $29.99"],
 ].map(X);

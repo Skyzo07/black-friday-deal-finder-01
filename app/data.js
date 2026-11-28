@@ -1,4 +1,4 @@
-// Deals checked 27-28 Nov 2026 (v23: 32 deals, 10 also, 0 fix 19:59
+// Deals checked 27-28 Nov 2026 (v24: 37 deals, 10 also, 1 fix 20:19
 // 28 Nov) Each deal: product, store, link, prices, check time,
 // source, verdict; `also` = same product at
 //another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
@@ -86,7 +86,7 @@ const deals1 = [
     title: "Bose QuietComfort headphones (1st gen)",
     store: AM,
     category: CA,
-    price: 169,
+    price: 167,
     was: 359,
     url: 2,
     source: MA,
@@ -879,6 +879,7 @@ const deals1 = [
     source: BG,
     verdict: VS,
     evidence: "$100 off list, 19% under avg",
+    also: [{ store: BB, price: 199.99 }],
   },
   {
     id: "dyson-airwrap-bestbuy",
@@ -891,6 +892,7 @@ const deals1 = [
     source: "Houston News Network Black Friday 2026 ads roundup, 27 Nov 2026",
     verdict: VN,
     evidence: "$150 off a rarely-cut tool",
+    also: [{ store: AM, price: 499.99 }],
   },
   // ---- v3 additions, checked 28 Nov 2026 (A8) ----
   {
@@ -1072,7 +1074,6 @@ const deals1 = [
 
 // The rest of the board loads after the first paint, so the first load
 // stays small: the dossier counts this module under "later by import()",
-// and the board still renders every deal before the first screenshot.
 const { deals2, fillUrls } = await import("./data2.js");
 export const deals = [...deals1, ...deals2];
 fillUrls(deals); // Omitted search links are rebuilt from store + title.
