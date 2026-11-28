@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v21; v21 checked 28 Nov 2026 ~19:39 UTC).
+// The rest of the deals (v6–v22; v22 checked 28 Nov 2026 ~19:50 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -30,6 +30,9 @@ const L0=DT+"19:09:00Z";
 const M0=DT+"19:20:00Z";
 const N0=DT+"19:31:00Z";
 const O0=DT+"19:39:00Z";
+const P0=DT+"19:50:00Z";
+const W2 = "9to5Toys Best of Weekly Cyber Monday, 28 Nov 2026";
+const RG = "VR.org and Road to VR Meta Black Friday sale, 28 Nov 2026";
 const PG = "PC Guide Cyber Monday deals, 28 Nov 2026";
 const T0 = "9to5Toys top 10 still live, 28 Nov 2026";
 const G9 = "9to5Google Black Friday deals, 26 Nov 2026";
@@ -83,6 +86,7 @@ const CR = "Streaming";
 const CV = "TVs";
 const CK = "Kitchen";
 const CF = "Fitness";
+const CB = "Beauty";
 
 // Numeric url N: title slug minus last N tokens; "1-K": drop first token
 // and last K; "d2,3": drop slug-token indices 2,3 (order kept); trailing
@@ -289,8 +293,8 @@ export const deals2 = [
   ["alexa-tablet-8-128gb-amazon","Amazon Alexa Tablet 8, 128GB",AM,CT,160,280,0,H0,WQ,VN,R7],
   ["alexa-tablet-11-64gb-amazon","Amazon Alexa Tablet 11, 64GB",AM,CT,200,320,0,H0,WQ,VN,R7],
   ["alexa-tablet-11-128gb-amazon","Amazon Alexa Tablet 11, 128GB",AM,CT,220,380,0,H0,WQ,VN,"New all-time low, $160 off"],
-  ["alexa-tablet-12-pro-amazon","Amazon Alexa Tablet 12 Pro, 128GB",AM,CT,400,500,1,H0,WQ,VS,AL+D1],
-  ["alexa-tablet-12-pro-nanomatte-amazon","Amazon Alexa Tablet 12 Pro Nanomatte, 128GB",AM,CT,450,550,1,H0,WQ,VS,AL+D1],
+  ["alexa-tablet-12-pro-amazon","Amazon Alexa Tablet 12 Pro, 128GB",AM,CT,349.99,500,1,P0,Q9,VN,"All-time low, $150 off, 128GB"],
+  ["alexa-tablet-12-pro-nanomatte-amazon","Amazon Alexa Tablet 12 Pro Nanomatte, 128GB",AM,CT,400,550,1,P0,Q9,VN,"All-time low, $150 off Nano"],
   ["alexa-photo-frame-amazon","Amazon Alexa Photo Frame",AM,CT,115,200,0,H0,WQ,VN,"New low, $85 off Alexa"],
   ["fire-tv-stick-4k-select-amazon","Amazon Fire TV Stick 4K Select",AM,CT,18,50,0,H0,WQ,VN,"64% off the Select 4K stick",[[BB,17.99,"d0,4",H6,"ClarkDeals Best Buy, 28 Nov 2026"]]],
   ["fire-tv-stick-hd-amazon","Amazon Fire TV Stick HD",AM,CT,16,40,0,H0,WQ,VN,"60% off the HD stick, $16 now",[[BB,15.99,"1-0",H6,BP]]],
@@ -546,4 +550,60 @@ export const deals2 = [
   ["lego-arcanine-amazon","LEGO Pokémon Arcanine",AM,CY,87.99,109.99,0,O0,L8,VS,"$22 off the Arcanine set"],
   ["lego-pikachu-poke-ball-amazon","LEGO Pokémon Pikachu and Poké Ball",AM,CY,159.95,199.99,0,O0,L8,VN,"$40 off the Pikachu set"],
   ["lego-hogwarts-castle-amazon","LEGO Harry Potter Hogwarts Castle and Grounds",AM,CY,136.99,169.99,0,O0,L8,VS,"$33 off the Hogwarts Castle",[[TA,136.99,0,O0,T9]]],
+  ["razer-deathadder-essential-amazon","Razer DeathAdder Essential wired gaming mouse",AM,CG,14.99,29.99,0,P0,W2,VN,"$15 off the DeathAdder mouse",[[BB,14.99,0,P0,BP]]],
+  ["sony-inzone-h9-amazon","Sony INZONE H9 wireless noise-canceling gaming headset",AM,CG,138,329.99,0,P0,W2,VN,"All-time low, $192 off H9"],
+  ["sony-inzone-h9-ii-amazon","Sony INZONE H9 II wireless noise-canceling gaming headset",AM,CG,238,348,0,P0,W2,VS,"$110 off the INZONE H9 II"],
+  ["backbone-pro-amazon","Backbone Pro mobile gaming controller",AM,CG,119.99,169.99,0,P0,W2,VN,"All-time low, $50 off Pro"],
+  ["backbone-one-2nd-gen-amazon","Backbone One mobile gaming controller (2nd generation)",AM,CG,59.99,79.99,0,P0,W2,VS,"$20 off the Backbone One",[[BB,59.99,0,P0,BP]]],
+  ["gears-eday-controller-walmart","Microsoft Gears of War: E-Day Xbox controller",WM,CG,49,90,0,P0,W2,VN,"All-time low, $41 off, Walmart"],
+  ["gamesir-x5-lite-amazon","GameSir X5 Lite Xbox 25th Anniversary controller",AM,CG,35.99,44.99,0,P0,W2,VN,"First deal, $9 off the X5 Lite"],
+  ["nba-2k27-switch2-amazon","NBA 2K27 Nintendo Switch 2 Edition",AM,CG,29.99,69.99,0,P0,W2,VN,"All-time low, $40 off 2K27",[[TA,29.99,0,P0,T9]]],
+  ["logitech-g309-white-amazon","Logitech G309 LIGHTSPEED wireless gaming mouse, white",AM,CG,40.99,89.99,0,P0,W2,VS,"$49 off the G309, white"],
+  ["logitech-mx-master-3s-bluetooth-amazon","Logitech MX Master 3S Bluetooth Edition mouse, Graphite",AM,CT,72.19,99.99,0,P0,W2,VN,"All-time low, $28 off MX 3S",[[BB,79.99,0,P0,BP]]],
+  ["samsung-m9-m90sf-amazon","Samsung 32-inch M9 (M90SF) OLED 4K 165Hz Smart Monitor",AM,CT,1179.99,1599.99,0,P0,W2,VN,"All-time low, $420 off the M9",[[BB,1179.99,0,P0,BP]]],
+  ["sharge-pixel-67w-amazon","Sharge Pixel 67W travel charger",AM,CT,23,50,0,P0,W2,VN,"All-time low, $27 off, 67W"],
+  ["sharge-pixel-100w-amazon","Sharge Pixel 100W travel charger",AM,CT,44.9,75,0,P0,W2,VN,"All-time low, $30 off, 100W"],
+  ["sharge-pixel-140w-amazon","Sharge Pixel 140W travel charger",AM,CT,65.9,95,0,P0,W2,VN,"All-time low, $29 off, 140W"],
+  ["eero-7-1pack-amazon","Amazon eero 7 dual-band Wi-Fi 7 router, 1-pack",AM,CT,139.99,169.99,0,P0,W2,VS,"$30 off the eero 7, 1-pack"],
+  ["eero-max-7-1pack-amazon","Amazon eero Max 7 Wi-Fi 7 router, 1-pack",AM,CT,420,600,0,P0,W2,VS,"$180 off the eero Max 7"],
+  ["eero-pro-7-amazon","Amazon eero Pro 7 Wi-Fi 7 router",AM,CT,225,300,0,P0,W2,VS,"$75 off the eero Pro 7"],
+  ["eero-outdoor-7-1pack-amazon","Amazon eero Outdoor 7 Wi-Fi 7 router, 1-pack",AM,CT,310,400,0,P0,W2,VS,"$90 off the eero Outdoor 7"],
+  ["acer-4k-usb-c-hdmi-cable-amazon","Acer 4K USB-C to HDMI braided cable",AM,CT,10,14,0,P0,W2,VR,"$4 off the 4K USB-C cable"],
+  ["lisen-140w-magnetic-3-macbook-cable-amazon","LISEN 140W Magnetic 3 MacBook charging cable",AM,CT,18,22,0,P0,W2,VR,"$4 off the 140W MagSafe cable"],
+  ["lisen-140w-2in1-silicone-cable-amazon","LISEN 140W 2-in-1 USB-C silicone charging cable",AM,CT,15,18,0,P0,W2,VR,"$3 off the 2-in-1 USB-C cable"],
+  ["ugreen-magflow-25w-2in1-foldable-amazon","UGREEN MagFlow 25W 2-in-1 foldable wireless charger",AM,CT,28.49,59.99,0,P0,W2,VN,"All-time low, $31.50 off"],
+  ["ugreen-magflow-pro-25w-2in1-station-amazon","UGREEN MagFlow Pro 25W 2-in-1 wireless charging station",AM,CT,70,100,0,P0,W2,VN,"All-time low, $30 off station"],
+  ["ugreen-magflow-pro-25w-3in1-cooling-amazon","UGREEN MagFlow Pro 25W 3-in-1 Cooling Charging Station",AM,CT,110,160,0,P0,W2,VS,"$50 off the 3-in-1 cooling"],
+  ["anker-nano-100w-smart-display-travel-charger-amazon","Anker Nano 100W 4-port Universal Travel Charger with Smart Display",AM,CT,59.99,80,0,P0,W2,VN,"All-time low, $20 off, 100W"],
+  ["anker-100w-laptop-smart-display-charger-amazon","Anker 100W Laptop Smart Display USB-C Charger",AM,CT,40,60,0,P0,W2,VN,"All-time low, $20 off charger"],
+  ["baseus-spacemate-rd1-mini-amazon","Baseus Spacemate RD1 Mini 10-in-1 docking station",AM,CT,89.99,169.99,0,P0,W2,VN,"All-time low, $80 off the dock"],
+  ["rove-r3-dashcam-amazon","ROVE R3 3-channel dash cam",AM,CT,159.99,300,0,P0,W2,VS,"$140 off the R3 dash cam"],
+  ["rove-r2-dashcam-amazon","ROVE R2 front and rear dash cam with free 128GB card",AM,CT,140,200,0,P0,W2,VS,"$60 off the R2, free 128GB"],
+  ["rove-r2-4k-dual-pro-dashcam-amazon","ROVE R2-4K Dual PRO dash cam with free 128GB card",AM,CT,206,350,0,P0,W2,VS,"$144 off the R2-4K PRO"],
+  ["viofo-a229-plus-amazon","VIOFO A229 Plus 2K dash cam",AM,CT,159.99,210,0,P0,W2,VN,"All-time low, $50 off Plus"],
+  ["viofo-a229-pro-amazon","VIOFO A229 Pro 4K dash cam",AM,CT,219.99,309.99,0,P0,W2,VN,"All-time low, $90 off Pro"],
+  ["redtiger-f7np-amazon","REDTIGER F7NP 4K front and rear dash cam with 128GB card",AM,CT,109.99,169.99,0,P0,W2,VS,"$60 off the F7NP, 4K dual"],
+  ["redtiger-f77-amazon","REDTIGER F77 4K front and rear dash cam",AM,CT,190,300,0,P0,W2,VS,"$110 off the F77, 4K dual"],
+  ["meta-adventurer-amazon","Meta Adventurer AI glasses",AM,CT,254.15,299,0,P0,RG,VS,"15% off the Meta Adventurer"],
+  ["oakley-meta-hstn-amazon","Oakley Meta HSTN AI glasses",AM,CT,299.25,399,0,P0,RG,VS,"25% off the Oakley HSTN"],
+  ["oakley-meta-vanguard-amazon","Oakley Meta Vanguard AI glasses",AM,CT,424.15,499,0,P0,RG,VS,"15% off the Oakley Vanguard"],
+  ["watch-series-12-bronze-milanese-amazon","Apple Watch Series 12, Bronze, Milanese Loop",AM,CT,299,449,0,P0,W2,VN,"All-time low, $150 off Bronze"],
+  ["alexa-tablet-12-pro-nanomatte-256gb-amazon","Amazon Alexa Tablet 12 Pro Nanomatte, 256GB",AM,CT,560,680,0,P0,Q9,VS,"$120 off the 256GB Nanomatte"],
+  ["govee-outdoor-lamp-post-amazon","Govee Matter Outdoor Lamp Post",AM,CS,124.99,300,0,P0,W2,VN,"All-time low, 58% off post"],
+  ["govee-floor-lamp-3-amazon","Govee Floor Lamp 3",AM,CS,118.99,170,0,P0,W2,VN,"All-time low, $51 off lamp 3"],
+  ["govee-tree-floor-lamp-amazon","Govee Matter Tree Floor Lamp",AM,CS,118.99,170,0,P0,W2,VS,"$51 off the Tree Floor Lamp"],
+  ["govee-updown-wall-light-2pack-amazon","Govee Outdoor UpDown Wall Light, 2-pack",AM,CS,150,230,0,P0,W2,VN,"Best price yet, $80 off, 2-pack"],
+  ["eve-aqua-amazon","Eve Aqua HomeKit Smart Water Controller",AM,CS,99.95,150,0,P0,W2,VS,"$50 off the Eve Aqua, best 2026"],
+  ["mammotion-luba-mini-2-amazon","Mammotion LUBA Mini 2 AWD 1500H robot mower with cleaning stand",AM,CS,1599,1999,0,P0,W2,VN,"All-time low, $400 off LUBA",[[BB,1599,0,P0,BP]]],
+  ["mammotion-luba-2-awd-3000x-amazon","Mammotion LUBA 2 AWD 3000X robot mower with blade set",AM,CS,1928,2399,0,P0,W2,VS,"$471 off the LUBA 3000X"],
+  ["mammotion-luba-2-awd-3000hx-amazon","Mammotion LUBA 2 AWD 3000HX robot mower",AM,CS,1998,2378,0,P0,W2,VS,"$380 off the LUBA 3000HX"],
+  ["ring-indoor-cam-2k-bestbuy","Ring Indoor Cam 2K",BB,CS,25,60,0,P0,W2,VS,"$35 off the Indoor Cam 2K"],
+  ["ring-doorbell-plus-bestbuy","Ring Battery Doorbell Plus",BB,CS,90,180,0,P0,W2,VS,"$90 off the Doorbell Plus"],
+  ["beatbot-sora-70-amazon","Beatbot Sora 70 5-in-1 robot pool cleaner",AM,CH,999,1499,0,P0,W2,VS,"$500 off the Sora 70 pool bot"],
+  ["ego-21-select-cut-mower-amazon","EGO 21-inch Select Cut cordless mower",AM,CH,580,779,0,P0,W2,VS,"$199 off the Select Cut mower"],
+  ["ego-8-auger-amazon","EGO 8-inch cordless auger",AM,CH,449,659,0,P0,W2,VS,"$210 off the 8-inch auger"],
+  ["ego-foldable-area-light-amazon","EGO foldable area light",AM,CH,119,179,0,P0,W2,VS,"$60 off the foldable area light"],
+  ["ego-z6-zero-turn-amazon","EGO Z6 42-inch zero-turn riding mower",AM,CH,4499,5300,0,P0,W2,VS,"$801 off the zero-turn Z6"],
+  ["hisense-c3-projector-amazon","Hisense C3 Triple Color RGB Smart Laser Projector",AM,CV,1499.99,1999.99,0,P0,W2,VN,"All-time low, $500 off the C3"],
+  ["waterpik-aquarius-amazon","Waterpik Aquarius water flosser",AM,CB,50,99.99,0,P0,W2,VS,"Half price, $50 off Waterpik"],
 ].map(X);
