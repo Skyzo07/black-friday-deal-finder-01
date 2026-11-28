@@ -1,4 +1,4 @@
-// Deals checked 27–28 Nov 2026 (v16: 16 new deals, 7 also, 2 fix 19:00
+// Deals checked 27–28 Nov 2026 (v17: 19 deals, 6 also, 2 dedupe, 1 fix 19:00
 // 28 Nov). Each deal: product, store, link, prices, check time,
 // source, verdict; `also` = same product at
 // another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
@@ -60,14 +60,13 @@ const deals1 = [
     category: CA,
     price: 149,
     was: 249,
-    url: AMZ+"Apple+AirPods+Pro+3",
     source: TW,
     verdict: VN,
     evidence: "$100 off, the lowest ever",
     also: [
-      { store: TA, price: 149.99, url: TGT+"Apple+AirPods+Pro+3" },
-      { store: BB, price: 149.99, url: BBY+"Apple+AirPods+Pro+3" },
-      { store: WM, price: 149, url: WMT+"Apple+AirPods+Pro+3" },
+      { store: TA, price: 149.99 },
+      { store: BB, price: 149.99 },
+      { store: WM, price: 149 },
     ],
   },
   {
@@ -77,11 +76,10 @@ const deals1 = [
     category: CA,
     price: 149.99,
     was: 249.99,
-    url: TGT+"Apple+AirPods+Pro+3",
     source: TW,
     verdict: VS,
     evidence: "A cent under Amazon's headline",
-    also: [{ store: AM, price: 149, url: AMZ+"Apple+AirPods+Pro+3" }],
+    also: [{ store: AM, price: 149 }],
   },
   {
     id: "bose-quietcomfort-amazon",
@@ -107,7 +105,7 @@ const deals1 = [
     source: UA,
     verdict: VS,
     evidence: "$160 off the current-gen Bose",
-    also: [{ store: BB, price: 199, url: BBY+"Bose+QuietComfort+headphones+2nd+gen", checked: B3, source: B }],
+    also: [{ store: BB, price: 199, checked: B3, source: B }],
   },
   {
     id: "sony-wh1000xm6-amazon",
@@ -274,7 +272,6 @@ const deals1 = [
     category: CT,
     price: 349.99,
     was: 679.97,
-    url: AMZ+"Samsung+9100+Pro+2TB+SSD",
     source: TW,
     verdict: VN,
     evidence: "Nearly half price, Gen5 drive",
@@ -287,7 +284,6 @@ const deals1 = [
     category: CT,
     price: 599,
     was: 699,
-    url: AMZ+"Apple+iPad+mini",
     source: TR,
     verdict: VS,
     evidence: "$100 off the current iPad mini",
@@ -364,7 +360,6 @@ const deals1 = [
     category: CV,
     price: 228,
     was: 398,
-    url: WMT+"Hisense+65-inch+H5R1+4K+Roku+TV",
     source: TW,
     verdict: VS,
     evidence: "$170 off; Walmart's doorbuster",
@@ -400,7 +395,6 @@ const deals1 = [
     category: CV,
     price: 2299.99,
     was: 3399.99,
-    url: BBY+"Samsung+S95H+65-inch+OLED+TV",
     source: N1,
     verdict: VS,
     evidence: "$1,100 off Samsung's 65-inch",
@@ -412,7 +406,6 @@ const deals1 = [
     category: CV,
     price: 84.98,
     was: 149.99,
-    url: BBY+"Insignia+40-inch+Fire+TV",
     checked: B3,
     source: B,
     verdict: VS,
@@ -425,13 +418,12 @@ const deals1 = [
     category: CG,
     price: 499.99,
     was: 549.99,
-    url: TGT+"Nintendo+Switch+2+Mario+Kart+World+bundle",
     source: "NerdSnack Black Friday 2026 deals for nerds, 26 Nov 2026",
     verdict: VR,
     evidence: "Only 9% off, but first ever",
     also: [
-      { store: AM, price: 499.99, url: AMZ+"Nintendo+Switch+2+Mario+Kart+World+bundle" },
-      { store: WM, price: 499.99, url: WMT+"Nintendo+Switch+2+Mario+Kart+World+bundle" },
+      { store: AM, price: 499.99 },
+      { store: WM, price: 499.99 },
       { store: "Costco", price: 519.99, url: "https://www.costco.com/CatalogSearch?dept=All&keyword=Nintendo+Switch+2+Mario+Kart+World" },
     ],
   },
@@ -442,12 +434,11 @@ const deals1 = [
     category: CG,
     price: 54,
     was: 74.99,
-    url: AMZ+"PlayStation+DualSense+wireless+controller",
     source: PO,
     verdict: VS,
     evidence: "$21 off in Sony's Nov sale",
     drop: 59.99,
-    also: [{ store: BB, price: 54.99, url: BBY+"PlayStation+DualSense+wireless+controller" }],
+    also: [{ store: BB, price: 54.99 }],
   },
   {
     id: "dualsense-edge-amazon",
@@ -456,7 +447,6 @@ const deals1 = [
     category: CG,
     price: 169,
     was: 199.99,
-    url: AMZ+"PlayStation+DualSense+Edge+wireless+controller",
     source: FC,
     verdict: VS,
     evidence: "$30 off Sony's pro controller",
@@ -548,7 +538,6 @@ const deals1 = [
     category: CH,
     price: 299,
     was: 399.99,
-    url: WMT+"Dyson+V8+Cyclone+cordless+vacuum",
     source: PF,
     verdict: VR,
     evidence: "25% off; the V8 was $299",
@@ -561,7 +550,6 @@ const deals1 = [
     category: CH,
     price: 280,
     was: 1000,
-    url: AMZ+"Dyson+360+Vis+Nav+robot+vacuum",
     source: LA,
     verdict: VN,
     evidence: "72% off Dyson's robot vacuum",
@@ -585,7 +573,6 @@ const deals1 = [
     category: CH,
     price: 118,
     was: 199.99,
-    url: WMT+"Shark+Navigator+Lift-Away+upright+vacuum",
     source: PF,
     verdict: VS,
     evidence: "41% off, 15,000 ratings",
@@ -597,7 +584,6 @@ const deals1 = [
     category: CH,
     price: 39.99,
     was: 99.99,
-    url: AMZ+"Ring+Battery+Doorbell+2K",
     source: LA,
     verdict: VS,
     evidence: "60% off Ring's new 2K doorbell",
@@ -635,7 +621,6 @@ const deals1 = [
     category: CK,
     price: 150,
     was: 250,
-    url: AMZ+"Ninja+Foodi+digital+air+fry+countertop+oven",
     source: MH,
     verdict: VS,
     evidence: "40% off, a most-wanted deal",
@@ -736,7 +721,6 @@ const deals1 = [
     category: CY,
     price: 11.95,
     was: 19.99,
-    url: AMZ+"LEGO+Botanicals+tiny+wildflower+bouquet",
     source: MM,
     verdict: VS,
     evidence: "40% off a gift, rarely cut",
@@ -880,7 +864,6 @@ const deals1 = [
     category: CB,
     price: 14.5,
     was: 29,
-    url: AMZ+"amika+Perk+Up+dry+shampoo",
     source: MM,
     verdict: VS,
     evidence: "Half off the cult dry shampoo",
@@ -930,7 +913,6 @@ const deals1 = [
     category: CT,
     price: 49,
     was: 79,
-    url: AMZ+"Apple+Pencil+USB-C",
     checked: A8,
     source: LC,
     verdict: VS,
@@ -1091,8 +1073,9 @@ const deals1 = [
 // The rest of the board loads after the first paint, so the first load
 // stays small: the dossier counts this module under "later by import()",
 // and the board still renders every deal before the first screenshot.
-const { deals2 } = await import("./data2.js");
+const { deals2, fillUrls } = await import("./data2.js");
 export const deals = [...deals1, ...deals2];
+fillUrls(deals); // Omitted search links are rebuilt from store + title.
 
 
 export const categories = [...new Set(deals.map((d) => d.category))].sort();
