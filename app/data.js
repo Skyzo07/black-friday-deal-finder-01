@@ -1,14 +1,9 @@
-// The deals: every price checked on Black Friday itself, 27 Nov 2026,
-// and re-checked 28 Nov in six more passes (v9: +27 deals ~18:00 UTC;
-// v10: +21 deals and 18 second-store prices ~19:00 UTC). Each deal names
-// product, store, store link, sale price, usual price, check time, source
-// and a verdict: "new-low" (lowest this season), "strong" (a real cut) or
-// "routine" (a modest cut). `also` lists the same product at another
-// store; `drop` is the morning price when the deal fell again. No
-// `checked` line means 27 Nov 16:00 UTC. The board holds 363 deals: the
-// first 80 live in this file and load with the first paint; the rest live
-// in data2.js, loaded by import() just after it, so the first load stays
-// small while the board still shows all 363 before the first screenshot.
+// Deals checked 27–28 Nov 2026 (v11: more deals and second-store prices
+// ~18:00 UTC 28 Nov). Each deal: product, store, link, sale price, usual
+// price, check time, source, verdict ("new-low"/"strong"/"routine").
+// `also` = same product at another store. No `checked` = 27 Nov 16:00 UTC.
+// The first 80 deals load with the first paint; the rest live in data2.js,
+// loaded by import() just after it.
 
 export const CHECKED = "2026-11-27T16:00:00Z";
 // C28–C32: deals added 28 Nov 2026, ~17:00–18:00 UTC.
@@ -18,6 +13,9 @@ export const C30 = "2026-11-28T17:15:00Z";
 export const C32 = "2026-11-28T18:00:00Z";
 // v10 second-store prices, checked 28 Nov 2026 ~19:00 UTC.
 export const C33 = "2026-11-28T19:00:00Z";
+export const C34 = "2026-11-28T18:00:00Z";
+const S_MR = "MacRumors Black Friday, 28 Nov 2026";
+const S_TGT = "Target Black Friday page, 28 Nov 2026";
 const S_BBP = "Best Buy product page, 28 Nov 2026";
 const S_9TBB = "9to5Toys Best Buy Black Friday, 28 Nov 2026";
 const S_PCW = "PCWorld / Riverside Herald, 28 Nov 2026";
@@ -75,7 +73,7 @@ const deals1 = [
     url: "https://www.target.com/s?searchTerm=Apple+AirPods+Pro+3",
     source: S_TV,
     verdict: VS,
-    evidence: "A cent under Amazon's headline price in effect.",
+    evidence: "A cent under Amazon's headline.",
     also: [{ store: AM, price: 149, url: "https://www.amazon.com/s?k=Apple+AirPods+Pro+3" }],
   },
   {
@@ -88,7 +86,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Bose+QuietComfort+headphones",
     source: "Mashable best early Black Friday deals, 26 Nov 2026",
     verdict: VN,
-    evidence: "53% off, the lowest Mashable tracked.",
+    evidence: "53% off, Mashable's lowest.",
     also: [{ store: TA, price: 169.99, url: "https://www.target.com/s?searchTerm=Bose+QuietComfort+headphones" }],
   },
   {
@@ -101,7 +99,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Bose+QuietComfort+2nd+generation+headphones",
     source: "USA Quick Update AirPods Pro 3 deal report, 27 Nov 2026",
     verdict: VS,
-    evidence: "$160 off the current-generation Bose over-ear.",
+    evidence: "$160 off the current-gen Bose.",
     also: [{ store: BB, price: 199, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Bose+QuietComfort+headphones+2nd+gen", checked: C33, source: S_BBP }],
   },
   {
@@ -166,7 +164,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Beats+360+headphones",
     source: "9to5Toys official Black Friday Apple deals, updated 26 Nov 2026",
     verdict: VN,
-    evidence: "All-time low on the new modular Beats 360.",
+    evidence: "All-time low on the new Beats 360.",
   },
   {
     id: "sony-wh-ch520-amazon",
@@ -203,7 +201,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Apple+Watch+Series+12+42mm",
     source: S_TREND,
     verdict: VN,
-    evidence: "All-time low on the whole Series 12 line.",
+    evidence: "All-time low across Series 12.",
     drop: 329,
     also: [{ store: BB, price: 299, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Apple+Watch+Series+12+42mm", checked: C33, source: S_9TBB }],
   },
@@ -232,7 +230,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Apple+AirTag+2",
     source: S_TREND,
     verdict: VN,
-    evidence: "Matches the all-time low for the new AirTag 2",
+    evidence: "Matches the AirTag 2 all-time low.",
     drop: 23,
     also: [{ store: BB, price: 18, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Apple+AirTag+2" }],
   },
@@ -260,7 +258,7 @@ const deals1 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VR,
-    evidence: "Big cut, but this price recurs yearly.",
+    evidence: "Big cut, but it recurs yearly.",
   },
   {
     id: "samsung-9100-pro-2tb-amazon",
@@ -272,7 +270,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Samsung+9100+Pro+2TB+SSD",
     source: S_TV,
     verdict: VN,
-    evidence: "Nearly half price on a flagship Gen5 drive",
+    evidence: "Nearly half price on a Gen5 drive.",
     also: [{ store: BB, price: 349.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Samsung+9100+Pro+2TB", checked: C33, source: S_BBP }],
   },
   {
@@ -309,7 +307,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=MacBook+Air+13-inch+M5",
     source: "BeeBulletin Black Friday deals 2026, 27 Nov 2026",
     verdict: VN,
-    evidence: "$310 off the new M5 Air — Amazon cut it again today.",
+    evidence: "$310 off the new M5 Air.",
     drop: 1049,
     also: [{ store: BB, price: 999, url: "https://www.bestbuy.com/site/searchpage.jsp?st=MacBook+Air+M5+13-inch" }],
   },
@@ -337,7 +335,7 @@ const deals1 = [
     url: "https://www.bestbuy.com/site/searchpage.jsp?st=HP+OmniBook+5+14-inch+OLED",
     source: "BeeBulletin Black Friday deals 2026, checked 27 Nov 2026",
     verdict: VN,
-    evidence: "$350 off — the cheapest OLED laptop in Best Buy's sale.",
+    evidence: "$350 off — the cheapest OLED laptop.",
     also: [{ store: "HP", price: 449.99, url: "https://www.hp.com/us-en/shop/custom/hp-omnibook-5-laptop-ai-14t-mh000-2k-oled-display-14-inch-intel-core-5-8gb-ram-256gb-ssd-smoke-silver-E22CKAV_2758001?catEntryId=3074457345622498319", checked: C33, source: S_HP }],
   },
   {
@@ -350,7 +348,7 @@ const deals1 = [
     url: "https://www.bestbuy.com/site/searchpage.jsp?st=TCL+65-inch+4K+Fire+TV",
     source: "BeeBulletin Black Friday deals 2026, checked 27 Nov 2026",
     verdict: VN,
-    evidence: "$240 off, the season's lowest for it.",
+    evidence: "$240 off, the season's lowest.",
   },
   {
     id: "hisense-65-roku-walmart",
@@ -362,7 +360,7 @@ const deals1 = [
     url: "https://www.walmart.com/search?q=Hisense+65-inch+H5R1+4K+Roku+TV",
     source: S_TV,
     verdict: VS,
-    evidence: "$170 off; Walmart's headline big-screen doorbuster.",
+    evidence: "$170 off; Walmart's doorbuster.",
   },
   {
     id: "hisense-98-qd5-bestbuy",
@@ -398,7 +396,7 @@ const deals1 = [
     url: "https://www.bestbuy.com/site/searchpage.jsp?st=Samsung+S95H+65-inch+OLED+TV",
     source: "NewsOneUSA Black Friday 2026 record tech deals, 27 Nov 2026",
     verdict: VS,
-    evidence: "$1,100 off Samsung's flagship 65-inch OLED.",
+    evidence: "$1,100 off Samsung's 65-inch OLED.",
   },
   {
     id: "insignia-40-fire-tv-bestbuy",
@@ -423,7 +421,7 @@ const deals1 = [
     url: "https://www.target.com/s?searchTerm=Nintendo+Switch+2+Mario+Kart+World+bundle",
     source: "NerdSnack Black Friday 2026 deals for nerds, 26 Nov 2026",
     verdict: VR,
-    evidence: "Only 9% off, but a first-ever discount.",
+    evidence: "Only 9% off, but a first-ever cut.",
     also: [
       { store: AM, price: 499.99, url: "https://www.amazon.com/s?k=Nintendo+Switch+2+Mario+Kart+World+bundle" },
       { store: WM, price: 499.99, url: "https://www.walmart.com/search?q=Nintendo+Switch+2+Mario+Kart+World+bundle" },
@@ -440,7 +438,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=PlayStation+DualSense+wireless+controller",
     source: "Polygon 10 best Black Friday gaming deals, 27 Nov 2026",
     verdict: VS,
-    evidence: "$21 off in Sony's own sale to 30 Nov.",
+    evidence: "$21 off in Sony's sale to 30 Nov.",
     drop: 59.99,
     also: [{ store: BB, price: 54.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=PlayStation+DualSense+wireless+controller" }],
   },
@@ -467,7 +465,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Donkey+Kong+Bananza+Switch+2",
     source: "Polygon 10 best Black Friday gaming deals, 27 Nov 2026",
     verdict: VS,
-    evidence: "First discount ever on Nintendo's new platformer",
+    evidence: "First discount on Nintendo's game.",
     also: [{ store: BB, price: 49.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Donkey+Kong+Bananza+Switch+2" }],
   },
   {
@@ -480,7 +478,7 @@ const deals1 = [
     url: "https://www.target.com/s?searchTerm=NBA+2K27+PS5",
     source: S_TV,
     verdict: VS,
-    evidence: "56% off in Target's Black Friday sale.",
+    evidence: "56% off in Target's sale.",
   },
   {
     id: "metroid-prime-4-walmart",
@@ -505,7 +503,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Razer+BlackShark+V3",
     source: "Ultragamerz Black Friday 2026 deals under $300, 27 Nov 2026",
     verdict: VS,
-    evidence: "A third off Razer's new esports headset.",
+    evidence: "A third off Razer's new headset.",
   },
   {
     id: "dyson-v9-amazon",
@@ -546,7 +544,7 @@ const deals1 = [
     url: "https://www.walmart.com/search?q=Dyson+V8+Cyclone+cordless+vacuum",
     source: "Passion for Savings Walmart Black Friday ad preview, 27 Nov 2026",
     verdict: VR,
-    evidence: "25% off; the V8 has been $299 in Walmart events before.",
+    evidence: "25% off; the V8 was $299 before.",
     also: [{ store: AM, price: 299.99, url: "https://www.amazon.com/s?k=Dyson+V8+Cyclone", checked: C33, source: "ProductBible Dyson sale, 28 Nov 2026" }],
   },
   {
@@ -571,7 +569,7 @@ const deals1 = [
     url: "https://www.bestbuy.com/site/searchpage.jsp?st=Dyson+V10+Konical%20cordless+vacuum",
     source: "BuyVia live Best Buy Black Friday 2026 deals, 27 Nov 2026",
     verdict: VS,
-    evidence: "$150 off in Best Buy's Black Friday ad.",
+    evidence: "$150 off in Best Buy's ad.",
   },
   {
     id: "shark-navigator-walmart",
@@ -607,7 +605,7 @@ const deals1 = [
     url: "https://www.walmart.com/search?q=KitchenAid+Artisan+5-quart+stand+mixer",
     source: S_BARGAIN,
     verdict: VS,
-    evidence: "$150 off KitchenAid's best-selling mixer.",
+    evidence: "$150 off KitchenAid's top mixer.",
     also: [{ store: AM, price: 349, url: "https://www.amazon.com/s?k=KitchenAid+Artisan+5-quart+stand+mixer" }],
   },
   {
@@ -620,7 +618,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=KitchenAid+Artisan+5-quart+stand+mixer",
     source: "Miami Herald Amazon Black Friday Week deals, 26 Nov 2026",
     verdict: VS,
-    evidence: "Held at $349 at both stores all week.",
+    evidence: "Held at $349 at both stores.",
     also: [{ store: WM, price: 349, url: "https://www.walmart.com/search?q=KitchenAid+Artisan+5-quart+stand+mixer" }],
   },
   {
@@ -657,7 +655,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Ninja+Air+Fryer+Pro+5+Qt",
     source: S_BARGAIN,
     verdict: VS,
-    evidence: "39% off list and 22% below its 90-day average",
+    evidence: "39% off list, 22% below average.",
   },
   {
     id: "ninja-kitchen-system-pro-plus-amazon",
@@ -669,7 +667,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Ninja+Kitchen+System+Pro+Plus",
     source: S_BARGAIN,
     verdict: VS,
-    evidence: "35% off list and 36% below its 90-day average of $201.54",
+    evidence: "35% off list, 36% below average.",
   },
   {
     id: "keurig-k-express-amazon",
@@ -681,7 +679,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Keurig+K-Express+single+serve+coffee+maker",
     source: "ClarkDeals best Black Friday deals at Amazon, 27 Nov 2026",
     verdict: VR,
-    evidence: "45% off, but it sold near $60 before.",
+    evidence: "45% off, but it sold near $60.",
     also: [{ store: WM, price: 35, url: "https://www.walmart.com/search?q=Keurig+K-Express+single+serve+coffee+maker" }],
   },
   {
@@ -694,7 +692,7 @@ const deals1 = [
     url: "https://www.walmart.com/search?q=Nespresso+Vertuo+Pop",
     source: S_LADY,
     verdict: VS,
-    evidence: "About $30 less than NBC Select found.",
+    evidence: "About $30 less than NBC Select.",
   },
   {
     id: "vitamix-5200-amazon",
@@ -718,7 +716,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=LEGO+Bluey+Grannies+11216",
     source: S_MAMA2,
     verdict: VS,
-    evidence: "A third off a stocking-stuffer LEGO set.",
+    evidence: "A third off a LEGO stocking stuffer.",
     also: [
       { store: TA, price: 9.99, url: "https://www.target.com/s?searchTerm=LEGO+Bluey+Grannies", checked: C33, source: "Target product page, 28 Nov 2026" },
       { store: WM, price: 9.99, url: "https://www.walmart.com/search?q=LEGO+Bluey+Grannies", checked: C33, source: "Walmart product page, 28 Nov 2026" },
@@ -758,7 +756,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=LEGO+Creator+Forest+Animals+Red+Fox",
     source: "BuzzFeed top early Amazon Black Friday deals, 27 Nov 2026",
     verdict: VS,
-    evidence: "30% off a 3-in-1 kit — about $12 per animal you can build.",
+    evidence: "30% off a 3-in-1 kit, ~$12 each.",
   },
   {
     id: "disney-stitch-amazon",
@@ -770,7 +768,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Disney+Stitch+Puppetronic",
     source: S_MAMA,
     verdict: VS,
-    evidence: "More than half off an interactive Stitch for under $30.",
+    evidence: "More than half off a Stitch plush.",
   },
   {
     id: "monopoly-junior-amazon",
@@ -782,7 +780,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Monopoly+Junior+Marvel+Spidey",
     source: S_MAMA,
     verdict: VS,
-    evidence: "43% off a first board game for the youngest players.",
+    evidence: "43% off a first board game.",
   },
   {
     id: "little-tikes-dream-machine-amazon",
@@ -806,7 +804,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Hurry+Up+Chicken+Butt+game",
     source: S_MAMA2,
     verdict: VS,
-    evidence: "Half price on a new-today 26 Nov deal.",
+    evidence: "Half price on a new 26 Nov deal.",
   },
   {
     id: "burts-bees-gift-set-amazon",
@@ -842,7 +840,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Sol+de+Janeiro+Cheirosa+Sol+Go+mini+perfume+mists",
     source: S_MAMA,
     verdict: VN,
-    evidence: "61% off, the deepest beauty cut on the board.",
+    evidence: "61% off, the deepest beauty cut.",
   },
   {
     id: "sol-de-janeiro-leite-nectar-amazon",
@@ -890,7 +888,7 @@ const deals1 = [
     url: "https://www.amazon.com/s?k=Shark+FlexStyle+air+multi-styler",
     source: S_BARGAIN,
     verdict: VS,
-    evidence: "$100 off list and 19% below its 90-day average",
+    evidence: "$100 off list, 19% below average.",
   },
   {
     id: "dyson-airwrap-bestbuy",
@@ -942,7 +940,7 @@ const deals1 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VN,
-    evidence: "New all-time low on Apple's toughest watch.",
+    evidence: "New all-time low on Apple's watch.",
   },
   {
     id: "apple-watch-series-12-46mm-amazon",
@@ -955,7 +953,8 @@ const deals1 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VN,
-    evidence: "All-time low on the larger Series 12.",
+    evidence: "All-time low, larger Series 12.",
+      also: [{ store: BB, price: 349, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Apple+Watch+Series+12+46mm", checked: C34, source: S_MR }],
   },
   {
     id: "macbook-air-m5-1tb-amazon",
@@ -968,7 +967,8 @@ const deals1 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VS,
-    evidence: "$400 off — the biggest Air cut this sale.",
+    evidence: "$400 off, the biggest Air cut.",
+      also: [{ store: BB, price: 1199, url: "https://www.bestbuy.com/site/searchpage.jsp?st=MacBook+Air+M5+13-inch+1TB", checked: C34, source: S_9TBB }],
   },
   {
     id: "macbook-air-m5-15-amazon",
@@ -982,6 +982,7 @@ const deals1 = [
     source: S_LASTCALL,
     verdict: VS,
     evidence: "$300 off the bigger-screen M5 Air",
+      also: [{ store: BB, price: 1199, url: "https://www.bestbuy.com/site/searchpage.jsp?st=MacBook+Air+M5+15-inch", checked: C34, source: S_9TBB }],
   },
   {
     id: "macbook-pro-m6-14-amazon",
@@ -994,7 +995,7 @@ const deals1 = [
     checked: C29,
     source: "9to5Toys Apple deals, 28 Nov 2026",
     verdict: VN,
-    evidence: "All-time low on the brand-new M6 Pro.",
+    evidence: "All-time low on the new M6 Pro.",
     drop: 1779,
   },
   {
@@ -1021,7 +1022,8 @@ const deals1 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VN,
-    evidence: "New all-time low on Amazon's best-sounding Echo.",
+    evidence: "New all-time low on Amazon's.",
+      also: [{ store: TA, price: 159.99, url: "https://www.target.com/s?searchTerm=Amazon+Echo+Studio", checked: C34, source: S_TGT }],
   },
   {
     id: "fire-tv-stick-4k-amazon",
@@ -1047,7 +1049,7 @@ const deals1 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VS,
-    evidence: "More than half off the fastest Fire TV box.",
+    evidence: "More than half off the fastest box.",
   },
   {
     id: "pixel-11-pro-xl-amazon",

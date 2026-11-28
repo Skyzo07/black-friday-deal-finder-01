@@ -1,12 +1,8 @@
-// The rest of the deals — the second half of the v5 board, plus v6 (+68),
-// v7 (+55), v8 (+33) and v9 (+27, 9to5Toys Steals Weekly + LEGO, The
-// Verge still-live). v10 (+21, checked 28 Nov 2026 ~19:00 UTC: 9to5Toys
-// LEGO sale, Echo deals, Pixel Buds Pro 2, Bee Frontier, Luna Ultra,
-// GoPro MISSION 1 PRO, Ray-Ban Meta Gen 2, Resident Evil Requiem).
-// Loaded by data.js with import() after the first paint.
-// Check times and the most-repeated sources are local consts in THIS file
-// (C28–C33, S_VERGE…): this module must not import data.js, or the two
-// modules deadlock on the top-level await that loads this file.
+// The rest of the deals (v6–v11; v11 checked 28 Nov 2026 ~18:00 UTC).
+// Loaded by data.js with import() after the first paint. Check times and
+// the most-repeated sources are local consts in THIS file: this module
+// must not import data.js, or the two modules deadlock on the top-level
+// await that loads this file.
 const C28 = "2026-11-28T17:00:00Z";
 const C29 = "2026-11-28T17:30:00Z";
 const C30 = "2026-11-28T17:15:00Z";
@@ -26,6 +22,10 @@ const C32 = "2026-11-28T18:00:00Z";
 const S_STEALS9 = "9to5Toys Steals Weekly, 28 Nov 2026";
 const S_LEGO9 = "9to5Toys LEGO Black Friday deals, 28 Nov 2026";
 const C33 = "2026-11-28T19:00:00Z";
+const C34 = "2026-11-28T18:00:00Z";
+const S_BBP = "Best Buy product page, 28 Nov 2026";
+const S_MR = "MacRumors Black Friday, 28 Nov 2026";
+const S_TGT = "Target Black Friday page, 28 Nov 2026";
 const S_ECHO = "9to5Toys Amazon Echo Black Friday, 28 Nov 2026";
 const S_9T5 = "9to5Toys Black Friday, 28 Nov 2026";
 
@@ -61,6 +61,7 @@ export const deals2 = [
     source: S_LASTCALL,
     verdict: VS,
     evidence: "$115 off Google's current watch",
+      also: [{ store: BB, price: 299.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Google+Pixel+Watch+5+41mm", checked: C34, source: S_BBP }],
   },
   {
     id: "galaxy-s26-ultra-amazon",
@@ -112,7 +113,7 @@ export const deals2 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VS,
-    evidence: "A third off Sony's accessibility controller",
+    evidence: "A third off Sony's controller.",
   },
   {
     id: "spiderman-2-amazon",
@@ -138,7 +139,7 @@ export const deals2 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VS,
-    evidence: "$25 off the keyboard most offices buy",
+    evidence: "$25 off the office keyboard.",
   },
   {
     id: "macbook-neo-512gb-amazon",
@@ -151,7 +152,7 @@ export const deals2 = [
     checked: C28,
     source: S_LASTCALL,
     verdict: VS,
-    evidence: "$100 off the 512GB Neo, double the storage.",
+    evidence: "$100 off the 512GB Neo.",
   },
   {
     id: "mario-party-jamboree-s2-amazon",
@@ -203,7 +204,8 @@ export const deals2 = [
     checked: C28,
     source: S_BLESS,
     verdict: VN,
-    evidence: "Half price, the best deal seen on it.",
+    evidence: "Half price, the best deal seen.",
+      also: [{ store: BB, price: 89.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Marshall+Emberton+III", checked: C34, source: S_BBP }],
   },
   {
     id: "garmin-instinct-3-amazon",
@@ -216,7 +218,7 @@ export const deals2 = [
     checked: C28,
     source: S_BLESS,
     verdict: VS,
-    evidence: "$200 off Garmin's rugged AMOLED watch",
+    evidence: "$200 off Garmin's rugged watch.",
   },
   {
     id: "anker-power-bank-25k-amazon",
@@ -229,7 +231,7 @@ export const deals2 = [
     checked: C28,
     source: S_BLESS,
     verdict: VS,
-    evidence: "24% off the editors' laptop power bank.",
+    evidence: "24% off the editors' power bank.",
   },
   {
     id: "sony-wh1000xm6-bestbuy",
@@ -242,7 +244,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE27,
     verdict: VS,
-    evidence: "Read live off Best Buy's own page at $348",
+    evidence: "Read live off Best Buy's own page.",
     also: [{ store: AM, price: 348, url: "https://www.amazon.com/s?k=Sony+WH-1000XM6" }],
   },
   {
@@ -295,7 +297,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE27,
     verdict: VN,
-    evidence: "70% off a Mini LED set, $1,400 under list",
+    evidence: "70% off a Mini LED set.",
   },
   {
     id: "ninja-creami-deluxe-bestbuy",
@@ -360,7 +362,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE28,
     verdict: VS,
-    evidence: "40% off Shark's filter-free purifier.",
+    evidence: "40% off Shark's purifier.",
   },
   {
     id: "asus-vivobook-16-bestbuy",
@@ -373,7 +375,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE28,
     verdict: VS,
-    evidence: "42% off a 16-inch everyday laptop at $349.99",
+    evidence: "42% off a 16-inch everyday laptop.",
   },
   {
     id: "asus-v16-bestbuy",
@@ -386,7 +388,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE28,
     verdict: VS,
-    evidence: "48% off a gaming laptop, $600 under list",
+    evidence: "48% off a gaming laptop.",
   },
   {
     id: "vizio-75-qled-walmart",
@@ -399,7 +401,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE27,
     verdict: VS,
-    evidence: "75-inch QLED for $348, cheapest per inch.",
+    evidence: "75-inch QLED for $348.",
   },
   {
     id: "keurig-k-express-walmart",
@@ -412,7 +414,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE27,
     verdict: VS,
-    evidence: "Read live off Walmart's own page at $35",
+    evidence: "Read live off Walmart's own page.",
     also: [{ store: AM, price: 60, url: "https://www.amazon.com/s?k=Keurig+K-Express+single+serve+coffee+maker" }],
   },
   {
@@ -452,7 +454,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE28,
     verdict: VN,
-    evidence: "84% off — the steepest cut in the check.",
+    evidence: "84% off, the steepest cut here.",
   },
   {
     id: "apple-watch-se-3-target",
@@ -465,7 +467,7 @@ export const deals2 = [
     checked: C28,
     source: S_STORE27,
     verdict: VS,
-    evidence: "Read live off Target's own page at $179.99",
+    evidence: "Read live off Target's own page.",
     also: [{ store: AM, price: 179, url: "https://www.amazon.com/s?k=Apple+Watch+SE+3+40mm" }],
   },
   {
@@ -531,7 +533,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VN,
-    evidence: "Lowest price so far in 2026, $90 off.",
+    evidence: "Lowest price so far in 2026.",
   },
   {
     id: "alienware-aw2726dm-bestbuy",
@@ -544,7 +546,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VN,
-    evidence: "Lowest price yet on the 27-inch 240Hz QD-OLED.",
+    evidence: "Lowest price yet on the 27-inch.",
     also: [{ store: "Dell", price: 279.99, url: "https://www.dell.com/en-us/search/Alienware%20AW2726DM" }],
   },
   {
@@ -558,7 +560,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VN,
-    evidence: "38% off buds with ANC and an IP54 rating",
+    evidence: "38% off buds with ANC and an IP54.",
   },
   {
     id: "tapo-smart-plug-amazon",
@@ -584,7 +586,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$420 off the self-cleaning robot vac.",
+    evidence: "$420 off the self-cleaning robot.",
   },
   {
     id: "dreame-x60-ultra-amazon",
@@ -610,7 +612,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price on the entry B6 OLED — 4K.",
+    evidence: "Half price on the entry B6 OLED",
   },
   {
     id: "garmin-forerunner-265s-amazon",
@@ -623,7 +625,8 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$150 off Garmin's midrange OLED runner",
+    evidence: "$150 off Garmin's midrange OLED.",
+      also: [{ store: BB, price: 299.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Garmin+Forerunner+265S", checked: C34, source: S_BBP }],
   },
   {
     id: "pixel-11-pro-amazon",
@@ -650,6 +653,7 @@ export const deals2 = [
     source: S_VERGE,
     verdict: VS,
     evidence: "$160 off the Atmos soundbar.",
+      also: [{ store: BB, price: 339, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Sonos+Beam+Gen+2", checked: C34, source: S_BBP }],
   },
   {
     id: "roborock-qrevo-curv2-amazon",
@@ -662,7 +666,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$450 off Roborock's first roller-mop vac",
+    evidence: "$450 off Roborock's first.",
   },
   {
     id: "oura-ring-5-walmart",
@@ -688,7 +692,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "24% off the editors' laptop power bank.",
+    evidence: "24% off the editors' power bank.",
   },
   {
     id: "ring-doorbell-2k-bestbuy",
@@ -714,7 +718,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VN,
-    evidence: "All-time low on the new modular Beats 360.",
+    evidence: "All-time low on the new modular.",
   },
   {
     id: "meta-quest-3s-amazon",
@@ -766,7 +770,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VR,
-    evidence: "Big cut, but this price recurs yearly.",
+    evidence: "Big cut, but this price recurs.",
   },
   {
     id: "msi-claw-a8-bestbuy",
@@ -779,7 +783,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$300 off the Ryzen Z2 Extreme handheld.",
+    evidence: "$300 off the Ryzen Z2 Extreme.",
     also: [{ store: "MSI", price: 999, url: "https://us-store.msi.com/Sale/2026-Holiday-Deals/2026-Holiday-Deals-NB/Claw-A8-BZ2EM-070US?sort=p.model&order=ASC&limit=60" }],
   },
   {
@@ -806,7 +810,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$280 off the 14-inch 120Hz ultraportable.",
+    evidence: "$280 off the 14-inch 120Hz.",
   },
   {
     id: "roku-pro-65-amazon",
@@ -832,7 +836,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$320 off the self-emptying robot vac and mop.",
+    evidence: "$320 off the self-emptying robot.",
   },
   {
     id: "xreal-one-pro-amazon",
@@ -845,7 +849,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$150 off the AR glasses with a huge virtual screen.",
+    evidence: "$150 off the AR glasses with a huge.",
     also: [{ store: BB, price: 524.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Xreal+One+Pro" }],
   },
   {
@@ -859,7 +863,7 @@ export const deals2 = [
     checked: C28,
     source: "Dell store listing, read 28 Nov 2026",
     verdict: VS,
-    evidence: "$150 off the 165Hz Tandem OLED monitor.",
+    evidence: "$150 off the 165Hz Tandem OLED.",
   },
   {
     id: "sony-wh1000xm4c-amazon",
@@ -886,7 +890,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price on the year's big open-world sequel.",
+    evidence: "Half price on the year's big.",
   },
   {
     id: "ember-mug-3-amazon",
@@ -899,7 +903,7 @@ export const deals2 = [
     checked: C33,
     source: S_9T5,
     verdict: VS,
-    evidence: "A third off the temperature-controlled mug.",
+    evidence: "A third off the Ember Mug.",
     also: [{ store: BB, price: 99.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Ember+Mug+3" }],
   },
   {
@@ -913,7 +917,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VS,
-    evidence: "A third off the smart lamp with a JBL speaker inside.",
+    evidence: "A third off the smart lamp.",
     also: [{ store: BB, price: 119.99, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Govee+Table+Lamp+2+Pro" }],
   },
   {
@@ -955,6 +959,7 @@ export const deals2 = [
     source: S_STEALS,
     verdict: VN,
     evidence: "58% off the big Echo speaker",
+      also: [{ store: TA, price: 49.99, url: "https://www.target.com/s?searchTerm=Amazon+Echo+Dot+Max", checked: C34, source: S_TGT }],
   },
   {
     id: "echo-time-amazon",
@@ -967,7 +972,8 @@ export const deals2 = [
     checked: C28,
     source: S_STEALS,
     verdict: VN,
-    evidence: "Half price on the brand-new smart clock",
+    evidence: "Half price on the brand-new smart.",
+      also: [{ store: TA, price: 99.99, url: "https://www.target.com/s?searchTerm=Amazon+Echo+Time", checked: C34, source: S_TGT }],
   },
   {
     id: "aqara-u400-amazon",
@@ -993,7 +999,7 @@ export const deals2 = [
     checked: C28,
     source: S_STEALS,
     verdict: VN,
-    evidence: "Half price on the remake — an all-time low at $30.",
+    evidence: "Half price on the remake",
   },
   {
     id: "funko-astro-bot-amazon",
@@ -1019,7 +1025,7 @@ export const deals2 = [
     checked: C28,
     source: S_STEALS,
     verdict: VN,
-    evidence: "Half price on the cooled Qi2.2 MagSafe charger",
+    evidence: "Half price on the cooled charger.",
   },
   {
     id: "macbook-air-m5-13-24gb-1tb-amazon",
@@ -1033,6 +1039,7 @@ export const deals2 = [
     source: "9to5Toys Amazon Last Call, 28 Nov 2026",
     verdict: VS,
     evidence: "$400 off the maxed-out 13-inch Air.",
+      also: [{ store: BB, price: 1399, url: "https://www.bestbuy.com/site/searchpage.jsp?st=MacBook+Air+M5+13-inch+24GB+1TB", checked: C34, source: S_9T5 }],
   },
   {
     id: "macbook-air-m5-15-1tb-amazon",
@@ -1045,7 +1052,8 @@ export const deals2 = [
     checked: C28,
     source: "9to5Toys Amazon Last Call, 28 Nov 2026",
     verdict: VS,
-    evidence: "$400 off the 15-inch Air with a 1TB drive.",
+    evidence: "$400 off the 15-inch Air with a 1TB.",
+      also: [{ store: BB, price: 1399, url: "https://www.bestbuy.com/site/searchpage.jsp?st=MacBook+Air+M5+15-inch+1TB", checked: C34, source: S_9T5 }],
   },
   {
     id: "jbl-tour-one-m3-bestbuy",
@@ -1071,7 +1079,7 @@ export const deals2 = [
     checked: C28,
     source: S_VERGE,
     verdict: VN,
-    evidence: "Lowest price so far in 2026, $90 off.",
+    evidence: "Lowest price so far in 2026.",
     also: [{ store: BB, price: 209, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Nex+Playground" }],
   },
   {
@@ -1085,7 +1093,7 @@ export const deals2 = [
     checked: C28,
     source: "MacRumors Black Friday headphones, 28 Nov 2026",
     verdict: VN,
-    evidence: "47% off, matching its lowest price ever",
+    evidence: "47% off, matching its lowest price.",
     also: [
       { store: WM, price: 89.95, url: "https://www.walmart.com/search?q=Beats+Studio+Buds+Plus" },
       { store: BB, price: 89.95, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Beats+Studio+Buds+Plus" },
@@ -1104,7 +1112,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price on the pocket E Ink reader",
+    evidence: "Half price on the pocket reader.",
   },
   {
     id: "switchbot-bot-amazon",
@@ -1117,7 +1125,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$10 off the button-pushing automator.",
+    evidence: "$10 off the button-pushing bot.",
   },
   {
     id: "octobuddy-amazon",
@@ -1144,7 +1152,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "44% off Switch 2-ready storage with 800MB/s reads.",
+    evidence: "44% off Switch 2-ready storage.",
   },
   {
     id: "samsung-p9-512gb-amazon",
@@ -1170,7 +1178,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price on the fast tire inflator.",
+    evidence: "Half price on the tire inflator.",
   },
   {
     id: "govee-lamp-2-amazon",
@@ -1183,7 +1191,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "33% off Govee's color-changing lamp with 60+ scenes.",
+    evidence: "33% off Govee's color-changing lamp.",
   },
   {
     id: "noco-gb40-amazon",
@@ -1196,7 +1204,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price, and it charges your phone.",
+    evidence: "Half price, and it charges phones.",
   },
   {
     id: "sonos-play-amazon",
@@ -1223,7 +1231,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price on the cordless screwdriver with 16 bits.",
+    evidence: "Half price on the screwdriver.",
   },
   {
     id: "lego-hail-mary-amazon",
@@ -1236,7 +1244,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "30% off the microscale Hail Mary with a Rocky minifig.",
+    evidence: "30% off the microscale Hail Mary.",
   },
   {
     id: "hoto-screwdriver-amazon",
@@ -1280,7 +1288,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "29% off the 4K smart bird feeder with solar charging.",
+    evidence: "29% off the 4K smart bird feeder.",
   },
   {
     id: "yoto-mini-amazon",
@@ -1293,7 +1301,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "25% off the screen-free kids' player.",
+    evidence: "25% off the screen-free kids'.",
   },
   {
     id: "lego-n1-starfighter-amazon",
@@ -1306,7 +1314,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "30% off the Mandalorian's starfighter.",
+    evidence: "30% off the Mandalorian's.",
   },
   {
     id: "catan-6th-amazon",
@@ -1332,7 +1340,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price on the camera feeder that IDs 6,000+ birds.",
+    evidence: "Half price on the camera feeder.",
   },
   {
     id: "azul-amazon",
@@ -1358,7 +1366,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "30% off the magnetic building set kids actually keep.",
+    evidence: "30% off the magnetic building set.",
   },
   {
     id: "jbl-go-4-amazon",
@@ -1371,7 +1379,8 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "36% off the pocket speaker with a 7-hour battery.",
+    evidence: "36% off the pocket speaker.",
+      also: [{ store: "JBL", price: 31.95, url: "https://www.jbl.com/GO-4.html?dwvar_GO-4_color=Black%20and%20Orange-AM-Current", checked: C34, source: S_VERGE }],
   },
   {
     id: "ugreen-nexode-cable-amazon",
@@ -1384,7 +1393,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "30% off the 240W cable with a live power display.",
+    evidence: "30% off the 240W cable with a live.",
   },
   {
     id: "roku-pro-55-amazon",
@@ -1397,7 +1406,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "30% off the 55-inch OLED; the 65-inch is $799.99.",
+    evidence: "30% off the 55-inch OLED.",
   },
   {
     id: "reolink-doorbell-amazon",
@@ -1423,7 +1432,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "32% off the Pro 3 with swappable buttons.",
+    evidence: "32% off the Pro 3 with swappable.",
   },
   {
     id: "eve-energy-amazon",
@@ -1451,7 +1460,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VN,
-    evidence: "All-time low on the 24GB M6 Pro, $250 off.",
+    evidence: "All-time low on the 24GB M6 Pro.",
   },
   {
     id: "m6-macbook-pro-32gb-amazon",
@@ -1464,7 +1473,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VN,
-    evidence: "All-time low on the 32GB M6 Pro, $250 off.",
+    evidence: "All-time low on the 32GB M6 Pro.",
   },
   {
     id: "m5-pro-macbook-15c-amazon",
@@ -1477,7 +1486,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "$400 off the M5 Pro with 2TB of storage.",
+    evidence: "$400 off the M5 Pro, 2TB drive.",
   },
   {
     id: "m5-pro-macbook-18c-amazon",
@@ -1555,7 +1564,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "$70 off the larger SE 3, cut from $229 today.",
+    evidence: "$70 off the larger SE 3, cut today.",
     drop: 229,
   },
   {
@@ -1569,7 +1578,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VN,
-    evidence: "All-time low on the cellular Series 12.",
+    evidence: "All-time low on the cellular Series.",
   },
   {
     id: "studio-display-amazon",
@@ -1634,7 +1643,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "$299 off the 512GB iPhone Air at Best Buy.",
+    evidence: "$299 off the 512GB iPhone Air.",
   },
   {
     id: "anker-100w-universal-amazon",
@@ -1647,7 +1656,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VN,
-    evidence: "Lowest price on Anker's 100W travel charger.",
+    evidence: "Lowest price on Anker's 100W travel.",
   },
   {
     id: "anker-150w-slim-amazon",
@@ -1660,7 +1669,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VN,
-    evidence: "All-time low on Anker's slim 150W travel station.",
+    evidence: "All-time low on Anker's slim 150W.",
   },
   {
     id: "anker-prime-25w-3in1-amazon",
@@ -1673,7 +1682,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VN,
-    evidence: "Lowest price on Anker's foldable 3-in-1 MagSafe charger.",
+    evidence: "Lowest price on Anker's foldable.",
   },
   {
     id: "anker-140w-4port-amazon",
@@ -1686,7 +1695,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "33% off Anker's 140W 4-port charger with display.",
+    evidence: "33% off Anker's 140W 4-port charger.",
   },
   {
     id: "pixel-11-fold-amazon",
@@ -1764,7 +1773,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "$50 off PlayStation's 27-inch monitor at Best Buy.",
+    evidence: "$50 off PlayStation's 27-inch.",
   },
   {
     id: "wolverine-amazon",
@@ -1933,7 +1942,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "20% off Google's new Home speaker at Best Buy.",
+    evidence: "20% off Google's new Home speaker.",
   },
   {
     id: "pixelsnap-ring-stand-amazon",
@@ -1946,7 +1955,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VN,
-    evidence: "All-time low on the Pixelsnap ring stand.",
+    evidence: "All-time low on the Pixelsnap ring.",
   },
   // v6 dup rows: the same product at a second store, checked in this session.
   {
@@ -1960,7 +1969,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "$40 off at Amazon; Target has it at $29.99.",
+    evidence: "$40 off at Amazon; Target matches.",
   },
   {
     id: "metroid-prime-4-amazon",
@@ -1973,7 +1982,7 @@ export const deals2 = [
     checked: C29,
     source: S_APPLE,
     verdict: VS,
-    evidence: "$21 off at Amazon; Walmart matches at $49.99.",
+    evidence: "$21 off at Amazon; Walmart matches.",
     also: [{ store: WM, price: 49.99, url: "https://www.walmart.com/search?q=Metroid+Prime+4+Beyond" }],
   },
   {
@@ -1987,7 +1996,7 @@ export const deals2 = [
     checked: C29,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$52 off at Best Buy; Amazon and Walmart have it at $297.",
+    evidence: "$52 off at Best Buy; Amazon matches.",
   },
   {
     id: "pokemon-pokopia-amazon",
@@ -2000,7 +2009,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VR,
-    evidence: "$7 off Nintendo's cozy Switch 2 life sim.",
+    evidence: "$7 off Nintendo's cozy game.",
   },
   {
     id: "eshop-gift-card-200-costco",
@@ -2013,7 +2022,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$40 off $200 of eShop credit at Costco.",
+    evidence: "$40 off $200 of eShop credit.",
   },
   {
     id: "the90-gem-the90",
@@ -2026,7 +2035,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$100 off the subscription-free UV-tracking necklace.",
+    evidence: "$100 off the subscription-free.",
   },
   {
     id: "elegoo-centauri-carbon-2-elegoo",
@@ -2039,7 +2048,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$80 off the beginner-friendly 4-spool 3D printer.",
+    evidence: "$80 off the beginner-friendly.",
   },
   {
     id: "moft-tripod-wallet-amazon",
@@ -2065,7 +2074,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$16 off the Qi2 10,000mAh bank with kickstand and RGB.",
+    evidence: "$16 off the Qi2 10,000mAh bank.",
   },
   {
     id: "zelda-ocarina-amazon",
@@ -2078,7 +2087,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VR,
-    evidence: "Small cut on Nintendo's Switch 2 Zelda remake.",
+    evidence: "Small cut on Nintendo's Switch 2.",
     also: [{ store: "Costco", price: 62.99, url: "https://www.costco.com/CatalogSearch?dept=All&keyword=Zelda+Ocarina+of+Time" }],
   },
   {
@@ -2092,7 +2101,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$9 off the in-flight transmitter for two headphones.",
+    evidence: "$9 off the in-flight transmitter.",
     also: [{ store: "Twelve South", price: 25.99, url: "https://www.twelvesouth.com/" }],
   },
   {
@@ -2106,7 +2115,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VR,
-    evidence: "Stonemaier's sci-fi roguelike board game.",
+    evidence: "Stonemaier's sci-fi roguelike board.",
     also: [{ store: "Cardhaus", price: 75, url: "https://www.cardhaus.com/" }],
   },
   {
@@ -2120,7 +2129,7 @@ export const deals2 = [
     checked: C30,
     source: S_VERGE,
     verdict: VS,
-    evidence: "$8 off the 12-pack of USB-C rechargeable AAs with case.",
+    evidence: "$8 off the 12-pack of USB-C.",
   },
   {
     id: "paramount-plus-premium-paramount",
@@ -2185,7 +2194,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "New all-time low, $100 off Amazon's 8-inch tablet.",
+    evidence: "New all-time low, $100 off Amazon's.",
   },
   {
     id: "alexa-tablet-8-128gb-amazon",
@@ -2198,7 +2207,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "New all-time low, $120 off the 128GB 8-inch tablet.",
+    evidence: "New all-time low, $120 off 8-inch.",
   },
   {
     id: "alexa-tablet-11-64gb-amazon",
@@ -2211,7 +2220,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "New all-time low, $120 off the 11-inch tablet.",
+    evidence: "New all-time low, $120 off 11-inch.",
   },
   {
     id: "alexa-tablet-11-128gb-amazon",
@@ -2224,7 +2233,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "New all-time low, $160 off the 128GB 11-inch tablet.",
+    evidence: "New all-time low, $160 off 11-inch.",
   },
   {
     id: "alexa-tablet-12-pro-amazon",
@@ -2237,7 +2246,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "All-time low, $100 off the 12 Pro tablet.",
+    evidence: "All-time low, $100 off the 12 Pro.",
   },
   {
     id: "alexa-tablet-12-pro-nanomatte-amazon",
@@ -2250,7 +2259,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "All-time low, $100 off the Nanomatte 12 Pro.",
+    evidence: "All-time low, $100 off the 12 Pro.",
   },
   {
     id: "alexa-photo-frame-amazon",
@@ -2263,7 +2272,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "New all-time low, $85 off the Alexa photo frame.",
+    evidence: "New all-time low, $85 off Alexa.",
   },
   {
     id: "fire-tv-stick-4k-select-amazon",
@@ -2276,7 +2285,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "64% off the Select 4K stick, down to $18.",
+    evidence: "64% off the Select 4K stick.",
   },
   {
     id: "fire-tv-stick-hd-amazon",
@@ -2302,7 +2311,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "All-time low on the 46mm cellular Series 12.",
+    evidence: "All-time low on the 46mm cellular.",
   },
   {
     id: "ipad-mini-a20-256gb-amazon",
@@ -2315,7 +2324,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VR,
-    evidence: "A small cut on the new 256GB OLED mini.",
+    evidence: "A small cut on the new 256GB OLED.",
   },
   {
     id: "ipad-mini-a20-512gb-amazon",
@@ -2328,7 +2337,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VR,
-    evidence: "A small cut on the new 512GB OLED mini.",
+    evidence: "A small cut on the new 512GB OLED.",
   },
   {
     id: "anker-magstand-25w-amazon",
@@ -2354,7 +2363,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "All-time low, $10 off the Nano Neo charger.",
+    evidence: "All-time low, $10 off the Nano Neo.",
   },
   {
     id: "anker-prime-25w-station-amazon",
@@ -2367,7 +2376,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$102 off the Prime 3-in-1 Qi2 station.",
+    evidence: "$102 off the Prime 3-in-1 charger.",
   },
   {
     id: "anker-10in1-hub-amazon",
@@ -2380,7 +2389,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "Lowest price, $25 off the 10-in-1 hub.",
+    evidence: "Lowest price, $25 off the 10-in-1.",
   },
   {
     id: "anker-160w-prime-amazon",
@@ -2393,7 +2402,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$50 off the 160W Prime charger with touch display.",
+    evidence: "$50 off the 160W Prime charger.",
   },
   {
     id: "anker-tb5-dock-amazon",
@@ -2406,7 +2415,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$90 off the 14-in-1 Thunderbolt 5 dock.",
+    evidence: "$90 off the 14-in-1 Thunderbolt 5.",
   },
   {
     id: "anker-wukong-20k-amazon",
@@ -2419,7 +2428,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$70 off the 220W Wukong-edition 20,000mAh bank.",
+    evidence: "$70 off the 220W Wukong bank.",
   },
   {
     id: "anker-maggo-ufo-amazon",
@@ -2432,7 +2441,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$30 off the MagGo UFO 3-in-1 station.",
+    evidence: "$30 off the MagGo UFO station.",
   },
   {
     id: "anker-nano-magsafe-5k-amazon",
@@ -2445,7 +2454,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$12 off the ultra-slim MagSafe 5,000mAh bank.",
+    evidence: "$12 off the ultra-slim MagSafe bank.",
   },
   {
     id: "ugreen-qi2-2in1-amazon",
@@ -2458,7 +2467,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VN,
-    evidence: "53% off the foldable Qi2 2-in-1 charger.",
+    evidence: "53% off the foldable Qi2 charger.",
   },
   {
     id: "belkin-qi2-2in1-amazon",
@@ -2471,7 +2480,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$17 off Belkin's 2-in-1 Qi2 magnetic station.",
+    evidence: "$17 off Belkin's Qi2 station.",
   },
   {
     id: "belkin-qi2-3in1-foldable-amazon",
@@ -2484,7 +2493,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$23 off Belkin's foldable 3-in-1 station.",
+    evidence: "$23 off Belkin's foldable station.",
   },
   {
     id: "ugreen-magflow-pro-10k-amazon",
@@ -2497,7 +2506,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$60 off the liquid-cooled Qi2 10,000mAh bank.",
+    evidence: "$60 off the liquid-cooled Qi2 bank.",
   },
   {
     id: "pixel-watch-5-45mm-amazon",
@@ -2523,7 +2532,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$100 off the LTE Pixel Watch 5, 41mm.",
+    evidence: "$100 off the LTE Pixel Watch 5.",
   },
   {
     id: "pixel-watch-5-lte-45mm-amazon",
@@ -2536,7 +2545,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$100 off the LTE Pixel Watch 5, 45mm.",
+    evidence: "$100 off the LTE Pixel Watch 5.",
   },
   {
     id: "ps-access-controller-amazon",
@@ -2549,7 +2558,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$30 off Sony's accessible PS5 controller.",
+    evidence: "$30 off Sony's PS5 controller.",
   },
   {
     id: "control-resonant-amazon",
@@ -2562,7 +2571,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$10 off Remedy's new PS5 action game.",
+    evidence: "$10 off Remedy's new PS5 game.",
   },
   {
     id: "cyberpunk-2077-ultimate-amazon",
@@ -2575,7 +2584,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$10 off the Ultimate Edition with the expansion.",
+    evidence: "$10 off the Ultimate Edition.",
   },
   {
     id: "switch-sports-resort-amazon",
@@ -2614,7 +2623,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$28 off the solar-charging slim keyboard for Mac.",
+    evidence: "$28 off the solar Mac keyboard.",
   },
   {
     id: "logitech-mx-mechanical-amazon",
@@ -2627,7 +2636,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$38 off the low-profile mechanical MX keyboard.",
+    evidence: "$38 off the low-profile MX keyboard.",
   },
   {
     id: "logitech-mx-keys-mini-mac-amazon",
@@ -2640,7 +2649,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$24 off the compact MX Keys Mini for Mac.",
+    evidence: "$24 off the compact MX Keys Mini.",
   },
   {
     id: "logitech-mx-keys-s-combo-mac-amazon",
@@ -2653,7 +2662,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$30 off the MX Keys S Mac keyboard and mouse combo.",
+    evidence: "$30 off the MX Keys S Mac combo.",
   },
   {
     id: "logitech-pop-icon-amazon",
@@ -2666,7 +2675,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$8 off the colourful POP ICON keyboard.",
+    evidence: "$8 off the colourful POP keyboard.",
   },
   {
     id: "logitech-lift-vertical-amazon",
@@ -2679,7 +2688,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$13 off the vertical ergonomic Lift mouse.",
+    evidence: "$13 off the vertical Lift mouse.",
   },
   {
     id: "logitech-mx-anywhere-3s-mac-amazon",
@@ -2692,7 +2701,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$24 off the compact MX Anywhere 3S for Mac.",
+    evidence: "$24 off the compact MX Anywhere 3S.",
   },
   {
     id: "logitech-mx-creative-console-amazon",
@@ -2705,7 +2714,7 @@ export const deals2 = [
     checked: C30,
     source: S_WALMART,
     verdict: VS,
-    evidence: "$40 off the MX Creative Console dial-and-keypad.",
+    evidence: "$40 off the MX Creative Console.",
   },
   // v8 deals — all checked 28 Nov 2026 ~17:45 UTC (C31) by the builder in
   // this session, each from a named deals source or the store page itself.
@@ -2720,7 +2729,7 @@ export const deals2 = [
     checked: C31,
     source: S_TG,
     verdict: VN,
-    evidence: "$0.99 a month for the first 3 months.",
+    evidence: "$0.99/mo for the first 3 months.",
   },
   {
     id: "amc-mgm-starz-bundle-amazon",
@@ -2733,7 +2742,7 @@ export const deals2 = [
     checked: C31,
     source: S_TG,
     verdict: VN,
-    evidence: "$5.49 a month for 2 months via Prime Video add-ons.",
+    evidence: "$5.49/mo for 2 months.",
   },
   {
     id: "peacock-select-monthly",
@@ -2746,7 +2755,7 @@ export const deals2 = [
     checked: C31,
     source: S_TG,
     verdict: VN,
-    evidence: "Cheapest Peacock tier at a third of its usual price.",
+    evidence: "Cheapest Peacock tier, 67% off.",
   },
   {
     id: "starz-prime-video-amazon",
@@ -2759,7 +2768,7 @@ export const deals2 = [
     checked: C31,
     source: "Forbes Prime Video Channels, 28 Nov 2026",
     verdict: VN,
-    evidence: "$2.99 a month for 2 months via Prime Video Channels.",
+    evidence: "$2.99/mo for 2 months.",
   },
   {
     id: "cnn-all-access-monthly",
@@ -2785,7 +2794,7 @@ export const deals2 = [
     checked: C31,
     source: S_TG,
     verdict: VS,
-    evidence: "Anime streaming at 60% off for 6 months.",
+    evidence: "Anime streaming, 60% off 6 months.",
   },
   {
     id: "apple-tv-monthly",
@@ -2798,7 +2807,7 @@ export const deals2 = [
     checked: C31,
     source: S_TG,
     verdict: VS,
-    evidence: "Half price for 6 months via Prime Video add-on.",
+    evidence: "Half price for 6 months via Prime.",
   },
   {
     id: "hbo-max-basic-monthly",
@@ -2811,7 +2820,7 @@ export const deals2 = [
     checked: C31,
     source: S_VERGE,
     verdict: VS,
-    evidence: "Half price for a full year, until 1 Dec.",
+    evidence: "Half price for a full year.",
   },
   {
     id: "peacock-premium-monthly",
@@ -2824,7 +2833,7 @@ export const deals2 = [
     checked: C31,
     source: S_TG,
     verdict: VS,
-    evidence: "Full Peacock library, $4 off a month.",
+    evidence: "Full Peacock library, $4/mo off.",
   },
   {
     id: "youtube-tv-monthly",
@@ -2850,7 +2859,7 @@ export const deals2 = [
     checked: C31,
     source: S_SONOS,
     verdict: VN,
-    evidence: "All-time low on the mic-free Era 100.",
+    evidence: "All-time low on the Era 100.",
     also: [{ store: BB, price: 149, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Sonos+Era+100+SL" }],
   },
   {
@@ -2891,7 +2900,7 @@ export const deals2 = [
     checked: C31,
     source: S_SONOS,
     verdict: VN,
-    evidence: "New low on the flagship Atmos soundbar.",
+    evidence: "New low on the flagship Atmos.",
     also: [{ store: BB, price: 849, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Sonos+Arc+Ultra" }],
   },
   {
@@ -2918,7 +2927,7 @@ export const deals2 = [
     checked: C31,
     source: "MSI US store Black Friday, 28 Nov 2026",
     verdict: VS,
-    evidence: "$300 off the Intel Core Ultra 7 handheld.",
+    evidence: "$300 off the Intel Core Ultra 7.",
   },
   {
     id: "msi-aegis-zs2-msi",
@@ -3035,7 +3044,7 @@ export const deals2 = [
     checked: C31,
     source: S_TGL,
     verdict: VS,
-    evidence: "RTX 5070 Ti power for less than some RTX 5060 laptops.",
+    evidence: "5070 Ti power for 5060 money.",
   },
   {
     id: "asus-rog-strix-g16-amazon",
@@ -3061,7 +3070,7 @@ export const deals2 = [
     checked: C31,
     source: "PC Guide Legion 7a deal, 28 Nov 2026",
     verdict: VN,
-    evidence: "$900 off, the lowest price yet for this OLED laptop.",
+    evidence: "$900 off, lowest yet on this OLED.",
   },
   {
     id: "alienware-16-aurora-dell",
@@ -3087,7 +3096,7 @@ export const deals2 = [
     checked: C31,
     source: "DealNews Best Buy laptop deals, 28 Nov 2026",
     verdict: VS,
-    evidence: "Half price on the 2K touchscreen Dell.",
+    evidence: "Half price on the 2K Dell.",
   },
   {
     id: "lenovo-yoga-7i-lenovo",
@@ -3126,7 +3135,7 @@ export const deals2 = [
     checked: C31,
     source: "DealNews Best Buy laptop deals, 28 Nov 2026",
     verdict: VS,
-    evidence: "Best-ever price on the i7 touchscreen Dell.",
+    evidence: "Best-ever price on the i7 Dell.",
   },
   {
     id: "acer-predator-helios-16-bh",
@@ -3152,7 +3161,7 @@ export const deals2 = [
     checked: C32,
     source: S_STEALS9,
     verdict: VS,
-    evidence: "$40 off the compact electric standing desk.",
+    evidence: "$40 off the compact standing desk.",
   },
   {
     id: "aulumu-c03-band-amazon",
@@ -3165,7 +3174,7 @@ export const deals2 = [
     checked: C32,
     source: S_STEALS9,
     verdict: VS,
-    evidence: "$12 off the titanium-clasp nylon band.",
+    evidence: "$12 off the titanium-clasp band.",
   },
   {
     id: "huanuo-flowlift-arm-amazon",
@@ -3191,7 +3200,7 @@ export const deals2 = [
     checked: C32,
     source: S_STEALS9,
     verdict: VN,
-    evidence: "Half price on the Find My wallet stand.",
+    evidence: "Half price on the Find My wallet.",
   },
   {
     id: "cubii-jr1-amazon",
@@ -3295,7 +3304,7 @@ export const deals2 = [
     checked: C32,
     source: S_STEALS9,
     verdict: VS,
-    evidence: "$20 off the pocket electric ball pump.",
+    evidence: "$20 off the pocket ball pump.",
   },
   {
     id: "worx-pegasus-amazon",
@@ -3477,7 +3486,7 @@ export const deals2 = [
     checked: C32,
     source: S_VERGE,
     verdict: VS,
-    evidence: "32% off the ad-free bundle for a year.",
+    evidence: "32% off the ad-free yearly bundle.",
   },
   {
     id: "paramount-plus-essential-paramount",
@@ -3503,7 +3512,7 @@ export const deals2 = [
     checked: C33,
     source: S_LEGO9,
     verdict: VN,
-    evidence: "Retired set at its lowest price this year.",
+    evidence: "Retired set at its lowest this year.",
   },
   {
     id: "lego-peugeot-9x8-amazon",
@@ -3713,7 +3722,7 @@ export const deals2 = [
     checked: C33,
     source: S_9T5,
     verdict: VN,
-    evidence: "All-time low on Google's flagship buds.",
+    evidence: "All-time low on Google's top buds.",
     also: [{ store: BB, price: 169, url: "https://www.bestbuy.com/site/searchpage.jsp?st=Google+Pixel+Buds+Pro+2", checked: C33, source: S_9T5 }],
   },
   {
@@ -3770,6 +3779,32 @@ export const deals2 = [
     source: S_9T5,
     verdict: VS,
     evidence: "25% off the Gen 2 smart glasses.",
-    also: [{ store: WM, price: 284.25, url: "https://www.walmart.com/search?q=Ray-Ban+Meta+Gen+2", checked: "2026-11-21T00:00:00Z", source: "Hinty Ray-Ban Meta tracker, 28 Nov 2026" }],
+    also: [{ store: WM, price: 284, url: "https://www.walmart.com/search?q=Ray-Ban+Meta+Gen+2", checked: C34, source: "Walmart product page, 28 Nov 2026" }],
+  },
+  {
+    id: "lego-botanicals-mini-bonsai-amazon",
+    title: "LEGO Botanicals Mini Bonsai Trees 10373",
+    store: AM,
+    category: CY,
+    price: 45,
+    was: 65,
+    url: "https://www.amazon.com/s?k=LEGO+Botanicals+Mini+Bonsai+Trees",
+    checked: C34,
+    source: S_LEGO9,
+    verdict: VN,
+    evidence: "All-time low on the bonsai trio.",
+  },
+  {
+    id: "lego-animal-crossing-nooks-cranny-amazon",
+    title: "LEGO Animal Crossing Nook's Cranny 77050",
+    store: AM,
+    category: CY,
+    price: 52,
+    was: 75,
+    url: "https://www.amazon.com/s?k=LEGO+Animal+Crossing+Nooks+Cranny",
+    checked: C34,
+    source: S_LEGO9,
+    verdict: VS,
+    evidence: "31% off Nook's shop and Rosie.",
   },
 ];
