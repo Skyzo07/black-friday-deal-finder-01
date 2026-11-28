@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v26; v26 checked 28 Nov 2026 ~20:42 UTC).
+// The rest of the deals (v6–v27; v27 checked 28 Nov 2026 ~20:50 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -36,6 +36,7 @@ const R0=DT+"20:12:00Z";
 const S0=DT+"20:19:00Z";
 const U0=DT+"20:30:00Z";
 const U1=DT+"20:42:00Z";
+const U2=DT+"20:50:00Z";
 const MB = "MacObserver Belkin UltraCharge deal, 28 Nov 2026";
 const DC = "Digital Citizen Dell Black Friday deals, 28 Nov 2026";
 const BF = "BuzzFeed best Amazon Black Friday deals, 28 Nov 2026";
@@ -788,4 +789,65 @@ export const deals2 = [
   ["shark-speedstyle-amazon","Shark SpeedStyle Pro Flex hair dryer and styler",AM,CB,149,249,0,U1,BZ,VS,"40% off the SpeedStyle"],
   ["bissell-little-green-amazon","Bissell Little Green carpet and upholstery cleaner",AM,CH,84.99,129.99,0,U1,BF,VN,"New best price of 2026"],
   ["vitamix-propel-750-amazon","Vitamix Propel 750 blender",AM,CK,359.95,629.95,0,U1,BF,VS,"43% off the Propel 750"],
+  ["acer-nitro-v-16-amazon","Acer Nitro V gaming laptop (Ryzen 9 270, RTX 5070, 16-inch)",AM,CL,1699.99,2099.99,0,U2,PG,VS,"$400 off the Nitro V 16"],
+  ["msi-stealth-a18-ai-amazon","MSI Stealth A18 AI+ gaming laptop (18-inch 240Hz QHD+)",AM,CL,2899,3499.99,0,U2,PG,VS,"$601 off the Stealth A18"],
+  ["msi-raider-a16-hx-amazon","MSI Raider A16 HX gaming laptop",AM,CL,3144.15,3699.99,0,U2,PG,VS,"$556 off the Raider A16"],
+  ["msi-stealth-16-ai-amazon","MSI Stealth 16 AI+ gaming laptop (Core Ultra 9 386H, RTX 5070 Ti)",AM,CL,2634.15,3099.99,0,U2,PG,VS,"$466 off the Stealth 16"],
+  ["surface-laptop-2024-amazon","Microsoft Surface Laptop (2024)",AM,CL,899.99,1369.5,0,U2,PG,VS,"$470 off the Surface Laptop"],
+  ["samsung-galaxy-book6-ultra-amazon","Samsung 16-inch Galaxy Book6 Ultra U7 laptop (Core Ultra 7, RTX 5070)",AM,CL,2799.99,3799.99,0,U2,PG,VS,"$1,000 off the Book6 Ultra"],
+  ["dell-xps-14-amazon","Dell XPS 14 Premium laptop (Core Ultra 7 255H)",AM,CL,1699.99,2201.57,0,U2,PG,VS,"$502 off the XPS 14"],
+  ["asus-rog-flow-z13-amazon","ASUS ROG Flow Z13",AM,CL,1979.99,2399.99,0,U2,PG,VS,"$420 off the Flow Z13"],
+  ["macbook-pro-14-m5-pro-amazon","Apple MacBook Pro 2026 (14-inch, M5 Pro, 24GB/2TB)",AM,CL,2699,3199,0,U2,PG,VS,"$500 off the M5 Pro MacBook"],
+  ["lenovo-legion-tower-5-amazon","Lenovo Legion Tower 5 gaming PC (RX 9070 XT)",AM,CT,2239.99,2541.28,0,U2,PG,VS,"$301 off the Legion Tower 5"],
+  ["stormcraft-falcon-5070-newegg","STORMCRAFT FALCON gaming PC (RTX 5070)","Newegg",CT,1799.99,1999.99,"https://www.newegg.com/p/pl?d=STORMCRAFT+FALCON+RTX+5070",U2,PG,VS,"$200 off the Falcon RTX 5070"],
+  ["hp-open-45l-amazon","HP OPEN 45L gaming PC (RTX 3060 Ti)",AM,CT,1329.97,2299,0,U2,PG,VS,"$969 off the OPEN 45L"],
+  ["gmktech-neo-x1-pro-amazon","GMKtec NEO-X1 PRO mini PC",AM,CT,2944.99,4399.99,0,U2,PG,VS,"$1,455 off the NEO-X1 PRO"],
+  ["ibuypower-element-se-amazon","iBUYPOWER Element SE gaming PC (Ryzen 5 8400F, RTX 3050)",AM,CT,999.99,1399.99,0,U2,PG,VS,"$400 off the Element SE"],
+  ["msi-aegis-r2-5070-amazon","MSI Aegis R2 gaming desktop (Core Ultra 7 265, RTX 5070)",AM,CT,2269,2842.71,0,U2,PG,VS,"$574 off the Aegis R2"],
+  ["samsung-990-pro-heatsink-4tb-amazon","Samsung 990 PRO with Heatsink SSD 4TB",AM,CT,699.99,1139.99,0,U2,PG,VS,"$440 off the 4TB 990 PRO"],
+  ["wd-elements-20tb-amazon","WD 20TB Elements desktop external hard drive",AM,CT,549.99,879.99,0,U2,PG,VS,"$330 off the 20TB Elements"],
+  ["samsung-t9-4tb-amazon","Samsung T9 portable SSD 4TB",AM,CT,719.99,1144.99,0,U2,PG,VS,"$425 off the T9 4TB"],
+  ["samsung-990-pro-4tb-amazon","Samsung 990 PRO SSD 4TB",AM,CT,699.99,1099.99,0,U2,PG,VS,"$400 off the 4TB 990 PRO"],
+  ["samsung-odyssey-g9-49-amazon","Samsung 49-inch Odyssey G9 gaming monitor",AM,CT,697.99,1299.99,0,U2,PG,VS,"$602 off the 49-inch G9"],
+  ["samsung-odyssey-oled-g9-g91sd-amazon","Samsung 49-inch Odyssey OLED G9 (G91SD)",AM,CT,790.27,1299.99,0,U2,PG,VS,"$510 off the OLED G9"],
+  ["asus-rog-swift-32-oled-amazon","ASUS ROG Swift 32-inch 4K OLED gaming monitor",AM,CT,799,1199,0,U2,PG,VS,"$400 off the Swift 32 OLED"],
+  ["asus-rog-pg32ucdmr-amazon","ASUS ROG PG32UCDMR 32-inch 4K 240Hz OLED gaming monitor",AM,CT,899,1299.99,0,U2,PG,VS,"$401 off the PG32UCDMR"],
+  ["samsung-viewfinity-s65vc-amazon","Samsung 34-inch ViewFinity S65VC ultrawide QHD curved monitor",AM,CT,399.99,699.99,0,U2,PG,VS,"$300 off the ViewFinity"],
+  ["logitech-g502x-amazon","Logitech G502 X wired gaming mouse",AM,CT,39.99,99.99,0,U2,PG,VS,"60% off the G502 X mouse"],
+  ["steelseries-apex-pro-mini-amazon","SteelSeries Apex Pro Mini Wireless keyboard",AM,CT,119.99,239.99,0,U2,PG,VS,"50% off the Apex Pro Mini"],
+  ["razer-basilisk-v3-pro-amazon","Razer Basilisk V3 Pro wireless gaming mouse",AM,CT,79.99,159.99,0,U2,PG,VS,"50% off the Basilisk V3 Pro"],
+  ["garmin-fenix-8-solar-amazon","Garmin fēnix 8 Solar smartwatch",AM,CT,849.99,1099.99,0,U2,PG,VS,"$250 off the fēnix 8 Solar"],
+  ["garmin-instinct-3-tactical-amazon","Garmin Instinct 3 Tactical smartwatch (50mm, AMOLED)",AM,CT,399.99,599.99,0,U2,PG,VS,"$200 off the Instinct 3"],
+  ["samsung-galaxy-tab-s10-fe-amazon","Samsung Galaxy Tab S10 FE tablet",AM,CT,349.99,549.99,0,U2,PG,VS,"$200 off the Tab S10 FE"],
+  ["kindle-scribe-colorsoft-amazon","Amazon Kindle Scribe Colorsoft 64GB",AM,CT,479.99,679.99,0,U2,PG,VS,"$200 off the Scribe Colorsoft"],
+  ["ipad-mini-a17-pro-amazon","Apple iPad mini (A17 Pro)",AM,CT,499,599,0,U2,PG,VS,"$100 off the iPad mini"],
+  ["samsung-galaxy-s26-plus-amazon","Samsung Galaxy S26+ 512GB smartphone",AM,CT,1099.99,1399.99,0,U2,PG,VS,"$300 off the Galaxy S26+"],
+  ["eufy-c28-amazon","eufy C28 robot vacuum and mop",AM,CH,379.99,799.99,0,U2,PG,VS,"$420 off the C28 vacuum"],
+  ["tp-link-be700-amazon","TP-Link Tri-Band BE15000 WiFi 7 router Archer BE700",AM,CT,199.99,349.99,0,U2,PG,VS,"$150 off the Archer BE700"],
+  ["ecoflow-titan-5000-amazon","EF EcoFlow TITAN 5000 Classic power station",AM,CT,2199,3299,0,U2,PG,VS,"$1,100 off the TITAN 5000"],
+  ["eero-max-7-amazon","Amazon eero Max 7 mesh WiFi router",AM,CT,419.99,599.99,0,U2,PG,VS,"$180 off the eero Max 7"],
+  ["meta-ray-ban-gen2-amazon","Meta Ray-Ban (Gen 2) Wayfarer AI glasses",AM,CT,284,379,0,U2,PG,VS,"$95 off the Ray-Ban AI glasses"],
+  ["sony-bravia-6-65-amazon","Sony 65-inch BRAVIA 6 OLED 4K HDR TV",AM,CV,1198,1999.99,0,U2,PG,VS,"$802 off the 65-inch BRAVIA 6"],
+  ["lg-c6-65-amazon","LG 65-inch evo AI C6 4K OLED TV",AM,CV,1399.99,2699.99,0,U2,PG,VS,"$1,300 off the 65-inch C6"],
+  ["samsung-frame-65-ls03f-amazon","Samsung 65-inch Frame LS03F 4K QLED TV",AM,CV,897.96,1497.99,0,U2,PG,VS,"$600 off the 65-inch Frame"],
+  ["samsung-s84f-77-amazon","Samsung 77-inch OLED S84F TV",AM,CV,1297.99,1597.99,0,U2,PG,VS,"$300 off the 77-inch S84F"],
+  ["toshiba-z670-75-amazon","Toshiba 75-inch Z670 Series Mini-LED 4K UHD TV",AM,CV,699.99,1299.99,0,U2,PG,VS,"$600 off the 75-inch Z670"],
+  ["sol-de-janeiro-cheirosa-76-amazon","Sol de Janeiro Cheirosa 76 body mist",AM,CB,12.35,26,0,U2,BZ,VN,"Lowest price it goes for"],
+  ["beauty-of-joseon-eye-serum-amazon","Beauty of Joseon Revive eye serum",AM,CB,11.9,17,0,U2,BZ,VN,"Lowest price it goes for"],
+  ["medicube-zero-pore-pad-amazon","Medicube Zero Pore Pad toner pads",AM,CB,13.23,18.9,0,U2,BZ,VN,"Lowest price of the year"],
+  ["laneige-lip-sleeping-mask-set-amazon","Laneige Lip Sleeping Mask gift set",AM,CB,18.4,23,0,U2,BZ,VN,"New lowest price ever"],
+  ["ulike-led-mask-amazon","Ulike LED light therapy mask",AM,CB,219,399,0,U2,BZ,VN,"$40 less than it's ever been"],
+  ["ulike-laser-hair-removal-amazon","Ulike laser hair removal device",AM,CB,244,349,0,U2,BZ,VN,"New best-ever price, 30% off"],
+  ["blue-yeti-amazon","Logitech Creators Blue Yeti USB microphone",AM,CT,69.99,139.99,0,U2,PG,VS,"50% off the Blue Yeti mic"],
+  ["thermaltake-th360-amazon","Thermaltake TH360 ARGB Sync V2 CPU cooler",AM,CT,49.99,129.99,0,U2,PG,VS,"62% off the TH360 cooler"],
+  ["gigabyte-x870e-aorus-amazon","GIGABYTE X870E AORUS Elite WiFi7 motherboard",AM,CT,229,354.99,0,U2,PG,VS,"$126 off the X870E board"],
+  ["synology-ds225-plus-amazon","Synology DS225+ private cloud media server",AM,CT,291,364.99,0,U2,PG,VS,"$74 off the DS225+ server"],
+  ["elgato-stream-deck-mk2-amazon","Elgato Stream Deck MK.2 studio controller",AM,CT,109.99,149.99,0,U2,PG,VS,"$40 off the Stream Deck"],
+  ["charlotte-tilbury-lip-cheat-amazon","Charlotte Tilbury Lip Cheat lip liner pencil",AM,CB,19.6,28,0,U2,BZ,VS,"30% off the Lip Cheat liner"],
+  ["kiehls-creme-de-corps-amazon","Kiehl's Creme de Corps body moisturizer (500ml)",AM,CB,42,60,0,U2,BZ,VS,"30% off the Creme de Corps"],
+  ["tarte-tartelette-mascara-amazon","Tarte Tartelette tubing mascara",AM,CB,19.6,28,0,U2,BZ,VS,"30% off the Tartelette"],
+  ["dr-jart-mask-amazon","Dr. Jart+ two-step mask treatment",AM,CB,11.55,16.5,0,U2,BZ,VS,"30% off the Dr. Jart+ mask"],
+  ["anua-niacinamide-serum-amazon","Anua 10% niacinamide serum",AM,CB,11.49,22,0,U2,BZ,VS,"48% off the Anua serum"],
+  ["anua-azelaic-serum-amazon","Anua azelaic acid serum",AM,CB,15.4,24,0,U2,BZ,VS,"36% off the Anua serum"],
+  ["tirtir-cushion-foundation-amazon","TirTir cushion foundation",AM,CB,7.5,25,0,U2,BZ,VS,"70% off the TirTir cushion"],
 ].map(X);

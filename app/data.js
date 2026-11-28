@@ -1,4 +1,4 @@
-// Deals checked 27-28 Nov 2026 (v26: 49 deals, 1 also, 4 fix 20:42
+// Deals checked 27-28 Nov 2026 (v27: 61 deals, 1 also, 0 fix 20:50
 // 28 Nov) Each deal: product, store, link, prices, check time,
 // source, verdict; `also` = same product at
 //another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
@@ -298,6 +298,7 @@ const deals1 = [
     source: "Best Buy Black Friday sale announcement, 17 Nov 2026",
     verdict: VS,
     evidence: "$200 off Samsung's FE phone",
+    also: [{ store: AM, price: 499.99 }],
   },
   {
     id: "macbook-air-m5-amazon",
