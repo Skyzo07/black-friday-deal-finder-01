@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v22; v22 checked 28 Nov 2026 ~19:50 UTC).
+// The rest of the deals (v6–v23; v23 checked 28 Nov 2026 ~19:59 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -31,6 +31,18 @@ const M0=DT+"19:20:00Z";
 const N0=DT+"19:31:00Z";
 const O0=DT+"19:39:00Z";
 const P0=DT+"19:50:00Z";
+const Q0=DT+"19:59:00Z";
+const SD = "Slickdeals Black Friday frontpage, 28 Nov 2026";
+const NW = "NintendoWire Switch 2 Black Friday deals, 28 Nov 2026";
+const NL = "Nintendo Life Switch 2 Black Friday deals, 28 Nov 2026";
+const CM2 = "9to5Toys Amazon Cyber Monday weekend sale, 28 Nov 2026";
+const C9 = "ComicBook best Black Friday video game deals, 28 Nov 2026";
+const NH = "Nintendo News Hub Switch 2 deals, 28 Nov 2026";
+const MO = "MacObserver eero Black Friday deals, 24 Nov 2026";
+const DY = "Dyson Black Friday deals (GearReveal, Gizmodo, DealSpy), 28 Nov 2026";
+const KP = "Koupon Dyson Black Friday deals, 28 Nov 2026";
+const DN = "DealNews Ring deals at Amazon, 28 Nov 2026";
+const FC = "FullCleared best Black Friday gaming deals, 28 Nov 2026";
 const W2 = "9to5Toys Best of Weekly Cyber Monday, 28 Nov 2026";
 const RG = "VR.org and Road to VR Meta Black Friday sale, 28 Nov 2026";
 const PG = "PC Guide Cyber Monday deals, 28 Nov 2026";
@@ -161,7 +173,7 @@ export const deals2 = [
   ["jbl-tour-one-m3-amazon","JBL Tour One M3",AM,CA,149.95,449.95,0,H8,VG,VN,R4],
   ["nex-playground-amazon","Nex Playground",AM,CY,209,299,0,H8,VG,VN,R5],
   ["alienware-aw2726dm-bestbuy","Alienware AW2726DM QD-OLED monitor",BB,CT,279.99,349.99,2,H8,VG,VN,"Lowest price yet, 27-inch",[["Dell",279.99,"https://www.dell.com/en-us/search/Alienware%20AW2726DM"]]],
-  ["cmf-buds-2a-amazon","CMF Buds 2A",AM,CA,17.89,29,0,H8,VG,VN,"38% off buds with ANC"],
+  ["cmf-buds-2a-amazon","CMF Buds 2A",AM,CA,17.89,29,0,H8,VG,VN,"38% off buds with ANC",[[WM,18,0,Q0,SD]]],
   ["tapo-smart-plug-amazon","TP-Link Tapo Matter smart plug mini",AM,CS,7.99,19.99,"d2,5",H8,VG,VN,"60% off the Matter smart plug"],
   ["eufy-omni-c28-amazon","Eufy Omni C28 robot vacuum and mop",AM,CH,379.99,799.99,4,J5,VG,VN,"New low, $420 off the bot"],
   ["dreame-x60-ultra-amazon","Dreame X60 Ultra robot vacuum and mop",AM,CH,999.99,1499.99,4,H8,VG,VS,"$500 off the flagship robovac",[[BB,1000,4,H4,VG]]],
@@ -564,9 +576,9 @@ export const deals2 = [
   ["sharge-pixel-67w-amazon","Sharge Pixel 67W travel charger",AM,CT,23,50,0,P0,W2,VN,"All-time low, $27 off, 67W"],
   ["sharge-pixel-100w-amazon","Sharge Pixel 100W travel charger",AM,CT,44.9,75,0,P0,W2,VN,"All-time low, $30 off, 100W"],
   ["sharge-pixel-140w-amazon","Sharge Pixel 140W travel charger",AM,CT,65.9,95,0,P0,W2,VN,"All-time low, $29 off, 140W"],
-  ["eero-7-1pack-amazon","Amazon eero 7 dual-band Wi-Fi 7 router, 1-pack",AM,CT,139.99,169.99,0,P0,W2,VS,"$30 off the eero 7, 1-pack"],
-  ["eero-max-7-1pack-amazon","Amazon eero Max 7 Wi-Fi 7 router, 1-pack",AM,CT,420,600,0,P0,W2,VS,"$180 off the eero Max 7"],
-  ["eero-pro-7-amazon","Amazon eero Pro 7 Wi-Fi 7 router",AM,CT,225,300,0,P0,W2,VS,"$75 off the eero Pro 7"],
+  ["eero-7-1pack-amazon","Amazon eero 7 dual-band Wi-Fi 7 router, 1-pack",AM,CT,139.99,169.99,0,P0,W2,VS,"$30 off the eero 7, 1-pack",[[BB,139.99,0,Q0,BP]]],
+  ["eero-max-7-1pack-amazon","Amazon eero Max 7 Wi-Fi 7 router, 1-pack",AM,CT,420,600,0,P0,W2,VS,"$180 off the eero Max 7",[[BB,419.99,0,Q0,BP]]],
+  ["eero-pro-7-amazon","Amazon eero Pro 7 Wi-Fi 7 router",AM,CT,225,300,0,P0,W2,VS,"$75 off the eero Pro 7",[[BB,224.99,0,Q0,BP]]],
   ["eero-outdoor-7-1pack-amazon","Amazon eero Outdoor 7 Wi-Fi 7 router, 1-pack",AM,CT,310,400,0,P0,W2,VS,"$90 off the eero Outdoor 7"],
   ["acer-4k-usb-c-hdmi-cable-amazon","Acer 4K USB-C to HDMI braided cable",AM,CT,10,14,0,P0,W2,VR,"$4 off the 4K USB-C cable"],
   ["lisen-140w-magnetic-3-macbook-cable-amazon","LISEN 140W Magnetic 3 MacBook charging cable",AM,CT,18,22,0,P0,W2,VR,"$4 off the 140W MagSafe cable"],
@@ -597,7 +609,7 @@ export const deals2 = [
   ["mammotion-luba-mini-2-amazon","Mammotion LUBA Mini 2 AWD 1500H robot mower with cleaning stand",AM,CS,1599,1999,0,P0,W2,VN,"All-time low, $400 off LUBA",[[BB,1599,0,P0,BP]]],
   ["mammotion-luba-2-awd-3000x-amazon","Mammotion LUBA 2 AWD 3000X robot mower with blade set",AM,CS,1928,2399,0,P0,W2,VS,"$471 off the LUBA 3000X"],
   ["mammotion-luba-2-awd-3000hx-amazon","Mammotion LUBA 2 AWD 3000HX robot mower",AM,CS,1998,2378,0,P0,W2,VS,"$380 off the LUBA 3000HX"],
-  ["ring-indoor-cam-2k-bestbuy","Ring Indoor Cam 2K",BB,CS,25,60,0,P0,W2,VS,"$35 off the Indoor Cam 2K"],
+  ["ring-indoor-cam-2k-bestbuy","Ring Indoor Cam 2K",BB,CS,25,60,0,P0,W2,VS,"$35 off the Indoor Cam 2K",[[AM,24.99,0,Q0,DN]]],
   ["ring-doorbell-plus-bestbuy","Ring Battery Doorbell Plus",BB,CS,90,180,0,P0,W2,VS,"$90 off the Doorbell Plus"],
   ["beatbot-sora-70-amazon","Beatbot Sora 70 5-in-1 robot pool cleaner",AM,CH,999,1499,0,P0,W2,VS,"$500 off the Sora 70 pool bot"],
   ["ego-21-select-cut-mower-amazon","EGO 21-inch Select Cut cordless mower",AM,CH,580,779,0,P0,W2,VS,"$199 off the Select Cut mower"],
@@ -606,4 +618,36 @@ export const deals2 = [
   ["ego-z6-zero-turn-amazon","EGO Z6 42-inch zero-turn riding mower",AM,CH,4499,5300,0,P0,W2,VS,"$801 off the zero-turn Z6"],
   ["hisense-c3-projector-amazon","Hisense C3 Triple Color RGB Smart Laser Projector",AM,CV,1499.99,1999.99,0,P0,W2,VN,"All-time low, $500 off the C3"],
   ["waterpik-aquarius-amazon","Waterpik Aquarius water flosser",AM,CB,50,99.99,0,P0,W2,VS,"Half price, $50 off Waterpik"],
+  ["star-wars-outlaws-gold-amazon","Star Wars Outlaws: Gold Edition (Nintendo Switch 2)",AM,CG,24.99,60,0,Q0,NW,VS,"58% off the Gold Edition",[[BB,24.99,0,Q0,SD]]],
+  ["sonic-x-shadow-generations-amazon","Sonic X Shadow Generations (Nintendo Switch 2)",AM,CG,19.99,49.99,0,Q0,NW,VS,"60% off Sonic, $19.99 now",[[BB,19.99,0,Q0,FC]]],
+  ["virtua-fighter-5-revo-amazon","Virtua Fighter 5 R.E.V.O. World Stage: 30th Anniversary Edition (Nintendo Switch 2)",AM,CG,19.99,49.99,0,Q0,NL,VS,"60% off the 30th Anniversary"],
+  ["yakuza-kiwami-3-amazon","Yakuza Kiwami 3 & Dark Ties (Nintendo Switch 2)",AM,CG,25,60,0,Q0,Q9,VS,"$35 off Yakuza Kiwami 3"],
+  ["elden-ring-tarnished-amazon","Elden Ring: Tarnished Edition (Nintendo Switch 2)",AM,CG,59.99,79.99,0,Q0,NH,VS,"$20 off the Tarnished Edition"],
+  ["pragmata-amazon","Pragmata (Nintendo Switch 2)",AM,CG,39.99,59.99,0,Q0,NL,VN,"All-time low, $20 off Pragmata",[[BB,39.99,0,Q0,SD]]],
+  ["monster-hunter-stories-3-amazon","Monster Hunter Stories 3: Twisted Reflection (Nintendo Switch 2)",AM,CG,39.99,69.99,0,Q0,C9,VS,"$30 off Monster Hunter Stories"],
+  ["lego-horizon-adventures-bestbuy","LEGO Horizon Adventures (Nintendo Switch)",BB,CG,10,40,0,Q0,SD,VS,"75% off the Horizon LEGO game"],
+  ["switch2-mariokart-bundle-amazon","Nintendo Switch 2 + Mario Kart World bundle",AM,CG,499.99,549.99,0,Q0,CM2,VR,"$50 off the Mario Kart bundle"],
+  ["technics-eah-az100-bh","Technics EAH-AZ100 reference-class true wireless earbuds","B&H",CA,199.99,300,"https://www.bhphotovideo.com/c/search?Ntt=Technics+EAH-AZ100",Q0,SD,VS,"$100 off the Technics AZ100"],
+  ["anker-prime-67w-3port-amazon","Anker Prime 67W 3-port GaN compact wall charger",AM,CT,35,50,0,Q0,SD,VS,"$15 off Anker's 67W 3-port"],
+  ["moto-g-stylus-5g-2025-amazon","Motorola Moto G Stylus 5G smartphone (2025, 256GB, unlocked)",AM,CT,200,400,0,Q0,SD,VS,"Half price, $200 off Stylus"],
+  ["samsung-odyssey-g75f-amazon","Samsung Odyssey G75F 37-inch 4K 165Hz curved VA gaming monitor",AM,CT,493,900,0,Q0,SD,VS,"$407 off the 37-inch Odyssey"],
+  ["watch-series-11-46mm-walmart","Apple Watch Series 11 GPS + Cellular 46mm, Natural Titanium, Milanese Loop",WM,CT,399.5,799,0,Q0,SD,VS,"Half price, $400 off Series 11"],
+  ["cotton-carrier-g3-amazon","Cotton Carrier CCS G3 camera harness system, one camera",AM,CT,96.75,129,0,Q0,SD,VS,"$32 off the CCS G3 harness"],
+  ["eero-7-2pack-amazon","Amazon eero 7 dual-band Wi-Fi 7 router, 2-pack",AM,CT,229.99,284.99,0,Q0,MO,VS,"$55 off the eero 7 2-pack",[[BB,229.99,0,Q0,BP]]],
+  ["eero-7-3pack-amazon","Amazon eero 7 dual-band Wi-Fi 7 router, 3-pack",AM,CT,319.99,399.99,0,Q0,MO,VS,"$80 off the eero 7 3-pack",[[BB,319.99,0,Q0,BP]]],
+  ["eero-pro-7-3pack-amazon","Amazon eero Pro 7 tri-band Wi-Fi 7 router, 3-pack",AM,CT,599.99,799.99,0,Q0,MO,VS,"$200 off the Pro 7 3-pack"],
+  ["eero-6plus-1pack-bestbuy","Amazon eero 6+ dual-band Wi-Fi 6 router, 1-pack",BB,CT,94.99,139.99,0,Q0,BP,VS,"$45 off the eero 6+ 1-pack"],
+  ["eufy-s4-eufycam-amazon","eufy S4 eufyCam 4K solar wireless security camera",AM,CS,260,350,0,Q0,SD,VS,"$90 off the solar eufyCam S4"],
+  ["eufy-familock-s3-max-walmart","eufy Security Smart Lock FamiLock S3 Max",WM,CS,231,400,0,Q0,SD,VS,"$169 off the FamiLock S3 Max"],
+  ["dyson-v15-detect-amazon","Dyson V15 Detect cordless vacuum",AM,CH,598.5,849.99,0,Q0,DY,VS,"$251 off the V15 Detect"],
+  ["dyson-ball-animal-3-amazon","Dyson Ball Animal 3 upright vacuum",AM,CH,299.99,449.99,0,Q0,KP,VS,"$150 off the Ball Animal 3"],
+  ["klein-modbox-workbench-amazon","Klein Tools MODbox folding work bench",AM,CH,100,129,0,Q0,SD,VS,"$29 off the MODbox bench"],
+  ["leatherman-charge-tti-amazon","Leatherman Charge+ TTI multi-tool, titanium handles",AM,CH,100,200,0,Q0,SD,VS,"Half price, $100 off TTI"],
+  ["toto-washlet-ks6-amazon","TOTO WASHLET KS6 electronic heated bidet, elongated",AM,CH,399,550,0,Q0,SD,VS,"$151 off the WASHLET KS6"],
+  ["scotts-turf-builder-amazon","Scotts Turf Builder lawn food, 37.5 lbs",AM,CH,36,65,0,Q0,SD,VS,"$29 off the Turf Builder"],
+  ["workpro-wet-dry-vac-walmart","WORKPRO wet dry vacuum, 2.5 gallon, 3 peak HP",WM,CH,36.99,80,0,Q0,SD,VS,"53% off the WORKPRO vac"],
+  ["ninja-possiblecooker-pro-bestbuy","Ninja PossibleCooker Pro multi-slow cooker, 8.5-Qt",BB,CK,100,200,0,Q0,SD,VS,"Half price, $100 off Ninja"],
+  ["all-clad-fry-pan-set-costco","All-Clad Ceramic Nonstick fry pan set, 3-piece","Costco",CK,109.99,140,"https://www.costco.com/CatalogSearch?dept=All&keyword=All-Clad+Ceramic+Nonstick+Fry+Pan+Set",Q0,SD,VS,"$30 off the All-Clad fry pans"],
+  ["tile-lock-scrabble-amazon","Winning Moves Tile Lock Scrabble board game",AM,CY,16,30,0,Q0,SD,VS,"46% off Tile Lock Scrabble"],
+  ["echo-studio-home-camera-amazon","Amazon Echo Studio with Home Camera",AM,CT,180,250,0,Q0,CM2,VS,"$70 off the Studio + camera"],
 ].map(X);

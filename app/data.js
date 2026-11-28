@@ -1,7 +1,7 @@
-// Deals checked 27–28 Nov 2026 (v22: 56 deals, 6 also, 2 fix 19:50
+// Deals checked 27-28 Nov 2026 (v23: 32 deals, 10 also, 0 fix 19:59
 // 28 Nov) Each deal: product, store, link, prices, check time,
 // source, verdict; `also` = same product at
-// another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
+//another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
 // the first paint; the rest live in data2.js (import() after).
 
 export const CHECKED = "2026-11-27T16:00:00Z";
