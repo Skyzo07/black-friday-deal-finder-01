@@ -1,11 +1,10 @@
-// Deals checked 27-28 Nov 2026 (v24: 37 deals, 10 also, 1 fix 20:19
+// Deals checked 27-28 Nov 2026 (v25: 31 deals, 2 also, 0 fix 20:30
 // 28 Nov) Each deal: product, store, link, prices, check time,
 // source, verdict; `also` = same product at
 //another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
 // the first paint; the rest live in data2.js (import() after).
 
 export const CHECKED = "2026-11-27T16:00:00Z";
-// A8–B2: deals added 28 Nov 2026, ~17:00–18:00 UTC.
 export const A8 = "2026-11-28T17:00:00Z";
 export const B2 = "2026-11-28T18:00:00Z";
 // v10 second-store prices, checked 28 Nov 2026 ~19:00 UTC.
@@ -223,7 +222,7 @@ const deals1 = [
     verdict: VN,
     evidence: "$70 off now — cut again today",
     drop: 199,
-    also: [{ store: TA, price: 179.99, url: TGT+"Apple+Watch+SE+3" }],
+    also: [{ store: TA, price: 179.99, url: TGT+"Apple+Watch+SE+3" }, { store: WM, price: 179, url: WMT+"Apple+Watch+SE+3" }],
   },
   {
     id: "airtag-2-amazon",
@@ -988,6 +987,7 @@ const deals1 = [
     verdict: VN,
     evidence: "All-time low on the new M6 Pro",
     drop: 1779,
+    also: [{ store: BB, price: 1749, url: BBY+"MacBook+Pro+14-inch+M6" }],
   },
   {
     id: "echo-dot-amazon",

@@ -1,4 +1,4 @@
-// The rest of the deals (v6–v24; v24 checked 28 Nov 2026 ~20:19 UTC).
+// The rest of the deals (v6–v25; v25 checked 28 Nov 2026 ~20:30 UTC).
 // Loaded by data.js with import() after the first paint. Times/sources
 // are local consts here: never import data.js, or the modules deadlock
 // on the top-level await.
@@ -34,6 +34,12 @@ const P0=DT+"19:50:00Z";
 const Q0=DT+"19:59:00Z";
 const R0=DT+"20:12:00Z";
 const S0=DT+"20:19:00Z";
+const U0=DT+"20:30:00Z";
+const BZ = "BuzzFeed Black Friday beauty deals, 28 Nov 2026";
+const WR = "WIRED best Black Friday deals, 28 Nov 2026";
+const DS = "DealSeek best early Black Friday tech deals, 28 Nov 2026";
+const MG = "Best Black Friday Massage Gun Deals 2026, 28 Nov 2026";
+const TU = "Tech and Audio Black Friday deals review, 28 Nov 2026";
 const BV = "Bob Vila Black Friday kitchen deals, 28 Nov 2026";
 const PS = "PopSci Amazon Black Friday deals, 28 Nov 2026";
 const D2 = "DealNews Black Friday deals, 28 Nov 2026";
@@ -697,4 +703,35 @@ export const deals2 = [
   ["yeti-yonder-20oz-amazon","YETI Yonder Water Bottle, 20 oz",AM,CK,21,30,0,S0,T1,VS,"Yonder bottle down to $21"],
   ["instant-pot-duo-6qt-amazon","Instant Pot Duo 7-in-1 pressure cooker, 6-Qt",AM,CK,60,109.99,0,S0,D2,VS,"Duo 6-Qt down to $60"],
   ["it-takes-two-switch2-digital-amazon","It Takes Two (Nintendo Switch 2, digital)",AM,CG,29.99,39.99,0,S0,OT,VS,"It Takes Two down to $29.99"],
+  ["nimble-sharepower-amazon","Nimble SharePower 10,000mAh portable charger",AM,CT,59.96,79.96,0,U0,VG,VN,"Lowest price we've seen"],
+  ["anker-prime-67w-charger-amazon","Anker Prime 67W 3-port GaN fast wall charger",AM,CT,35,50,0,U0,SD,VS,"30% off Anker Prime 67W"],
+  ["britbox-annual","BritBox annual plan subscription","BritBox",CR,55,110,"https://www.britbox.com/",U0,SD,VS,"Half price on BritBox annual"],
+  ["olaplex-wash-shine-amazon","Olaplex Wash and Shine hair kit",AM,CB,47.6,68,0,U0,BZ,VS,"30% off the Olaplex kit"],
+  ["revlon-one-step-amazon","Revlon One-Step hair dryer and volumizer",AM,CB,34.97,49.99,0,U0,BZ,VS,"30% off Revlon One-Step"],
+  ["urban-decay-247-pencil-amazon","Urban Decay 24/7 Glide-On eye pencil",AM,CB,11.5,23,0,U0,BZ,VS,"Half price, Prime exclusive"],
+  ["laneige-eye-mask-amazon","Laneige Bouncy & Firm Eye Sleeping Mask",AM,CB,19.2,32,0,U0,BZ,VN,"New lowest price ever"],
+  ["cyberpowerpc-5060ti-amazon","CyberPowerPC RTX 5060 Ti gaming PC",AM,CT,1549,1629.99,0,U0,PG,VS,"$81 off the 5060 Ti PC"],
+  ["cyberpowerpc-5070-9900x-amazon","CyberPowerPC Gamer Xtreme RTX 5070 gaming PC (Ryzen 9 9900X, 32GB DDR5)",AM,CT,1999.99,2348.1,0,U0,PG,VS,"$348 off the 5070 rig"],
+  ["samsung-odyssey-g5-34-amazon","Samsung Odyssey G5 34-inch 180Hz ultrawide gaming monitor",AM,CT,249.99,379.99,0,U0,PG,VS,"$130 off the G5 ultrawide"],
+  ["thinkfun-gravity-maze-amazon","ThinkFun Gravity Maze STEM marble game",AM,CY,17,25,0,U0,WR,VS,"$8 off the STEM maze gift"],
+  ["chipolo-card-amazon","Chipolo Card wallet Bluetooth tracker",AM,CT,33,39,0,U0,WR,VS,"$6 off the wallet tracker"],
+  ["lifepro-massage-gun-amazon","Lifepro Sonic Massage Gun",AM,CF,51,60,0,U0,WR,VS,"$9 off the budget massage gun"],
+  ["jisulife-neck-fan-amazon","JisuLife Neck Fan",AM,CT,25,34,0,U0,WR,VS,"$9 off the neck fan we love"],
+  ["moft-snap-duo-amazon","Moft Snap Duo Apple Watch band",AM,CT,32,40,0,U0,WR,VS,"$8 off the watch band"],
+  ["nothing-headphone-a-amazon","Nothing Headphone (a) wireless headphones",AM,CA,109.99,199.99,0,U0,WR,VS,"$90 off Nothing Headphone"],
+  ["slumberpod-fan-amazon","SlumberPod with Fan blackout sleep pod",AM,CH,154,220,0,U0,WR,VS,"$66 off the SlumberPod"],
+  ["roborock-qrevo-2-pro-amazon","Roborock Qrevo 2 Pro robot vacuum and mop",AM,CH,449.99,799.99,0,U0,WR,VN,"Lowest price you'll find"],
+  ["hatch-sleep-clock-amazon","Hatch Sleep Clock sunrise alarm clock",AM,CS,188,250,0,U0,WR,VS,"$62 off the sunrise alarm"],
+  ["typhur-dome-2-amazon","Typhur Dome 2 air fryer",AM,CK,285,390,0,U0,WR,VS,"$105 off the Dome 2 fryer"],
+  ["tribit-pocketgo-amazon","Tribit PocketGo portable Bluetooth speaker",AM,CA,21,33,0,U0,ST,VS,"$12 off the PocketGo"],
+  ["pebblebee-halo-amazon","Pebblebee Halo Find My tracker with flashlight",AM,CT,33,60,0,U0,ST,VS,"45% off the Halo tracker"],
+  ["bougerv-area-light-amazon","BougeRV portable 3,200mAh area light and power bank",AM,CT,21,40,0,U0,ST,VN,"Newest $21 low, 48% off"],
+  ["belkin-switch2-case-pro-amazon","Belkin Switch 2 Charging Case Pro with 10,000mAh power bank",AM,CG,85,100,0,U0,ST,VS,"$15 off the charging case"],
+  ["fullmosa-watch-band-amazon","Fullmosa stainless steel link Apple Watch band",AM,CT,13,17,0,U0,ST,VS,"$4 off the steel link band"],
+  ["tcl-nxtpaper-70-pro-amazon","TCL Nxtpaper 70 Pro smartphone",AM,CT,259.99,329.99,0,U0,DS,VS,"$70 off the Nxtpaper 70 Pro"],
+  ["pebblebee-clip-5-amazon","Pebblebee Clip 5 Bluetooth tracker",AM,CT,27.99,34.99,0,U0,DS,VS,"20% off the Clip 5 tracker"],
+  ["bose-quietcomfort-2-amazon","Bose QuietComfort Headphones, 2nd Generation",AM,CA,199,359,0,U0,TU,VS,"$160 off the 2nd-gen QC"],
+  ["jbl-go-5-amazon","JBL Go 5 portable Bluetooth speaker",AM,CA,39.95,54.95,0,U0,TU,VS,"$15 off the pocket JBL Go 5"],
+  ["netgear-orbi-770-3pack-amazon","Netgear Orbi 770 Wi-Fi 7 mesh system, 3-pack",AM,CT,569,700,0,U0,D2,VS,"19% off the Orbi 770 3-pack"],
+  ["theragun-prime-g6-target","Theragun Prime (6th Gen) massage gun",TA,CF,189.99,329.99,0,U0,MG,VS,"$140 off the Theragun Prime"],
 ].map(X);
