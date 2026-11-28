@@ -1,11 +1,8 @@
-// The Deal Desk: search, filter, sort and detail routing over the deals in
-// data.js. Everything runs from the files in app/ — no network request.
-//
-//   #/            the board, with search and filters
-//   #/deal/<id>   one deal, with its verdict and cross-store comparison
-//
-// window.__shotReady is false while a page renders and true once it is on
-// screen, so a screenshot script knows when to capture.
+// The Deal Desk: search, filter, sort and detail routing over data.js.
+// Runs from app/ — no network request. Routes: #/ the board, #/deal/<id>
+// one deal with its verdict and cross-store comparison. __shotReady is
+// false while a page renders, true once it is on screen, so a screenshot
+// script knows when to capture.
 
 import { deals, categories, stores } from "./data.js";
 import { listPage, dealPage, missingPage, card } from "./views.js";
@@ -71,8 +68,7 @@ function renderList() {
 }
 
 function refreshGrid() {
-  // Live search: re-render only the grid and the count, so typing never
-  // loses the cursor or the scroll position.
+  // Live search: re-render only the grid and the count.
   const shown = applyFilters();
   const old = app.querySelector(".deals, .empty");
   const fresh = document.createElement("div");

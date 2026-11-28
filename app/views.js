@@ -1,6 +1,5 @@
-// HTML for each page, built from the deal data. Every value is escaped
-// before it goes into the page, so a deal's text can never break the markup.
-// Deals without `checked` / `also` fall back to CHECKED / an empty list.
+// HTML for each page from the deal data. Values are escaped before they
+// go into the page; missing `checked` / `also` fall back to CHECKED / [].
 
 import { CHECKED } from "./data.js";
 
