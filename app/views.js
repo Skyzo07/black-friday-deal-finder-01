@@ -107,7 +107,7 @@ export function dealPage(d, all) {
   const compare = also.length
     ? `<h2>Same product, other stores</h2>
 <table class="compare"><thead><tr><th>Store</th><th>Price</th><th>Link</th></tr></thead><tbody>${compareRows}</tbody></table>`
-    : `<p class="source-note">We found this product at one store in this sale. If another store lists it cheaper before Cyber Monday, it will be added here.</p>`;
+    : `<p class="source-note">We found this product at one store in this sale — check the store's site for the exact product name before you buy.</p>`;
   const siblings = all.filter((x) => x.category === d.category && x.id !== d.id).slice(0, 4);
   const more = siblings.length
     ? `<h2>More ${escape(d.category)} deals</h2><ul class="deals">${siblings.map(card).join("")}</ul>`
