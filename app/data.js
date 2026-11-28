@@ -1,4 +1,4 @@
-// Deals checked 27–28 Nov 2026 (v15: 21 new deals, 3 also, 1 fix 18:45
+// Deals checked 27–28 Nov 2026 (v16: 16 new deals, 7 also, 2 fix 19:00
 // 28 Nov). Each deal: product, store, link, prices, check time,
 // source, verdict; `also` = same product at
 // another store; no `checked` = 27 Nov 16:00 UTC. First 80 load with
