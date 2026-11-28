@@ -1,5 +1,8 @@
 // HTML for each page, built from the deal data. Every value is escaped
 // before it goes into the page, so a deal's text can never break the markup.
+// Deals without `checked` / `also` fall back to CHECKED / an empty list.
+
+import { CHECKED } from "./data.js";
 
 const escape = (s) => String(s).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 const usd = (n) => `$${Number(n).toLocaleString("en-US", { minimumFractionDigits: Number.isInteger(n) ? 0 : 2, maximumFractionDigits: 2 })}`;
@@ -27,7 +30,7 @@ export function card(d) {
   <div>${verdictBadge(d)} <span class="meta">save ${usd(saved(d))}</span></div>
   <p class="evidence">${escape(d.evidence)}</p>
   <div class="spacer"></div>
-  <div class="checked">Checked ${day(d.checked)} · ${escape(d.source)}</div>
+  <div class="checked">Checked ${day(d.checked || CHECKED)} · ${escape(d.source)}</div>
   <a class="store-link" href="${escape(d.url)}" rel="noopener">Shop at ${escape(d.store)} ↗</a>
   <a class="detail-link" href="#/deal/${encodeURIComponent(d.id)}">Why this verdict →</a>
 </li>`;
@@ -96,11 +99,12 @@ export function listPage(deals, categories, stores, state, shown) {
 }
 
 export function dealPage(d, all) {
-  const compareRows = [{ store: d.store, price: d.price, url: d.url, here: true }, ...d.also.map((a) => ({ ...a, here: false }))]
+  const also = d.also || [];
+  const compareRows = [{ store: d.store, price: d.price, url: d.url, here: true }, ...also.map((a) => ({ ...a, here: false }))]
     .sort((a, b) => a.price - b.price)
-    .map((r, i) => `<tr${i === 0 && d.also.length ? ' class="best"' : ""}><td>${escape(r.store)}${r.here ? " (this deal)" : ""}</td><td>${usd(r.price)}</td><td><a href="${escape(r.url)}" rel="noopener">Open at ${escape(r.store)} ↗</a></td></tr>`)
+    .map((r, i) => `<tr${i === 0 && also.length ? ' class="best"' : ""}><td>${escape(r.store)}${r.here ? " (this deal)" : ""}</td><td>${usd(r.price)}</td><td><a href="${escape(r.url)}" rel="noopener">Open at ${escape(r.store)} ↗</a></td></tr>`)
     .join("");
-  const compare = d.also.length
+  const compare = also.length
     ? `<h2>Same product, other stores</h2>
 <table class="compare"><thead><tr><th>Store</th><th>Price</th><th>Link</th></tr></thead><tbody>${compareRows}</tbody></table>`
     : `<p class="source-note">We found this product at one store in this sale. If another store lists it cheaper before Cyber Monday, it will be added here.</p>`;
@@ -119,7 +123,7 @@ export function dealPage(d, all) {
     <dt>You save</dt><dd>${usd(saved(d))} (${percentOff(d)}% off the usual ${usd(d.was)})</dd>
     <dt>Verdict</dt><dd><strong>${escape(VERDICT_LABEL[d.verdict] || d.verdict)}</strong> — ${escape(d.evidence)}</dd>
     ${d.drop ? `<dt>Price move</dt><dd>Dropped again today — ${usd(d.drop)} in this morning's check, ${usd(d.price)} now.</dd>` : ""}
-    <dt>Checked</dt><dd>${day(d.checked)}</dd>
+    <dt>Checked</dt><dd>${day(d.checked || CHECKED)}</dd>
     <dt>Read in</dt><dd>${escape(d.source)}</dd>
   </dl>
   ${compare}
