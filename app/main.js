@@ -48,7 +48,7 @@ function renderList() {
   document.title = "The Deal Desk — Black Friday 2026 deal finder";
   app.innerHTML = listPage(deals, categories, stores, state, shown);
   const line = app.querySelector("#result-line");
-  line.textContent = `Showing ${shown.length} of ${deals.length} deals · sorted: ${state.sort === "best" ? "best deal first" : state.sort} · all prices checked 27 Nov 2026.`;
+  line.textContent = `Showing ${shown.length} of ${deals.length} deals · sorted: ${state.sort === "best" ? "best deal first" : state.sort} · all prices checked 27–28 Nov 2026.`;
   const q = app.querySelector("#q");
   q.addEventListener("input", () => { state.q = q.value; refreshGrid(); });
   for (const id of ["category", "store", "minoff", "sort"]) {
@@ -81,7 +81,7 @@ function refreshGrid() {
     : `<ul class="deals">${shown.map(card).join("")}</ul>`;
   old.replaceWith(fresh.firstChild);
   app.querySelector("#result-line").textContent =
-    `Showing ${shown.length} of ${deals.length} deals · sorted: ${state.sort === "best" ? "best deal first" : state.sort} · all prices checked 27 Nov 2026.`;
+    `Showing ${shown.length} of ${deals.length} deals · sorted: ${state.sort === "best" ? "best deal first" : state.sort} · all prices checked 27–28 Nov 2026.`;
 }
 
 function render() {

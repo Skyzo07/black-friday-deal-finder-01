@@ -37,11 +37,20 @@ export function statsBar(deals) {
   const totalSaved = deals.reduce((s, d) => s + saved(d), 0);
   const avgOff = Math.round(deals.reduce((s, d) => s + percentOff(d), 0) / deals.length);
   const newLows = deals.filter((d) => d.verdict === "new-low").length;
+  const byTitle = new Map();
+  for (const d of deals) {
+    if (!byTitle.has(d.title)) byTitle.set(d.title, new Set());
+    byTitle.get(d.title).add(d.store);
+    for (const a of d.also || []) byTitle.get(d.title).add(a.store);
+  }
+  let crossStore = 0;
+  for (const [, s] of byTitle) if (s.size >= 2) crossStore++;
   return `<section class="stats" aria-label="Board summary">
   <div class="stat"><b>${deals.length}</b><span>verified deals</span></div>
   <div class="stat"><b>${avgOff}%</b><span>average discount</span></div>
   <div class="stat"><b>${usd(totalSaved)}</b><span>total savings if you bought one of each</span></div>
   <div class="stat"><b>${newLows}</b><span>new lows this season</span></div>
+  <div class="stat"><b>${crossStore}</b><span>products compared across stores</span></div>
 </section>`;
 }
 

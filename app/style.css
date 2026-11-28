@@ -58,7 +58,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 16px; }
 /* ---- stats strip ---- */
 .stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   margin: 4px 0 16px;
 }
